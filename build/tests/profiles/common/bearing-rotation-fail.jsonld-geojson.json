@@ -1,0 +1,14 @@
+{
+    "$schema": "schema.json",
+    "type": "FeatureCollection",
+    "coordRefSys": "epsg:4167",
+    "verticalCRS": "epsg:4167",
+    "id": null,
+    "name": "DP 572532",
+    "purpose": "http://any.valid/",
+    "featureType": "CSD",
+    "referencedCSDs": [],
+    "links": [],
+    "provenance": {},
+    "features": []
+}
