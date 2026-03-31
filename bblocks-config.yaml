@@ -20,4 +20,5 @@ description: |
 
 imports:
   - default
-  - https://icsm-au.github.io/3d-csdm-common/build/register.json
+  - https://surroundaustralia.github.io/3d-csdm-common/build/register.json
+#  - https://icsm-au.github.io/3d-csdm-common/build/register.json
