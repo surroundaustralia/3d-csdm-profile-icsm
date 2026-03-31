@@ -3,16 +3,14 @@
 @prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix owlTime: <http://www.w3.org/2006/time#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<file:///github/workspace/DP_572532> a container:CSD,
-        geojson:FeatureCollection ;
+<file:///github/workspace/DP_572532> a geojson:FeatureCollection ;
     rdfs:label "DP 572532" ;
     dct:time [ owlTime:hasTime "2022-05-23"^^xsd:date ] ;
-    prov:wasGeneratedBy [ ] ;
     container:horizontalCRS epsg:4167 ;
     container:purpose <http://any.valid/> ;
-    container:surveyType <http://any.valid/> .
+    container:surveyType <http://any.valid/> ;
+    geojson:collectionFeatureType "CSD" .
 

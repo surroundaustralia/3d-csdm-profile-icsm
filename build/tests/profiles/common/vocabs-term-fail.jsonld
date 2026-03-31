@@ -1,5 +1,5 @@
 {
-  "@context": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/context.jsonld",
+  "@context": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/context.jsonld",
   "description": "Examples-DP_572532",
   "id": "DP_572532",
   "name": "DP 572532",

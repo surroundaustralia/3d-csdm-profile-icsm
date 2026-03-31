@@ -2,3 +2,5 @@ path
 /parcels/appellation
 /parcels/features
 /parcels/features/featureType
+/parcels/features/topology
+/parcels/features/topology/type

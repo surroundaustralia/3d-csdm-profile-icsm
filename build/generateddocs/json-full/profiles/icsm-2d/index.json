@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2024-12-03",
+  "dateOfLastChange": "2026-03-31",
   "sources": [
     {
       "title": "3D Cadastre Survey Data Model",
@@ -28,21 +28,21 @@
     "profile"
   ],
   "superBBlock": false,
-  "shaclRules": {},
-  "ldContext": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/context.jsonld",
+  "shaclRules": [],
+  "shaclShapes": {},
+  "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/context.jsonld",
   "schema": {
-    "application/yaml": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/schema.yaml",
-    "application/json": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/schema.json"
+    "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/schema.yaml",
+    "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/schema.json"
   },
-  "sourceSchema": "https://icsm-au.github.io/3d-csdm-profile-icsm/_sources/icsm-2d/schema.json",
-  "sourceLdContext": "https://icsm-au.github.io/3d-csdm-profile-icsm/_sources/icsm-2d/context.jsonld",
-  "sourceFiles": "https://icsm-au.github.io/3d-csdm-profile-icsm/_sources/icsm-2d/",
-  "rdfData": [
-    "https://icsm-au.github.io/3d-csdm-profile-icsm/data.ttl"
-  ],
+  "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-2d/schema.json",
+  "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-2d/context.jsonld",
+  "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/resolvedProperties.json",
+  "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-2d/",
+  "rdfData": [],
   "validationPassed": true,
   "description": "## Cadastral Survey Data Model - ICSM common\n\nRules and default namespace bindings for ICSM Jurisdiction Profiles of the Cadastral Survey Data Model (CSDM)\n\n",
   "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: 2D restricted profile Cadastral Survey Data Model\nallOf:\n- $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json\n",
-  "gitRepository": "https://github.com/icsm-au/3d-csdm-profile-icsm",
+  "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-icsm",
   "gitPath": "_sources/icsm-2d"
 }

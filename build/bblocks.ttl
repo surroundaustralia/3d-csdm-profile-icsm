@@ -1,146 +1,257 @@
 @prefix bblocks: <https://www.opengis.net/def/bblocks/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://www.w3.org/ns/oa#> .
+@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
 @prefix schema: <https://schema.org/> .
+@prefix shacl: <https://www.w3.org/TR/shacl/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://icsm-au.github.io/icsm.profiles.common> a skos:Concept,
+<bblocks://icsm.profiles.icsm-2d> a skos:Concept,
         dcat:Dataset,
-        bblocks:Schema ;
-    rdfs:label "Cadastral Survey Common ICSM Profile" ;
-    dct:abstract "Common profile of the Cadastral Survey Data Model. All ICSM jurisdiction profiles will inherit schemas, rules and vocabulary bindings from this profile, ensuring consistency and minimising effort and complexity of jurisdictional profile specification." ;
-    dct:created "2023-07-31T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-icsm/build/generateddocs/markdown/profiles/common/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-icsm/build/generateddocs/json-full/profiles/common/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-icsm/bblock/icsm.profiles.common" ] ;
-    dct:hasVersion "0.1" ;
-    dct:modified "2024-12-03"^^xsd:date ;
-    dct:source <https://icsm-au.github.io/3d-csdm-design/2022/spec.html> ;
-    skos:inScheme <https://icsm-au.github.io/3d-csdm-profile-icsm/> ;
-    dcat:keyword "csdm",
-        "o&m",
-        "o&m&s",
-        "profile",
-        "sosa",
-        "ssn" ;
-    bblocks:dependsOn <https://icsm-au.github.io/icsm.csdm.features.CSD>,
-        <https://icsm-au.github.io/icsm.profiles.datatypes.address> ;
-    bblocks:hasJsonLdContext <https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/context.jsonld> ;
-    bblocks:hasSchema <https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/schema.json>,
-        <https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/schema.yaml> ;
-    bblocks:hasShaclRule <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl>,
-        <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl>,
-        <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl>,
-        <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl>,
-        <https://icsm-au.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl>,
-        <https://icsm-au.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl>,
-        <https://icsm-au.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl>,
-        <https://icsm-au.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl>,
-        <https://icsm-au.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl>,
-        <https://icsm-au.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl>,
-        <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
-        <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl>,
-        <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/rules.shacl> ;
-    bblocks:hasSourceJsonLdContext <https://icsm-au.github.io/3d-csdm-profile-icsm/_sources/common/context.jsonld> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/profiles> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
-
-<https://icsm-au.github.io/icsm.profiles.icsm-2d> a skos:Concept,
-        dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "Cadastral Survey 2D (+elevation) basic Profile" ;
-    dct:abstract "Profile to constrain a 2D implementation of the 3D Cadastre Survey Data Model" ;
+    dct:abstract "Profile to constrain a 2D implementation of the 3D Cadastre Survey Data Model"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-07-31T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-icsm/build/generateddocs/json-full/profiles/icsm-2d/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-icsm/build/generateddocs/markdown/profiles/icsm-2d/index.md" ],
+            rdfs:isDefinedBy <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/generateddocs/json-full/profiles/icsm-2d/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-icsm/bblock/icsm.profiles.icsm-2d" ] ;
+            rdfs:isDefinedBy <https://surroundaustralia.github.io/3d-csdm-profile-icsm/bblock/icsm.profiles.icsm-2d> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/generateddocs/markdown/profiles/icsm-2d/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-12-03"^^xsd:date ;
+    dct:modified "2026-03-31"^^xsd:date ;
     dct:source <https://icsm-au.github.io/3d-csdm-design/2022/spec.html> ;
-    skos:inScheme <https://icsm-au.github.io/3d-csdm-profile-icsm/> ;
+    skos:inScheme <https://surroundaustralia.github.io/3d-csdm-profile-icsm/> ;
+    skos:prefLabel "Cadastral Survey 2D (+elevation) basic Profile" ;
+    skos:topConceptOf <https://surroundaustralia.github.io/3d-csdm-profile-icsm/> ;
     dcat:keyword "csdm",
         "o&m",
         "o&m&s",
         "profile",
         "sosa",
         "ssn" ;
-    bblocks:hasJsonLdContext <https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/context.jsonld> ;
-    bblocks:hasSchema <https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/schema.json>,
-        <https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/schema.yaml> ;
-    bblocks:hasSourceJsonLdContext <https://icsm-au.github.io/3d-csdm-profile-icsm/_sources/icsm-2d/context.jsonld> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:hasSourceJsonLdContext <https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-2d/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/profiles> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://icsm-au.github.io/icsm.profiles.icsm-3d> a skos:Concept,
+<bblocks://icsm.profiles.icsm-3d> a skos:Concept,
         dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "Cadastral Survey 3D profile" ;
-    dct:abstract "2d and 3D objects allowed, observations  and coords must be 3d.  Note that validation rules for 3D have not been elucidated pending future phases of development and testing." ;
+    dct:abstract "2d and 3D objects allowed, observations  and coords must be 3d.  Note that validation rules for 3D have not been elucidated pending future phases of development and testing."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-07-31T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-icsm/build/generateddocs/json-full/profiles/icsm-3d/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-icsm/build/generateddocs/markdown/profiles/icsm-3d/index.md" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/generateddocs/markdown/profiles/icsm-3d/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/generateddocs/json-full/profiles/icsm-3d/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-icsm/bblock/icsm.profiles.icsm-3d" ] ;
+            rdfs:isDefinedBy <https://surroundaustralia.github.io/3d-csdm-profile-icsm/bblock/icsm.profiles.icsm-3d> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-12-03"^^xsd:date ;
+    dct:modified "2026-03-31"^^xsd:date ;
     dct:source <https://icsm-au.github.io/3d-csdm-design/2022/spec.html> ;
-    skos:inScheme <https://icsm-au.github.io/3d-csdm-profile-icsm/> ;
+    skos:inScheme <https://surroundaustralia.github.io/3d-csdm-profile-icsm/> ;
+    skos:prefLabel "Cadastral Survey 3D profile" ;
+    skos:topConceptOf <https://surroundaustralia.github.io/3d-csdm-profile-icsm/> ;
     dcat:keyword "csdm",
         "o&m",
         "o&m&s",
         "profile",
         "sosa",
         "ssn" ;
-    bblocks:hasJsonLdContext <https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/context.jsonld> ;
-    bblocks:hasSchema <https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/schema.json>,
-        <https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/schema.yaml> ;
-    bblocks:hasSourceJsonLdContext <https://icsm-au.github.io/3d-csdm-profile-icsm/_sources/icsm-3d/context.jsonld> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:hasSourceJsonLdContext <https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-3d/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/profiles> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
 <https://github.com/icsm-au/3d-csdm> rdfs:label "CSDM model" .
 
-<https://icsm-au.github.io/icsm.profiles.datatypes.address> a skos:Concept,
+<https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:N26371c278f5f4f76bbe2ae730b2c81b2 ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2026-03-31T04:24:18.183918"^^xsd:dateTime ;
+            prov:startedAtTime "2026-03-31T04:24:18.062474"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:8b1225e5c76cbe09151bb201c4cf7117aaf4c6dc" ;
+                    rdfs:seeAlso <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json> ],
+                [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            prov:wasAssociatedWith _:N26371c278f5f4f76bbe2ae730b2c81b2 ] .
+
+<bblocks://icsm.profiles.common> a skos:Concept,
         dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "Cadastral Survey Common ICSM Profile" ;
+    dct:abstract "Common profile of the Cadastral Survey Data Model. All ICSM jurisdiction profiles will inherit schemas, rules and vocabulary bindings from this profile, ensuring consistency and minimising effort and complexity of jurisdictional profile specification."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2023-07-31T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://surroundaustralia.github.io/3d-csdm-profile-icsm/bblock/icsm.profiles.common> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/generateddocs/markdown/profiles/common/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/generateddocs/json-full/profiles/common/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-03-31"^^xsd:date ;
+    dct:source <https://icsm-au.github.io/3d-csdm-design/2022/spec.html> ;
+    skos:inScheme <https://surroundaustralia.github.io/3d-csdm-profile-icsm/> ;
+    skos:prefLabel "Cadastral Survey Common ICSM Profile" ;
+    skos:topConceptOf <https://surroundaustralia.github.io/3d-csdm-profile-icsm/> ;
+    dcat:keyword "csdm",
+        "o&m",
+        "o&m&s",
+        "profile",
+        "sosa",
+        "ssn" ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature> ;
+            prof:hasArtifact <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
+                <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://icsm.csdm.features.CSD> ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl>,
+                <https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl>,
+                <https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://icsm.csdm.features.SurveyObservations> ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature-collection> ;
+            prof:hasArtifact <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
+                <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://icsm.csdm.datatypes.compoundName> ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-arc> ;
+            prof:hasArtifact <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
+                <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://icsm.profiles.common> ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl>,
+                <https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl>,
+                <https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl>,
+                <https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl>,
+                <https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
+            prof:hasArtifact <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:dependsOn <bblocks://icsm.csdm.features.CSD>,
+        <bblocks://icsm.profiles.datatypes.address> ;
+    bblocks:hasSourceJsonLdContext <https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/common/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/profiles> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://icsm.profiles.datatypes.address> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "ICSM Address (Placeholder)" ;
-    dct:abstract "A simple implementation of ICSM address model. Can be mapped to or replaced by a standard ICSM schema when available." ;
+    dct:abstract "A simple implementation of ICSM address model. Can be mapped to or replaced by a standard ICSM schema when available."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-01-15T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-icsm/build/generateddocs/json-full/profiles/datatypes/address/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-icsm/build/generateddocs/markdown/profiles/datatypes/address/index.md" ],
+            rdfs:isDefinedBy <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/generateddocs/json-full/profiles/datatypes/address/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://icsm-au.github.io/3d-csdm-profile-icsm/bblock/icsm.profiles.datatypes.address" ] ;
+            rdfs:isDefinedBy <https://surroundaustralia.github.io/3d-csdm-profile-icsm/bblock/icsm.profiles.datatypes.address> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/generateddocs/markdown/profiles/datatypes/address/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-12-03"^^xsd:date ;
+    dct:modified "2026-03-31"^^xsd:date ;
     dct:source <https://github.com/icsm-au/3d-csdm> ;
-    skos:inScheme <https://icsm-au.github.io/3d-csdm-profile-icsm/> ;
+    skos:inScheme <https://surroundaustralia.github.io/3d-csdm-profile-icsm/> ;
+    skos:prefLabel "ICSM Address (Placeholder)" ;
+    skos:topConceptOf <https://surroundaustralia.github.io/3d-csdm-profile-icsm/> ;
     dcat:keyword "ICSM",
         "address",
         "utils" ;
-    bblocks:hasJsonLdContext <https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/context.jsonld> ;
-    bblocks:hasSchema <https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.json>,
-        <https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.yaml> ;
-    bblocks:hasSourceJsonLdContext <https://icsm-au.github.io/3d-csdm-profile-icsm/_sources/datatypes/address/context.jsonld> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:hasSourceJsonLdContext <https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/datatypes/address/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/placeholder> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
 <https://icsm-au.github.io/3d-csdm-design/2022/spec.html> rdfs:label "3D Cadastre Survey Data Model" .
 
-<https://icsm-au.github.io/3d-csdm-profile-icsm/> a skos:ConceptScheme,
-        dcat:Catalog ;
+<https://surroundaustralia.github.io/3d-csdm-profile-icsm/> a skos:ConceptScheme,
+        dcat:Catalog,
+        bblocks:BBlocksRegister ;
     rdfs:label "Building Blocks - Implementation Profiles for 3D CSDM" ;
     dct:abstract """This repository contains the 
  ICSM - [ANZLIC](https://www.anzlic.gov.au/) [Intergovernmental Committee on Survey and Mapping](https://www.icsm.gov.au/) - [Common  profile](bblock/icsm.profiles.common) of the [Cadastral Survey Data Model Exchange Specification](https://icsm-au.github.io/3d-csdm-common/). 
@@ -148,7 +259,7 @@
  _The ICSM profile is a partial set of constraints, the full model is implemented by a further set of jurisdiction specific profiles using local vocabulary (codelists) and any additional content and rules necessary._
  
 Profiles are defined in a consistent, machine-readable and validatable way using the [OGC Building Blocks methodology](https://ogcincubator.github.io/bblocks-docs/).
-""" ;
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:description """Each jurisdiction profile extends a [common ICSM profile] of a general [model of 3D cadastre](https://icsm-au.github.io/3d-csdm-model/), and an [encoding specification in form of a JSON schema](https://icsm-au.github.io/3d-csdm-common/).
 
 The encoding specification and all profiles are compatible with the [OGC API Features](https://opengeospatial.github.io/e-learning/ogcapi-features/text/basic-main.html) data exchange specification, and can thus be implemented by any standards compliant software capable of handling nested object sub-schemas and control of codelist in content.
@@ -156,25 +267,33 @@ The encoding specification and all profiles are compatible with the [OGC API Fea
 The relationships of this profile to specific jurisdictional profiles and and the underlying  common model are shown below:
 
 ![](https://lucid.app/publicSegments/view/f7e6c029-db67-4186-9592-cab6ec3437d0/image.png)
-""" ;
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:modified "2026-03-31T04:23:55.782248"^^xsd:dateTime ;
+    owl:imports <https://opengeospatial.github.io/bblocks/register.json>,
+        <https://surroundaustralia.github.io/3d-csdm-common/build/register.json> ;
+    skos:hasTopConcept <bblocks://icsm.profiles.common>,
+        <bblocks://icsm.profiles.datatypes.address>,
+        <bblocks://icsm.profiles.icsm-2d>,
+        <bblocks://icsm.profiles.icsm-3d> ;
     skos:prefLabel "Building Blocks - Implementation Profiles for 3D CSDM" ;
-    bblocks:hasValidationReport <https://icsm-au.github.io/3d-csdm-profile-icsm/build/tests/report.html> ;
-    bblocks:imports <https://icsm-au.github.io/3d-csdm-common/build/register.json>,
-        <https://opengeospatial.github.io/bblocks/register.json> .
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json> ],
+        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/bblocks.jsonld> ],
+        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/bblocks.ttl> ] ;
+    foaf:homepage <https://surroundaustralia.github.io/3d-csdm-profile-icsm/> ;
+    bblocks:hasValidationReport <https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/tests/report.html> .
 
-[] a prov:Activity ;
-    prov:endedAtTime "2024-12-03T07:02:19.988134"^^xsd:dateTime ;
-    prov:startedAtTime "2024-12-03T07:02:19.917433"^^xsd:dateTime ;
-    prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
-            dct:format "application/json" ;
-            dct:hasVersion "git:cb33d594f4a101fd40b5dd63f00f37485f939fbc" ;
-            rdfs:seeAlso <https://icsm-au.github.io/3d-csdm-profile-icsm/build/register.json> ] ;
-    prov:wasAssociatedWith [ a prov:Agent,
-                schema:SoftwareApplication ;
-            rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.3.55" ;
-            rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] .
+_:N26371c278f5f4f76bbe2ae730b2c81b2 a prov:Agent,
+        schema:SoftwareApplication ;
+    rdfs:label "OGC-NA tools" ;
+    dct:hasVersion "0.5.26" ;
+    rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 

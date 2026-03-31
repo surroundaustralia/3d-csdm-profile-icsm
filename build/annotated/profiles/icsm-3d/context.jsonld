@@ -1,5 +1,183 @@
 {
   "@context": {
+    "type": "@type",
+    "featureType": "geojson:collectionFeatureType",
+    "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
+    "features": {
+      "@context": {
+        "featureType": "@type",
+        "links": {
+          "@context": {
+            "href": {
+              "@type": "@id",
+              "@id": "oa:hasTarget"
+            },
+            "rel": {
+              "@context": {
+                "@base": "http://www.iana.org/assignments/relation/"
+              },
+              "@id": "http://www.iana.org/assignments/relation",
+              "@type": "@id"
+            },
+            "type": "dct:type",
+            "hreflang": "dct:language",
+            "title": "rdfs:label",
+            "length": "dct:extent"
+          },
+          "@id": "rdfs:seeAlso"
+        },
+        "Prism": {
+          "@id": "geojson:Prism",
+          "@context": {
+            "base": "geojson:prismBase",
+            "lower": "geojson:prismLower",
+            "upper": "geojson:prismUpper"
+          }
+        },
+        "MultiPrism": {
+          "@id": "geojson:MultiPrism",
+          "@context": {
+            "prisms": "geojson:prisms"
+          }
+        },
+        "topology": {
+          "@context": {
+            "references": {
+              "@id": "geojson:relatedFeatures",
+              "@type": "@id",
+              "@container": "@list"
+            }
+          },
+          "@type": "@id",
+          "@id": "geojson:topology"
+        }
+      },
+      "@id": "geojson:features",
+      "@container": "@set"
+    },
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "id": "@id",
+    "properties": "@nest",
+    "geometry": "geojson:geometry",
+    "bbox": {
+      "@container": "@list",
+      "@id": "geojson:bbox"
+    },
+    "links": {
+      "@context": {
+        "href": {
+          "@type": "@id",
+          "@id": "oa:hasTarget"
+        },
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent"
+      },
+      "@id": "rdfs:seeAlso"
+    },
+    "time": {
+      "@context": {
+        "date": {
+          "@id": "owlTime:hasTime",
+          "@type": "xsd:date"
+        },
+        "timestamp": {
+          "@id": "owlTime:hasTime",
+          "@type": "xsd:dateTime"
+        },
+        "interval": {
+          "@id": "owlTime:hasTime",
+          "@container": "@list"
+        }
+      },
+      "@id": "dct:time"
+    },
+    "place": "dct:spatial",
+    "Polyhedron": "geojson:Polyhedron",
+    "MultiPolyhedron": "geojson:MultiPolyhedron",
+    "Prism": {
+      "@id": "geojson:Prism",
+      "@context": {
+        "base": "geojson:prismBase",
+        "lower": "geojson:prismLower",
+        "upper": "geojson:prismUpper"
+      }
+    },
+    "MultiPrism": {
+      "@id": "geojson:MultiPrism",
+      "@context": {
+        "prisms": "geojson:prisms"
+      }
+    },
+    "coordinates": {
+      "@container": "@list",
+      "@id": "geojson:coordinates"
+    },
+    "geometries": {
+      "@id": "geojson:geometry",
+      "@container": "@list"
+    },
+    "name": "rdfs:label",
+    "bearingRotation": "container:bearingRotation",
+    "annotations": {
+      "@context": {
+        "href": {
+          "@type": "@id",
+          "@id": "oa:hasTarget"
+        },
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
+        "type": "dct:type",
+        "hreflang": "dct:language",
+        "title": "rdfs:label",
+        "length": "dct:extent",
+        "role": {
+          "@id": "prof:hasRole",
+          "@type": "@id"
+        },
+        "conformsTo": {
+          "@id": "dct:conformsTo",
+          "@type": "@id"
+        }
+      },
+      "@id": "container:annotations"
+    },
+    "CSD": "container:CSD",
+    "locality": "csd:locality",
+    "PrimaryParcel": {
+      "@id": "parcel:PrimaryParcel",
+      "@type": "@id"
+    },
+    "SecondaryParcel": {
+      "@id": "parcel:SecondaryParcel",
+      "@type": "@id"
+    },
+    "parcelQualityClass": {
+      "@id": "parcel:qualityClass",
+      "@type": "@id"
+    },
+    "terrainIntersectionCurve": "parcel:terrainIntersectionCurve",
     "horizontalCRS": {
       "@id": "container:horizontalCRS",
       "@type": "@id"
@@ -13,7 +191,18 @@
       "@type": "@id"
     },
     "surveyDescription": "container:surveyDescription",
-    "surveyDescriptors": "container:surveyDescriptors",
+    "surveyDescriptors": {
+      "@context": {
+        "name": "csdm:commonpatterns/name",
+        "hasPart": {
+          "@context": {
+            "type": "csdm:commonpatterns/namePartType"
+          },
+          "@id": "dct:hasPart"
+        }
+      },
+      "@id": "container:surveyDescriptors"
+    },
     "purpose": {
       "@id": "container:purpose",
       "@type": "@id"
@@ -22,12 +211,7 @@
       "@id": "container:surveyType",
       "@type": "@id"
     },
-    "referencedCSDs": {
-      "@context": {
-        "name": "rdfs:label"
-      },
-      "@id": "container:referencedCSD"
-    },
+    "referencedCSDs": "container:referencedCSD",
     "adminUnit": {
       "@context": {
         "href": {
@@ -89,149 +273,28 @@
     },
     "points": {
       "@context": {
-        "name": {
-          "@id": "rdfs:label",
-          "@type": "@id"
-        },
-        "purpose": {
-          "@type": "@id",
-          "@id": "surv:purpose"
-        },
-        "ptQuality": {
-          "@id": "commonpatterns:qualityClass",
-          "@type": "@id"
-        },
-        "ptQualityMeasure": {
-          "@id": "commonpatterns:qualityMeasure",
-          "@type": "@id"
-        },
-        "comment": "rdfs:comment",
-        "monumentedBy": {
-          "@type": "@id",
-          "@id": "surv:monumentedBy"
-        },
-        "age": "surv:age",
-        "note": "rdfs:comment",
-        "geodeticid": "surv:geodeticid",
-        "condition": {
-          "@type": "@id",
-          "@id": "surv:condition"
-        },
-        "form": {
-          "@type": "@id",
-          "@id": "surv:form"
-        },
-        "replaces": {
-          "@type": "@id",
-          "@id": "surv:replaces"
-        },
-        "state": {
-          "@type": "@id",
-          "@id": "surv:state"
-        },
-        "references": {
-          "@id": "geojson:relatedFeatures",
-          "@type": "@id",
-          "@container": "@list"
-        },
-        "vectorPurpose": {
-          "@type": "@id",
-          "@id": "surv:vectorPurpose"
-        }
-      },
-      "@id": "container:points"
-    },
-    "observedVectors": {
-      "@context": {
-        "references": {
-          "@id": "geojson:relatedFeatures",
-          "@type": "@id",
-          "@container": "@list"
-        }
-      },
-      "@id": "container:observedVectors"
-    },
-    "adoptedVectors": "container:adoptedVectors",
-    "parcels": {
-      "@context": {
-        "appellation": "parcel:appellation",
-        "parcelType": {
-          "@id": "parcel:type",
-          "@type": "@id"
-        },
-        "parcelState": {
-          "@id": "parcel:state",
-          "@type": "@id"
-        },
-        "address": "sdo:address",
-        "parcelPurpose": {
-          "@id": "parcel:purpose",
-          "@type": "@id"
-        },
-        "area": "parcel:surfaceArea",
-        "floor": "parcel:floor",
-        "zmin": "parcel:zmin",
-        "zmax": "parcel:zmax",
-        "interests": {
-          "@context": {
-            "interestLink": {
-              "@type": "@id",
-              "@id": "parcel:interestLink"
-            },
-            "interestName": "parcel:interestName",
-            "interestType": {
-              "@type": "@id",
-              "@id": "parcel:interestType"
-            },
-            "dateInForce": "parcel:interestDateInForce",
-            "dateExpires": "parcel:interestDateExpires",
-            "statuteLink": {
-              "@type": "@id",
-              "@id": "parcel:statuteLink"
-            },
-            "statuteName": "parcel:statuteName",
-            "benefitedPartyName": "parcel:benefitedPartyName",
-            "benefitedPartyLink": {
-              "@type": "@id",
-              "@id": "parcel:benefitedPartyLink"
-            },
-            "originalSurveyLink": {
-              "@type": "@id",
-              "@id": "parcel:originalSurveyLink"
-            },
-            "referencedParcel": {
-              "@type": "@id",
-              "@id": "parcel:referencedParcel"
-            },
-            "burdenedParcels": {
-              "@id": "parcel:burdened",
-              "@container": "@set"
-            },
-            "benefitedParcels": {
-              "@id": "parcel:benefited",
-              "@container": "@set"
-            },
-            "description": "parcel:interestDescription",
-            "entitlementPortion": "parcel:entitlementPortion",
-            "liabilityPortion": "parcel:liabilityPortion"
-          },
-          "@id": "parcel:interest",
-          "@container": "@set"
-        }
-      },
-      "@id": "container:parcels"
-    },
-    "vectorObservations": {
-      "@context": {
         "features": {
-          "@id": "sosa:hasMember",
-          "@type": "@id",
-          "@container": "@set",
           "@context": {
-            "features": {
-              "@container": "@set",
-              "@id": "sosa:hasMember",
-              "@type": "@id"
+            "featureType": "@type",
+            "links": {
+              "@context": {
+                "href": {
+                  "@type": "@id",
+                  "@id": "oa:hasTarget"
+                },
+                "rel": {
+                  "@context": {
+                    "@base": "http://www.iana.org/assignments/relation/"
+                  },
+                  "@id": "http://www.iana.org/assignments/relation",
+                  "@type": "@id"
+                },
+                "type": "dct:type",
+                "hreflang": "dct:language",
+                "title": "rdfs:label",
+                "length": "dct:extent"
+              },
+              "@id": "rdfs:seeAlso"
             },
             "Prism": {
               "@id": "geojson:Prism",
@@ -247,85 +310,725 @@
                 "prisms": "geojson:prisms"
               }
             },
-            "observedProperty": {
-              "@id": "sosa:observedProperty",
+            "topology": {
+              "@context": {
+                "references": {
+                  "@id": "geojson:relatedFeatures",
+                  "@type": "@id",
+                  "@container": "@list"
+                }
+              },
+              "@type": "@id",
+              "@id": "geojson:topology"
+            },
+            "@base": "https://linked.data.gov.au/def/csdm/surveyfeatures/",
+            "condition": {
+              "@type": "@id",
+              "@id": "surv:condition"
+            },
+            "form": {
+              "@type": "@id",
+              "@id": "surv:form"
+            },
+            "replaces": {
+              "@type": "@id",
+              "@id": "surv:replaces"
+            },
+            "state": {
+              "@type": "@id",
+              "@id": "surv:state"
+            },
+            "purpose": {
+              "@type": "@id",
+              "@id": "surv:purpose"
+            },
+            "geodeticid": {
+              "@id": "surv:geodeticid",
+              "@context": {
+                "hasPart": {
+                  "@context": {
+                    "type": "csdm:commonpatterns/namePartType"
+                  },
+                  "@id": "dct:hasPart"
+                }
+              }
+            },
+            "name": {
+              "@id": "csdm:commonpatterns/name",
+              "@type": "@id",
+              "@context": {
+                "hasPart": {
+                  "@context": {
+                    "type": "csdm:commonpatterns/namePartType"
+                  },
+                  "@id": "dct:hasPart"
+                }
+              }
+            }
+          },
+          "@id": "geojson:features",
+          "@container": "@set"
+        }
+      },
+      "@id": "container:points"
+    },
+    "observedVectors": {
+      "@context": {
+        "featureType": "@type"
+      },
+      "@id": "container:observedVectors"
+    },
+    "adoptedVectors": {
+      "@context": {
+        "featureType": "@type"
+      },
+      "@id": "container:adoptedVectors"
+    },
+    "parcels": {
+      "@context": {
+        "featureType": "@type",
+        "features": {
+          "@context": {
+            "links": {
+              "@context": {
+                "href": {
+                  "@type": "@id",
+                  "@id": "oa:hasTarget"
+                },
+                "rel": {
+                  "@context": {
+                    "@base": "http://www.iana.org/assignments/relation/"
+                  },
+                  "@id": "http://www.iana.org/assignments/relation",
+                  "@type": "@id"
+                },
+                "type": "dct:type",
+                "hreflang": "dct:language",
+                "title": "rdfs:label",
+                "length": "dct:extent"
+              },
+              "@id": "rdfs:seeAlso"
+            },
+            "Prism": {
+              "@id": "geojson:Prism",
+              "@context": {
+                "base": "geojson:prismBase",
+                "lower": "geojson:prismLower",
+                "upper": "geojson:prismUpper"
+              }
+            },
+            "MultiPrism": {
+              "@id": "geojson:MultiPrism",
+              "@context": {
+                "prisms": "geojson:prisms"
+              }
+            },
+            "topology": {
+              "@context": {
+                "references": {
+                  "@id": "geojson:relatedFeatures",
+                  "@type": "@id",
+                  "@container": "@list"
+                }
+              },
+              "@type": "@id",
+              "@id": "geojson:topology"
+            },
+            "appellation": {
+              "@context": {
+                "name": "csdm:commonpatterns/name",
+                "hasPart": {
+                  "@context": {
+                    "type": "csdm:commonpatterns/namePartType"
+                  },
+                  "@id": "dct:hasPart"
+                }
+              },
+              "@id": "parcel:appellation"
+            },
+            "parcelType": {
+              "@id": "parcel:type",
               "@type": "@id"
             },
-            "madeBySensor": {
-              "@id": "sosa:madeBySensor",
+            "parcelState": {
+              "@id": "parcel:state",
+              "@type": "@id"
+            },
+            "address": "sdo:address",
+            "parcelPurpose": {
+              "@id": "parcel:purpose",
+              "@type": "@id"
+            },
+            "area": "parcel:surfaceArea",
+            "floor": "parcel:floor",
+            "zmin": "parcel:zmin",
+            "zmax": "parcel:zmax",
+            "interests": {
+              "@context": {
+                "interestLink": {
+                  "@type": "@id",
+                  "@id": "parcel:interestLink"
+                },
+                "interestName": "parcel:interestName",
+                "interestType": {
+                  "@type": "@id",
+                  "@id": "parcel:interestType"
+                },
+                "dateInForce": "parcel:interestDateInForce",
+                "dateExpires": "parcel:interestDateExpires",
+                "statuteLink": {
+                  "@type": "@id",
+                  "@id": "parcel:statuteLink"
+                },
+                "statuteName": "parcel:statuteName",
+                "benefitedPartyName": "parcel:benefitedPartyName",
+                "benefitedPartyLink": {
+                  "@type": "@id",
+                  "@id": "parcel:benefitedPartyLink"
+                },
+                "originalSurveyLink": {
+                  "@type": "@id",
+                  "@id": "parcel:originalSurveyLink"
+                },
+                "referencedParcel": {
+                  "@type": "@id",
+                  "@id": "parcel:referencedParcel"
+                },
+                "burdenedParcels": {
+                  "@id": "parcel:burdened",
+                  "@container": "@set"
+                },
+                "benefitedParcels": {
+                  "@id": "parcel:benefited",
+                  "@container": "@set"
+                },
+                "description": "parcel:interestDescription",
+                "entitlementPortion": "parcel:entitlementPortion",
+                "liabilityPortion": "parcel:liabilityPortion"
+              },
+              "@id": "parcel:interest",
+              "@container": "@set"
+            }
+          },
+          "@id": "geojson:features",
+          "@container": "@set"
+        }
+      },
+      "@id": "container:parcels"
+    },
+    "vectorObservations": {
+      "@context": {
+        "observedProperty": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/property/"
+          },
+          "@id": "sosa:observedProperty",
+          "@type": "@id"
+        },
+        "madeBySensor": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor",
+            "sensorType": "@type",
+            "baseSensor": "csdm:sensors/baseSensor",
+            "roverSensor": "csdm:sensors/roverSensor"
+          },
+          "@id": "sosa:madeBySensor",
+          "@type": "@id"
+        },
+        "hasMember": {
+          "@context": {
+            "features": {
+              "@id": "sosa:hasMember",
+              "@type": "@id"
+            }
+          },
+          "@id": "sosa:hasMember",
+          "@type": "@id"
+        },
+        "featureType": "@type",
+        "features": {
+          "@id": "sosa:hasMember",
+          "@type": "@id",
+          "@container": "@set",
+          "@context": {
+            "features": {
+              "@container": "@set",
+              "@id": "sosa:hasMember",
               "@type": "@id"
             },
             "hasResult": {
               "@id": "sosa:hasResult",
               "@type": "@id",
               "@context": {
-                "pose": "surv:pose",
+                "pose": {
+                  "@context": {
+                    "angles": "csdm:utils/geopose/angles"
+                  },
+                  "@id": "surv:pose"
+                },
                 "distance": "surv:distance"
               }
             },
-            "angleAccuracy": "csdm:surveyobs/angleAccuracyMeasure",
-            "distanceAccuracy": "csdm:surveyobs/distanceAccuracyMeasure",
-            "distanceAccuracyClass": {
+            "hasResultQuality": {
+              "@id": "sosa:hasResultQuality",
               "@type": "@id",
-              "@id": "csdm:surveyobs/distanceAccuracyClass"
-            },
-            "angleAccuracyClass": {
-              "@type": "@id",
-              "@id": "csdm:surveyobs/angleAccuracyClass"
+              "@context": {
+                "angleAccuracy": "csdm:surveyobs/angleAccuracyMeasure",
+                "distanceAccuracy": "csdm:surveyobs/distanceAccuracyMeasure",
+                "distanceAccuracyClass": {
+                  "@type": "@id",
+                  "@id": "csdm:surveyobs/distanceAccuracyClass"
+                },
+                "angleAccuracyClass": {
+                  "@type": "@id",
+                  "@id": "csdm:surveyobs/angleAccuracyClass"
+                }
+              }
             }
           }
+        },
+        "angleType": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/defs/angletypes/"
+          },
+          "@type": "@id",
+          "@id": "csdm:surveyobs/angleType"
+        },
+        "distanceType": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/defs/distancetypes/"
+          },
+          "@type": "@id",
+          "@id": "csdm:surveyobs/distanceType"
         }
       },
       "@id": "container:vectorObservations"
     },
-    "resultTime": "sosa:resultTime",
-    "phenomenonTime": {
-      "@id": "sosa:phenomenonTime",
-      "@type": "@id"
-    },
-    "hasFeatureOfInterest": {
-      "@id": "sosa:hasFeatureOfInterest",
-      "@type": "@id"
-    },
-    "observedProperty": {
+    "occupationObservations": {
       "@context": {
-        "@base": "https://linked.data.gov.au/def/csdm/property/"
-      },
-      "@id": "sosa:observedProperty",
-      "@type": "@id"
-    },
-    "usedProcedure": {
-      "@id": "sosa:usedProcedure",
-      "@type": "@id"
-    },
-    "madeBySensor": {
-      "@context": {
-        "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor"
-      },
-      "@id": "sosa:madeBySensor",
-      "@type": "@id"
-    },
-    "hasMember": {
-      "@context": {
-        "observedProperty": {
-          "@id": "sosa:observedProperty",
-          "@type": "@id"
-        },
-        "madeBySensor": {
-          "@id": "sosa:madeBySensor",
-          "@type": "@id"
-        },
-        "features": {
+        "hasMember": {
+          "@context": {
+            "features": {
+              "@id": "sosa:hasMember",
+              "@type": "@id"
+            }
+          },
           "@id": "sosa:hasMember",
           "@type": "@id"
+        },
+        "featureType": "@type",
+        "features": {
+          "@id": "sosa:hasMember",
+          "@type": "@id",
+          "@container": "@set",
+          "@context": {
+            "features": {
+              "@container": "@set",
+              "@id": "sosa:hasMember",
+              "@type": "@id"
+            },
+            "hasResult": {
+              "@id": "sosa:hasResult",
+              "@type": "@id",
+              "@context": {
+                "pose": {
+                  "@context": {
+                    "angles": "csdm:utils/geopose/angles"
+                  },
+                  "@id": "surv:pose"
+                },
+                "distance": "surv:distance"
+              }
+            },
+            "hasResultQuality": {
+              "@id": "sosa:hasResultQuality",
+              "@type": "@id",
+              "@context": {
+                "angleAccuracy": "csdm:surveyobs/angleAccuracyMeasure",
+                "distanceAccuracy": "csdm:surveyobs/distanceAccuracyMeasure",
+                "distanceAccuracyClass": {
+                  "@type": "@id",
+                  "@id": "csdm:surveyobs/distanceAccuracyClass"
+                },
+                "angleAccuracyClass": {
+                  "@type": "@id",
+                  "@id": "csdm:surveyobs/angleAccuracyClass"
+                }
+              }
+            }
+          }
         }
       },
-      "@id": "sosa:hasMember",
+      "@id": "container:occupationObservations"
+    },
+    "occupationFeatures": "container:occupationFeatures",
+    "Arc": "geojson:Arc",
+    "ArcWithCenter": "geojson:ArcWithCenter",
+    "ArcByChord": "geojson:ArcByChord",
+    "CircleByCenter": "geojson:CircleByCenter",
+    "CubicSpline": "geojson:CubicSpline",
+    "radius": "geojson:radius",
+    "arcLength": "geojson:arcLength",
+    "startTangentVector": "geojson:startTangentVector",
+    "endTangentVector": "geojson:endTangentVector",
+    "activityType": "@type",
+    "agentType": "@type",
+    "entityType": "@type",
+    "provType": "@type",
+    "Activity": "prov:Activity",
+    "ActivityInfluence": "prov:ActivityInfluence",
+    "Agent": "prov:Agent",
+    "AgentInfluence": "prov:AgentInfluence",
+    "Association": "prov:Association",
+    "Attribution": "prov:Attribution",
+    "Bundle": "prov:Bundle",
+    "Collection": "prov:Collection",
+    "Communication": "prov:Communication",
+    "Delegation": "prov:Delegation",
+    "Derivation": "prov:Derivation",
+    "EmptyCollection": "prov:EmptyCollection",
+    "End": "prov:End",
+    "Entity": "prov:Entity",
+    "EntityInfluence": "prov:EntityInfluence",
+    "Generation": "prov:Generation",
+    "Influence": "prov:Influence",
+    "InstantaneousEvent": "prov:InstantaneousEvent",
+    "Invalidation": "prov:Invalidation",
+    "Location": "prov:Location",
+    "Organization": "prov:Organization",
+    "Person": "prov:Person",
+    "Plan": "prov:Plan",
+    "PrimarySource": "prov:PrimarySource",
+    "Quotation": "prov:Quotation",
+    "Revision": "prov:Revision",
+    "Role": "prov:Role",
+    "SoftwareAgent": "prov:SoftwareAgent",
+    "Start": "prov:Start",
+    "Usage": "prov:Usage",
+    "ServiceDescription": "prov:ServiceDescription",
+    "DirectQueryService": "prov:DirectQueryService",
+    "Accept": "prov:Accept",
+    "Contribute": "prov:Contribute",
+    "Contributor": "prov:Contributor",
+    "Copyright": "prov:Copyright",
+    "Create": "prov:Create",
+    "Creator": "prov:Creator",
+    "Modify": "prov:Modify",
+    "Publish": "prov:Publish",
+    "Publisher": "prov:Publisher",
+    "Replace": "prov:Replace",
+    "RightsAssignment": "prov:RightsAssignment",
+    "RightsHolder": "prov:RightsHolder",
+    "Submit": "prov:Submit",
+    "Dictionary": "prov:Dictionary",
+    "EmptyDictionary": "prov:EmptyDictionary",
+    "KeyEntityPair": "prov:KeyEntityPair",
+    "Insertion": "prov:Insertion",
+    "Removal": "prov:Removal",
+    "atTime": {
+      "@id": "prov:atTime",
+      "@type": "xsd:dateTime"
+    },
+    "endedAtTime": {
+      "@id": "prov:endedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "generatedAtTime": {
+      "@id": "prov:generatedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "invalidatedAtTime": {
+      "@id": "prov:invalidatedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "startedAtTime": {
+      "@id": "prov:startedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "value": "prov:value",
+    "provenanceUriTemplate": "prov:provenanceUriTemplate",
+    "pairKey": {
+      "@id": "prov:pairKey",
+      "@type": "rdfs:Literal"
+    },
+    "removedKey": {
+      "@id": "prov:removedKey",
+      "@type": "rdfs:Literal"
+    },
+    "actedOnBehalfOf": {
+      "@id": "prov:actedOnBehalfOf",
       "@type": "@id"
     },
-    "id": "@id",
-    "properties": "@nest",
-    "featureType": "@type",
+    "agent": {
+      "@id": "prov:agent",
+      "@type": "@id"
+    },
+    "alternateOf": {
+      "@id": "prov:alternateOf",
+      "@type": "@id"
+    },
+    "atLocation": {
+      "@id": "prov:atLocation",
+      "@type": "@id"
+    },
+    "entity": {
+      "@id": "prov:entity",
+      "@type": "@id"
+    },
+    "generated": {
+      "@id": "prov:generated",
+      "@type": "@id"
+    },
+    "hadActivity": {
+      "@id": "prov:hadActivity",
+      "@type": "@id"
+    },
+    "activity": {
+      "@id": "prov:activity",
+      "@type": "@id"
+    },
+    "hadGeneration": {
+      "@id": "prov:hadGeneration",
+      "@type": "@id"
+    },
+    "hadMember": {
+      "@id": "prov:hadMember",
+      "@type": "@id"
+    },
+    "hadPlan": {
+      "@id": "prov:hadPlan",
+      "@type": "@id"
+    },
+    "hadPrimarySource": {
+      "@id": "prov:hadPrimarySource",
+      "@type": "@id"
+    },
+    "hadRole": {
+      "@id": "prov:hadRole",
+      "@type": "@id"
+    },
+    "hadUsage": {
+      "@id": "prov:hadUsage",
+      "@type": "@id"
+    },
+    "influenced": {
+      "@id": "prov:influenced",
+      "@type": "@id"
+    },
+    "influencer": {
+      "@id": "prov:influencer",
+      "@type": "@id"
+    },
+    "invalidated": {
+      "@id": "prov:invalidated",
+      "@type": "@id"
+    },
+    "qualifiedAssociation": {
+      "@id": "prov:qualifiedAssociation",
+      "@type": "@id"
+    },
+    "qualifiedAttribution": {
+      "@id": "prov:qualifiedAttribution",
+      "@type": "@id"
+    },
+    "qualifiedCommunication": {
+      "@id": "prov:qualifiedCommunication",
+      "@type": "@id"
+    },
+    "qualifiedDelegation": {
+      "@id": "prov:qualifiedDelegation",
+      "@type": "@id"
+    },
+    "qualifiedDerivation": {
+      "@id": "prov:qualifiedDerivation",
+      "@type": "@id"
+    },
+    "qualifiedEnd": {
+      "@id": "prov:qualifiedEnd",
+      "@type": "@id"
+    },
+    "qualifiedGeneration": {
+      "@id": "prov:qualifiedGeneration",
+      "@type": "@id"
+    },
+    "qualifiedInfluence": {
+      "@id": "prov:qualifiedInfluence",
+      "@type": "@id"
+    },
+    "qualifiedInvalidation": {
+      "@id": "prov:qualifiedInvalidation",
+      "@type": "@id"
+    },
+    "qualifiedPrimarySource": {
+      "@id": "prov:qualifiedPrimarySource",
+      "@type": "@id"
+    },
+    "qualifiedQuotation": {
+      "@id": "prov:qualifiedQuotation",
+      "@type": "@id"
+    },
+    "qualifiedRevision": {
+      "@id": "prov:qualifiedRevision",
+      "@type": "@id"
+    },
+    "qualifiedStart": {
+      "@id": "prov:qualifiedStart",
+      "@type": "@id"
+    },
+    "qualifiedUsage": {
+      "@id": "prov:qualifiedUsage",
+      "@type": "@id"
+    },
+    "specializationOf": {
+      "@id": "prov:specializationOf",
+      "@type": "@id"
+    },
+    "used": {
+      "@id": "prov:used",
+      "@type": "@id"
+    },
+    "wasAssociatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    },
+    "wasAttributedTo": {
+      "@id": "prov:wasAttributedTo",
+      "@type": "@id"
+    },
+    "wasDerivedFrom": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    },
+    "wasEndedBy": {
+      "@id": "prov:wasEndedBy",
+      "@type": "@id"
+    },
+    "wasInfluencedBy": {
+      "@id": "prov:wasInfluencedBy",
+      "@type": "@id"
+    },
+    "wasInformedBy": {
+      "@id": "prov:wasInformedBy",
+      "@type": "@id"
+    },
+    "wasInvalidatedBy": {
+      "@id": "prov:wasInvalidatedBy",
+      "@type": "@id"
+    },
+    "wasQuotedFrom": {
+      "@id": "prov:wasQuotedFrom",
+      "@type": "@id"
+    },
+    "wasRevisionOf": {
+      "@id": "prov:wasRevisionOf",
+      "@type": "@id"
+    },
+    "wasStartedBy": {
+      "@id": "prov:wasStartedBy",
+      "@type": "@id"
+    },
+    "has_anchor": {
+      "@id": "prov:has_anchor",
+      "@type": "@id"
+    },
+    "has_query_service": {
+      "@id": "prov:has_query_service",
+      "@type": "@id"
+    },
+    "describesService": {
+      "@id": "prov:describesService",
+      "@type": "@id"
+    },
+    "pingback": {
+      "@id": "prov:pingback",
+      "@type": "@id"
+    },
+    "dictionary": {
+      "@id": "prov:dictionary",
+      "@type": "@id"
+    },
+    "derivedByInsertionFrom": {
+      "@id": "prov:derivedByInsertionFrom",
+      "@type": "@id"
+    },
+    "derivedByRemovalFrom": {
+      "@id": "prov:derivedByRemovalFrom",
+      "@type": "@id"
+    },
+    "insertedKeyEntityPair": {
+      "@id": "prov:insertedKeyEntityPair",
+      "@type": "@id"
+    },
+    "hadDictionaryMember": {
+      "@id": "prov:hadDictionaryMember",
+      "@type": "@id"
+    },
+    "pairEntity": {
+      "@id": "prov:pairEntity",
+      "@type": "@id"
+    },
+    "qualifiedInsertion": {
+      "@id": "prov:qualifiedInsertion",
+      "@type": "@id"
+    },
+    "qualifiedRemoval": {
+      "@id": "prov:qualifiedRemoval",
+      "@type": "@id"
+    },
+    "asInBundle": {
+      "@id": "prov:asInBundle",
+      "@type": "@id"
+    },
+    "mentionOf": {
+      "@id": "prov:mentionOf",
+      "@type": "@id"
+    },
+    "CompoundName": "csdm:commonpatterns/CompoundName",
+    "vectorPurpose": {
+      "@type": "@id",
+      "@id": "surv:vectorPurpose"
+    },
+    "monumentedBy": {
+      "@type": "@id",
+      "@id": "surv:monumentedBy"
+    },
+    "comment": "rdfs:comment",
+    "note": "rdfs:comment",
+    "age": "surv:age",
+    "geodeticid": "surv:geodeticid",
+    "fromSurvey": {
+      "@type": "@id",
+      "@id": "surv:fromSurvey"
+    },
+    "CadastralMark": {
+      "@id": "surv:CadastralMark",
+      "@type": "@id"
+    },
+    "BoundaryMark": {
+      "@id": "surv:BoundaryMark",
+      "@type": "@id"
+    },
+    "ptQuality": {
+      "@id": "csdm:commonpatterns/qualityClass",
+      "@type": "@id"
+    },
+    "ptQualityMeasure": {
+      "@id": "csdm:commonpatterns/qualityMeasure",
+      "@type": "@id"
+    },
+    "GeodeticReferenceMark": {
+      "@id": "surv:GeodeticReferenceMark",
+      "@type": "@id"
+    },
+    "ObservedVector": {
+      "@id": "surv:ObservedVector",
+      "@type": "@id"
+    },
+    "AdoptedVector": {
+      "@id": "surv:SurveyedVector",
+      "@type": "@id"
+    },
+    "label": "rdfs:label",
     "ActuatableProperty": {
       "@id": "sosa:ActuatableProperty",
       "@type": "@id"
@@ -421,58 +1124,6 @@
     "detects": {
       "@id": "sosa:detects",
       "@type": "@id"
-    },
-    "features": {
-      "@id": "geojson:features",
-      "@type": "@id",
-      "@container": "@set",
-      "@context": {
-        "features": {
-          "@container": "@set",
-          "@id": "sosa:hasMember",
-          "@type": "@id"
-        },
-        "Prism": {
-          "@id": "geojson:Prism",
-          "@context": {
-            "base": "geojson:prismBase",
-            "lower": "geojson:prismLower",
-            "upper": "geojson:prismUpper"
-          }
-        },
-        "MultiPrism": {
-          "@id": "geojson:MultiPrism",
-          "@context": {
-            "prisms": "geojson:prisms"
-          }
-        },
-        "observedProperty": {
-          "@id": "sosa:observedProperty",
-          "@type": "@id"
-        },
-        "madeBySensor": {
-          "@id": "sosa:madeBySensor",
-          "@type": "@id"
-        },
-        "hasResult": {
-          "@id": "sosa:hasResult",
-          "@type": "@id",
-          "@context": {
-            "pose": "surv:pose",
-            "distance": "surv:distance"
-          }
-        },
-        "angleAccuracy": "csdm:surveyobs/angleAccuracyMeasure",
-        "distanceAccuracy": "csdm:surveyobs/distanceAccuracyMeasure",
-        "distanceAccuracyClass": {
-          "@type": "@id",
-          "@id": "csdm:surveyobs/distanceAccuracyClass"
-        },
-        "angleAccuracyClass": {
-          "@type": "@id",
-          "@id": "csdm:surveyobs/angleAccuracyClass"
-        }
-      }
     },
     "forProperty": {
       "@id": "sosa:forProperty",
@@ -732,715 +1383,29 @@
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
-    "angleType": {
-      "@context": {
-        "@base": "https://linked.data.gov.au/def/csdm/defs/angletypes/"
-      },
-      "@type": "@id",
-      "@id": "csdm:surveyobs/angleType"
-    },
-    "distanceType": {
-      "@context": {
-        "@base": "https://linked.data.gov.au/def/csdm/defs/distancetypes/"
-      },
-      "@type": "@id",
-      "@id": "csdm:surveyobs/distanceType"
-    },
-    "occupationObservations": {
-      "@context": {
-        "features": {
-          "@id": "sosa:hasMember",
-          "@type": "@id"
-        }
-      },
-      "@id": "container:occupationObservations"
-    },
-    "occupationFeatures": "container:occupationFeatures",
-    "type": "@type",
-    "geometry": "geojson:geometry",
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "links": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      },
-      "@id": "rdfs:seeAlso"
-    },
-    "time": {
-      "@context": {
-        "date": {
-          "@id": "owlTime:hasTime",
-          "@type": "xsd:date"
-        },
-        "timestamp": {
-          "@id": "owlTime:hasTime",
-          "@type": "xsd:dateTime"
-        },
-        "interval": {
-          "@id": "owlTime:hasTime",
-          "@container": "@list"
-        }
-      },
-      "@id": "dct:time"
-    },
-    "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
-    "place": "dct:spatial",
-    "Polyhedron": "geojson:Polyhedron",
-    "MultiPolyhedron": "geojson:MultiPolyhedron",
-    "Prism": {
-      "@id": "geojson:Prism",
-      "@context": {
-        "base": "geojson:prismBase",
-        "lower": "geojson:prismLower",
-        "upper": "geojson:prismUpper"
-      }
-    },
-    "MultiPrism": {
-      "@id": "geojson:MultiPrism",
-      "@context": {
-        "prisms": "geojson:prisms"
-      }
-    },
-    "coordinates": {
-      "@container": "@list",
-      "@id": "geojson:coordinates"
-    },
-    "geometries": {
-      "@id": "geojson:geometry",
-      "@container": "@list"
-    },
-    "topology": {
-      "@context": {
-        "references": {
-          "@id": "geojson:relatedFeatures",
-          "@type": "@id",
-          "@container": "@list"
-        }
-      },
-      "@type": "@id",
-      "@id": "geojson:topology"
-    },
-    "name": "commonpatterns:name",
-    "bearingRotation": "container:bearingRotation",
-    "annotations": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent",
-        "role": {
-          "@id": "prof:hasRole",
-          "@type": "@id"
-        },
-        "conformsTo": {
-          "@id": "dct:conformsTo",
-          "@type": "@id"
-        }
-      },
-      "@id": "container:annotations"
-    },
-    "entityType": "@type",
-    "has_provenance": {
-      "@id": "dct:provenance",
+    "hasMember": {
+      "@id": "sosa:hasMember",
       "@type": "@id"
     },
-    "wasGeneratedBy": {
-      "@id": "prov:wasGeneratedBy",
+    "hasFeatureOfInterest": {
+      "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
-    "wasAttributedTo": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent",
-        "name": "rdfs:label"
-      },
-      "@id": "prov:wasAttributedTo",
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
       "@type": "@id"
     },
-    "wasDerivedFrom": {
-      "@id": "prov:wasDerivedFrom",
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
       "@type": "@id"
     },
-    "alternateOf": {
-      "@id": "prov:alternateOf",
+    "phenomenonTime": {
+      "@id": "sosa:phenomenonTime",
       "@type": "@id"
     },
-    "hadPrimarySource": {
-      "@id": "prov:hadPrimarySource",
-      "@type": "@id"
-    },
-    "specializationOf": {
-      "@id": "prov:specializationOf",
-      "@type": "@id"
-    },
-    "wasInvalidatedBy": {
-      "@id": "prov:wasInvalidatedBy",
-      "@type": "@id"
-    },
-    "wasQuotedFrom": {
-      "@id": "prov:wasQuotedFrom",
-      "@type": "@id"
-    },
-    "wasRevisionOf": {
-      "@id": "prov:wasRevisionOf",
-      "@type": "@id"
-    },
-    "atLocation": {
-      "@id": "prov:atLocation",
-      "@type": "@id"
-    },
-    "qualifiedGeneration": {
-      "@context": {
-        "atTime": {
-          "@id": "prov:atTime",
-          "@type": "xsd:dateTime"
-        },
-        "hadRole": {
-          "@id": "prov:hadRole",
-          "@type": "@id"
-        },
-        "influencer": {
-          "@id": "prov:influencer",
-          "@type": "@id"
-        },
-        "hadActivity": {
-          "@id": "prov:hadActivity",
-          "@type": "@id"
-        },
-        "activity": {
-          "@id": "prov:activity",
-          "@type": "@id"
-        }
-      },
-      "@id": "prov:qualifiedGeneration",
-      "@type": "@id"
-    },
-    "qualifiedInvalidation": {
-      "@context": {
-        "atTime": {
-          "@id": "prov:atTime",
-          "@type": "xsd:dateTime"
-        },
-        "hadRole": {
-          "@id": "prov:hadRole",
-          "@type": "@id"
-        },
-        "influencer": {
-          "@id": "prov:influencer",
-          "@type": "@id"
-        },
-        "hadActivity": {
-          "@id": "prov:hadActivity",
-          "@type": "@id"
-        },
-        "activity": {
-          "@id": "prov:activity",
-          "@type": "@id"
-        }
-      },
-      "@id": "prov:qualifiedInvalidation",
-      "@type": "@id"
-    },
-    "qualifiedDerivation": {
-      "@context": {
-        "hadGeneration": {
-          "@context": {
-            "atTime": {
-              "@id": "prov:atTime",
-              "@type": "xsd:dateTime"
-            },
-            "hadRole": {
-              "@id": "prov:hadRole",
-              "@type": "@id"
-            },
-            "influencer": {
-              "@id": "prov:influencer",
-              "@type": "@id"
-            },
-            "activity": {
-              "@id": "prov:activity",
-              "@type": "@id"
-            }
-          },
-          "@id": "prov:hadGeneration",
-          "@type": "@id"
-        },
-        "hadActivity": {
-          "@id": "prov:hadActivity",
-          "@type": "@id"
-        },
-        "hadUsage": {
-          "@context": {
-            "atTime": {
-              "@id": "prov:atTime",
-              "@type": "xsd:dateTime"
-            }
-          },
-          "@id": "prov:hadUsage",
-          "@type": "@id"
-        },
-        "entity": {
-          "@id": "prov:entity",
-          "@type": "@id"
-        }
-      },
-      "@id": "prov:qualifiedDerivation",
-      "@type": "@id"
-    },
-    "qualifiedAttribution": {
-      "@context": {
-        "agent": {
-          "@context": {
-            "name": "rdfs:label"
-          },
-          "@id": "prov:agent",
-          "@type": "@id"
-        }
-      },
-      "@id": "prov:qualifiedAttribution",
-      "@type": "@id"
-    },
-    "wasInfluencedBy": {
-      "@id": "prov:wasInfluencedBy",
-      "@type": "@id"
-    },
-    "qualifiedInfluence": {
-      "@context": {
-        "influencer": {
-          "@id": "prov:influencer",
-          "@type": "@id"
-        },
-        "entity": {
-          "@id": "prov:entity",
-          "@type": "@id"
-        },
-        "activity": {
-          "@id": "prov:activity",
-          "@type": "@id"
-        },
-        "agent": {
-          "@id": "prov:agent",
-          "@type": "@id"
-        }
-      },
-      "@id": "prov:qualifiedInfluence",
-      "@type": "@id"
-    },
-    "provType": "@type",
-    "hadMember": {
-      "@id": "prov:hadMember",
-      "@type": "@id"
-    },
-    "activityType": "@type",
-    "endedAtTime": {
-      "@id": "prov:endedAtTime",
-      "@type": "xsd:dateTime"
-    },
-    "wasAssociatedWith": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent",
-        "name": "rdfs:label"
-      },
-      "@id": "prov:wasAssociatedWith",
-      "@type": "@id"
-    },
-    "wasInformedBy": {
-      "@id": "prov:wasInformedBy",
-      "@type": "@id"
-    },
-    "used": {
-      "@id": "prov:used",
-      "@type": "@id"
-    },
-    "wasStartedBy": {
-      "@id": "prov:wasStartedBy",
-      "@type": "@id"
-    },
-    "wasEndedBy": {
-      "@id": "prov:wasEndedBy",
-      "@type": "@id"
-    },
-    "invalidated": {
-      "@id": "prov:invalidated",
-      "@type": "@id"
-    },
-    "generated": {
-      "@id": "prov:generated",
-      "@type": "@id"
-    },
-    "qualifiedUsage": {
-      "@context": {
-        "atTime": {
-          "@id": "prov:atTime",
-          "@type": "xsd:dateTime"
-        },
-        "entity": {
-          "@id": "prov:entity",
-          "@type": "@id"
-        }
-      },
-      "@id": "prov:qualifiedUsage",
-      "@type": "@id"
-    },
-    "qualifiedCommunication": {
-      "@context": {
-        "atTime": {
-          "@id": "prov:atTime",
-          "@type": "xsd:dateTime"
-        },
-        "hadRole": {
-          "@id": "prov:hadRole",
-          "@type": "@id"
-        },
-        "influencer": {
-          "@id": "prov:influencer",
-          "@type": "@id"
-        },
-        "hadActivity": {
-          "@id": "prov:hadActivity",
-          "@type": "@id"
-        },
-        "activity": {
-          "@id": "prov:activity",
-          "@type": "@id"
-        }
-      },
-      "@id": "prov:qualifiedCommunication",
-      "@type": "@id"
-    },
-    "qualifiedStart": {
-      "@context": {
-        "atTime": {
-          "@id": "prov:atTime",
-          "@type": "xsd:dateTime"
-        },
-        "entity": {
-          "@id": "prov:entity",
-          "@type": "@id"
-        },
-        "hadActivity": {
-          "@id": "prov:hadActivity",
-          "@type": "@id"
-        }
-      },
-      "@id": "prov:qualifiedStart",
-      "@type": "@id"
-    },
-    "qualifiedEnd": {
-      "@context": {
-        "atTime": {
-          "@id": "prov:atTime",
-          "@type": "xsd:dateTime"
-        },
-        "entity": {
-          "@id": "prov:entity",
-          "@type": "@id"
-        },
-        "hadActivity": {
-          "@id": "prov:hadActivity",
-          "@type": "@id"
-        }
-      },
-      "@id": "prov:qualifiedEnd",
-      "@type": "@id"
-    },
-    "qualifiedAssociation": {
-      "@context": {
-        "agent": {
-          "@context": {
-            "name": "rdfs:label"
-          },
-          "@id": "prov:agent",
-          "@type": "@id"
-        },
-        "hadRole": {
-          "@id": "prov:hadRole",
-          "@type": "@id"
-        },
-        "hadPlan": {
-          "@id": "prov:hadPlan",
-          "@type": "@id"
-        }
-      },
-      "@id": "prov:qualifiedAssociation",
-      "@type": "@id"
-    },
-    "agentType": "@type",
-    "actedOnBehalfOf": {
-      "@id": "prov:actedOnBehalfOf",
-      "@type": "@id"
-    },
-    "qualifiedDelegation": {
-      "@context": {
-        "agent": {
-          "@id": "prov:agent",
-          "@type": "@id"
-        },
-        "hadActivity": {
-          "@id": "prov:hadActivity",
-          "@type": "@id"
-        }
-      },
-      "@id": "prov:qualifiedDelegation",
-      "@type": "@id"
-    },
-    "CSD": "container:CSD",
-    "locality": "csd:locality",
-    "PrimaryParcel": {
-      "@id": "parcel:PrimaryParcel",
-      "@type": "@id"
-    },
-    "SecondaryParcel": {
-      "@id": "parcel:SecondaryParcel",
-      "@type": "@id"
-    },
-    "parcelQualityClass": {
-      "@id": "parcel:qualityClass",
-      "@type": "@id"
-    },
-    "terrainIntersectionCurve": "parcel:terrainIntersectionCurve",
-    "label": "rdfs:label",
-    "hasPart": {
-      "@context": {
-        "type": "commonpatterns:namePartType"
-      },
-      "@id": "dct:hasPart"
-    },
-    "CompoundName": "commonpatterns:CompoundName",
-    "Arc": "geojson:Arc",
-    "ArcWithCenter": "geojson:ArcWithCenter",
-    "ArcByChord": "geojson:ArcByChord",
-    "CircleByCenter": "geojson:CircleByCenter",
-    "CubicSpline": "geojson:CubicSpline",
-    "radius": "geojson:radius",
-    "arcLength": "geojson:arcLength",
-    "startTangentVector": "geojson:startTangentVector",
-    "endTangentVector": "geojson:endTangentVector",
-    "CadastralMark": {
-      "@id": "surv:CadastralMark",
-      "@type": "@id"
-    },
-    "BoundaryMark": {
-      "@id": "surv:BoundaryMark",
-      "@type": "@id"
-    },
-    "GeodeticReferenceMark": {
-      "@id": "surv:GeodeticReferenceMark",
-      "@type": "@id"
-    },
-    "ObservedVector": {
-      "@id": "surv:ObservedVector",
-      "@type": "@id"
-    },
-    "AdoptedVector": {
-      "@id": "surv:SurveyedVector",
-      "@type": "@id"
-    },
-    "Activity": "prov:Activity",
-    "ActivityInfluence": "prov:ActivityInfluence",
-    "Agent": "prov:Agent",
-    "AgentInfluence": "prov:AgentInfluence",
-    "Association": "prov:Association",
-    "Attribution": "prov:Attribution",
-    "Bundle": "prov:Bundle",
-    "Collection": "prov:Collection",
-    "Communication": "prov:Communication",
-    "Delegation": "prov:Delegation",
-    "Derivation": "prov:Derivation",
-    "EmptyCollection": "prov:EmptyCollection",
-    "End": "prov:End",
-    "Entity": "prov:Entity",
-    "EntityInfluence": "prov:EntityInfluence",
-    "Generation": "prov:Generation",
-    "Influence": "prov:Influence",
-    "InstantaneousEvent": "prov:InstantaneousEvent",
-    "Invalidation": "prov:Invalidation",
-    "Location": "prov:Location",
-    "Organization": "prov:Organization",
-    "Person": "prov:Person",
-    "Plan": "prov:Plan",
-    "PrimarySource": "prov:PrimarySource",
-    "Quotation": "prov:Quotation",
-    "Revision": "prov:Revision",
-    "Role": "prov:Role",
-    "SoftwareAgent": "prov:SoftwareAgent",
-    "Start": "prov:Start",
-    "Usage": "prov:Usage",
-    "ServiceDescription": "prov:ServiceDescription",
-    "DirectQueryService": "prov:DirectQueryService",
-    "Accept": "prov:Accept",
-    "Contribute": "prov:Contribute",
-    "Contributor": "prov:Contributor",
-    "Copyright": "prov:Copyright",
-    "Create": "prov:Create",
-    "Creator": "prov:Creator",
-    "Modify": "prov:Modify",
-    "Publish": "prov:Publish",
-    "Publisher": "prov:Publisher",
-    "Replace": "prov:Replace",
-    "RightsAssignment": "prov:RightsAssignment",
-    "RightsHolder": "prov:RightsHolder",
-    "Submit": "prov:Submit",
-    "Dictionary": "prov:Dictionary",
-    "EmptyDictionary": "prov:EmptyDictionary",
-    "KeyEntityPair": "prov:KeyEntityPair",
-    "Insertion": "prov:Insertion",
-    "Removal": "prov:Removal",
-    "generatedAtTime": {
-      "@id": "prov:generatedAtTime",
-      "@type": "xsd:dateTime"
-    },
-    "invalidatedAtTime": {
-      "@id": "prov:invalidatedAtTime",
-      "@type": "xsd:dateTime"
-    },
-    "startedAtTime": {
-      "@id": "prov:startedAtTime",
-      "@type": "xsd:dateTime"
-    },
-    "value": "prov:value",
-    "provenanceUriTemplate": "prov:provenanceUriTemplate",
-    "pairKey": {
-      "@id": "prov:pairKey",
-      "@type": "rdfs:Literal"
-    },
-    "removedKey": {
-      "@id": "prov:removedKey",
-      "@type": "rdfs:Literal"
-    },
-    "influenced": {
-      "@id": "prov:influenced",
-      "@type": "@id"
-    },
-    "qualifiedPrimarySource": {
-      "@id": "prov:qualifiedPrimarySource",
-      "@type": "@id"
-    },
-    "qualifiedQuotation": {
-      "@id": "prov:qualifiedQuotation",
-      "@type": "@id"
-    },
-    "qualifiedRevision": {
-      "@id": "prov:qualifiedRevision",
-      "@type": "@id"
-    },
-    "has_anchor": {
-      "@id": "prov:has_anchor",
-      "@type": "@id"
-    },
-    "has_query_service": {
-      "@id": "prov:has_query_service",
-      "@type": "@id"
-    },
-    "describesService": {
-      "@id": "prov:describesService",
-      "@type": "@id"
-    },
-    "pingback": {
-      "@id": "prov:pingback",
-      "@type": "@id"
-    },
-    "dictionary": {
-      "@id": "prov:dictionary",
-      "@type": "@id"
-    },
-    "derivedByInsertionFrom": {
-      "@id": "prov:derivedByInsertionFrom",
-      "@type": "@id"
-    },
-    "derivedByRemovalFrom": {
-      "@id": "prov:derivedByRemovalFrom",
-      "@type": "@id"
-    },
-    "insertedKeyEntityPair": {
-      "@id": "prov:insertedKeyEntityPair",
-      "@type": "@id"
-    },
-    "hadDictionaryMember": {
-      "@id": "prov:hadDictionaryMember",
-      "@type": "@id"
-    },
-    "pairEntity": {
-      "@id": "prov:pairEntity",
-      "@type": "@id"
-    },
-    "qualifiedInsertion": {
-      "@id": "prov:qualifiedInsertion",
-      "@type": "@id"
-    },
-    "qualifiedRemoval": {
-      "@id": "prov:qualifiedRemoval",
-      "@type": "@id"
-    },
-    "asInBundle": {
-      "@id": "prov:asInBundle",
-      "@type": "@id"
-    },
-    "mentionOf": {
-      "@id": "prov:mentionOf",
+    "resultTime": "sosa:resultTime",
+    "usedProcedure": {
+      "@id": "sosa:usedProcedure",
       "@type": "@id"
     },
     "container": "csdm:container/",
@@ -1448,18 +1413,18 @@
     "csd": "csdm:csd/",
     "parcel": "csdm:parcels/",
     "surv": "csdm:surveyfeatures/",
-    "dct": "http://purl.org/dc/terms/",
-    "commonpatterns": "csdm:commonpatterns/",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "csdm": "https://linked.data.gov.au/def/csdm/",
-    "oa": "http://www.w3.org/ns/oa#",
-    "prof": "http://www.w3.org/ns/dx/prof/",
     "geojson": "https://purl.org/geojson/vocab#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "oa": "http://www.w3.org/ns/oa#",
+    "dct": "http://purl.org/dc/terms/",
     "owlTime": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "csdm": "https://linked.data.gov.au/def/csdm/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "commonpatterns": "csdm:commonpatterns/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",

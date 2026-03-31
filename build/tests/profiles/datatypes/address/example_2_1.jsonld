@@ -1,5 +1,5 @@
 {
-  "@context": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/context.jsonld",
+  "@context": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/context.jsonld",
   "postOfficeBoxNumber": "4334",
   "locality": "Maidstone",
   "state": "VIC",

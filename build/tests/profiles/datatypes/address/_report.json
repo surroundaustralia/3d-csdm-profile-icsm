@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.profiles.datatypes.address - ICSM Address (Placeholder)",
   "bblockName": "ICSM Address (Placeholder)",
   "bblockId": "icsm.profiles.datatypes.address",
-  "generated": "2024-12-03T07:02:06.052898+00:00",
+  "generated": "2026-03-31T04:24:03.047639+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/profiles/datatypes/address/example_1_1.json",
-        "url": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/tests/profiles/datatypes/address/example_1_1.json",
+        "url": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/tests/profiles/datatypes/address/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"
@@ -65,7 +65,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/profiles/datatypes/address/example_2_1.json",
-        "url": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/tests/profiles/datatypes/address/example_2_1.json",
+        "url": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/tests/profiles/datatypes/address/example_2_1.json",
         "exampleIndex": 2,
         "snippetIndex": 1,
         "language": "application/json"

@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2024-12-03",
+  "dateOfLastChange": "2026-03-31",
   "sources": [
     {
       "title": "3D Cadastre Survey Data Model",
@@ -28,18 +28,18 @@
     "profile"
   ],
   "superBBlock": false,
-  "shaclRules": {},
-  "ldContext": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/context.jsonld",
+  "shaclRules": [],
+  "shaclShapes": {},
+  "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/context.jsonld",
   "schema": {
-    "application/yaml": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/schema.yaml",
-    "application/json": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/schema.json"
+    "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/schema.yaml",
+    "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/schema.json"
   },
-  "sourceSchema": "https://icsm-au.github.io/3d-csdm-profile-icsm/_sources/icsm-3d/schema.json",
-  "sourceLdContext": "https://icsm-au.github.io/3d-csdm-profile-icsm/_sources/icsm-3d/context.jsonld",
-  "sourceFiles": "https://icsm-au.github.io/3d-csdm-profile-icsm/_sources/icsm-3d/",
-  "rdfData": [
-    "https://icsm-au.github.io/3d-csdm-profile-icsm/data.ttl"
-  ],
+  "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-3d/schema.json",
+  "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-3d/context.jsonld",
+  "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/resolvedProperties.json",
+  "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-3d/",
+  "rdfData": [],
   "validationPassed": true,
   "description": "## Cadastral Survey Data Model - ICSM common\n\nRules and default namespace bindings for ICSM Jurisdiction Profiles of the Cadastral Survey Data Model (CSDM)\n\n",
   "examples": [
@@ -49,6 +49,6 @@
     }
   ],
   "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: 3D profile of Cadastral Survey Data Model - may include solid geometry\n  parcels and must include pitch (azimuth angle) component of each observation\n$defs:\n  3dParcelCollection: {}\n  3dParcelTypes:\n    anyOf:\n    - {}\nallOf:\n- $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json\n- properties:\n    parcels:\n      type: array\n      items:\n        allOf:\n        - $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json#/$defs/FeatureCollectionOptions\n        - allOf:\n          - properties:\n              featureType:\n                enum:\n                - PrimaryParcel\n                - surv:PrimaryParcel\n                - SecondaryParcel\n                - surv:SecondaryParcel\n              appellation:\n                $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema.json\n            required:\n            - featureType\n          - properties:\n              features:\n                items:\n                  properties:\n                    featureType:\n                      enum:\n                      - PrimaryParcel\n                      - surv:PrimaryParcel\n                      - SecondaryParcel\n                      - surv:SecondaryParcel\n                    topology:\n                      properties:\n                        type:\n                          enum:\n                          - Polygon\n                          - Solid\n                          - SweptSolid\n                  required:\n                  - featureType\n",
-  "gitRepository": "https://github.com/icsm-au/3d-csdm-profile-icsm",
+  "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-icsm",
   "gitPath": "_sources/icsm-3d"
 }

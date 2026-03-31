@@ -3,7 +3,7 @@
   "description": "Common ICSM profile of Cadastral Survey Data Model",
   "allOf": [
     {
-      "$ref": "https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.json"
+      "$ref": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.json"
     },
     {
       "properties": {
@@ -17,7 +17,7 @@
                   "properties": {
                     "properties": {
                       "address": {
-                        "$ref": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.json#/$defs/streetAddress"
+                        "$ref": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.json#/$defs/streetAddress"
                       }
                     }
                   },

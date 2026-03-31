@@ -1,466 +1,522 @@
-path	@id
-/horizontalCRS	https://linked.data.gov.au/def/csdm/container/horizontalCRS
-/compoundCRS	https://linked.data.gov.au/def/csdm/container/compoundCRS
-/verticalDatum	https://linked.data.gov.au/def/csdm/container/verticalDatum
-/surveyDescription	https://linked.data.gov.au/def/csdm/container/surveyDescription
-/surveyDescriptors	https://linked.data.gov.au/def/csdm/container/surveyDescriptors
-/surveyDescriptors/label	http://www.w3.org/2000/01/rdf-schema#label
-/surveyDescriptors/template	
-/surveyDescriptors/hasPart	http://purl.org/dc/terms/hasPart
-/surveyDescriptors/hasPart/label	http://www.w3.org/2000/01/rdf-schema#label
-/surveyDescriptors/hasPart/type	https://linked.data.gov.au/def/csdm/commonpatterns/namePartType
-/purpose	https://linked.data.gov.au/def/csdm/container/purpose
-/surveyType	https://linked.data.gov.au/def/csdm/container/surveyType
-/referencedCSDs	https://linked.data.gov.au/def/csdm/container/referencedCSD
-/referencedCSDs/name	rdfs:label
-/referencedCSDs/bearingRotation	https://linked.data.gov.au/def/csdm/container/bearingRotation
-/referencedCSDs/annotations	https://linked.data.gov.au/def/csdm/container/annotations
-/referencedCSDs/annotations/href	http://www.w3.org/ns/oa#hasTarget
-/referencedCSDs/annotations/rel	http://www.iana.org/assignments/relation
-/referencedCSDs/annotations/anchor	
-/referencedCSDs/annotations/type	http://purl.org/dc/terms/type
-/referencedCSDs/annotations/hreflang	http://purl.org/dc/terms/language
-/referencedCSDs/annotations/title	http://www.w3.org/2000/01/rdf-schema#label
-/referencedCSDs/annotations/length	http://purl.org/dc/terms/extent
-/referencedCSDs/annotations/role	http://www.w3.org/ns/dx/prof/hasRole
-/referencedCSDs/annotations/conformsTo	http://purl.org/dc/terms/conformsTo
-/referencedCSDs/annotations/description	
-/referencedCSDs/id	
-/adminUnit	https://linked.data.gov.au/def/csdm/container/adminUnit
-/supportingDocuments	https://linked.data.gov.au/def/csdm/container/supportingDocuments
-/points	https://linked.data.gov.au/def/csdm/container/points
-/points/conformsTo	
-/points/type	@type
-/points/featureType	@type
-/points/geometryDimension	
-/points/featureSchema	
-/points/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS
-/points/coordRefSys/type	
-/points/coordRefSys/href	
-/points/coordRefSys/epoch	
-/points/features	
-/points/features/conformsTo	
-/points/features/type	@type
-/points/features/id	@id
-/points/features/featureType	@type
-/points/features/featureSchema	
-/points/features/time	http://purl.org/dc/terms/time
-/points/features/time/date	http://www.w3.org/2006/time#hasTime
-/points/features/time/timestamp	http://www.w3.org/2006/time#hasTime
-/points/features/time/interval	http://www.w3.org/2006/time#hasTime
-/points/features/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS
-/points/features/place	http://purl.org/dc/terms/spatial
-/points/features/place/type	
-/points/features/place/coordRefSys	
-/points/features/place/coordinates	
-/points/features/place/bbox	
-/points/features/place/base	
-/points/features/place/lower	
-/points/features/place/upper	
-/points/features/place/prisms	
-/points/features/geometry	https://purl.org/geojson/vocab#geometry
-/points/features/geometry/type	@type
-/points/features/geometry/coordRefSys	
-/points/features/geometry/coordinates	https://purl.org/geojson/vocab#coordinates
-/points/features/geometry/bbox	https://purl.org/geojson/vocab#bbox
-/points/features/geometry/geometries	
-/points/features/properties	@nest
-/points/id	@id
-/points/properties	@nest
-/points/geometry	https://purl.org/geojson/vocab#geometry
-/points/geometry/type	@type
-/points/geometry/coordinates	https://purl.org/geojson/vocab#coordinates
-/points/geometry/bbox	https://purl.org/geojson/vocab#bbox
-/points/geometry/geometries	
-/points/geometry/geometries/type	@type
-/points/geometry/geometries/coordinates	https://purl.org/geojson/vocab#coordinates
-/points/geometry/geometries/bbox	https://purl.org/geojson/vocab#bbox
-/points/bbox	https://purl.org/geojson/vocab#bbox
-/points/links	http://www.w3.org/2000/01/rdf-schema#seeAlso
-/points/links/href	http://www.w3.org/ns/oa#hasTarget
-/points/links/rel	http://www.iana.org/assignments/relation
-/points/links/anchor	
-/points/links/type	http://purl.org/dc/terms/type
-/points/links/hreflang	http://purl.org/dc/terms/language
-/points/links/title	http://www.w3.org/2000/01/rdf-schema#label
-/points/links/length	http://purl.org/dc/terms/extent
-/points/time	http://purl.org/dc/terms/time
-/points/time/date	http://www.w3.org/2006/time#hasTime
-/points/time/timestamp	http://www.w3.org/2006/time#hasTime
-/points/time/interval	http://www.w3.org/2006/time#hasTime
-/points/place	http://purl.org/dc/terms/spatial
-/points/place/type	
-/points/place/coordRefSys	
-/points/place/coordinates	
-/points/place/bbox	
-/points/place/base	
-/points/place/lower	
-/points/place/upper	
-/points/place/prisms	
-/points/geometry/coordRefSys	
-/points/features/geometry/geometries/type	@type
-/points/features/geometry/geometries/coordinates	https://purl.org/geojson/vocab#coordinates
-/points/features/geometry/geometries/bbox	https://purl.org/geojson/vocab#bbox
-/points/features/bbox	https://purl.org/geojson/vocab#bbox
-/points/features/links	http://www.w3.org/2000/01/rdf-schema#seeAlso
-/points/features/links/href	http://www.w3.org/ns/oa#hasTarget
-/points/features/links/rel	http://www.iana.org/assignments/relation
-/points/features/links/anchor	
-/points/features/links/type	http://purl.org/dc/terms/type
-/points/features/links/hreflang	http://purl.org/dc/terms/language
-/points/features/links/title	http://www.w3.org/2000/01/rdf-schema#label
-/points/features/links/length	http://purl.org/dc/terms/extent
-/points/features/topology	https://purl.org/geojson/vocab#topology
-/points/features/topology/type	@type
-/points/features/topology/references	https://purl.org/geojson/vocab#relatedFeatures
-/points/features/properties/name	https://linked.data.gov.au/def/csdm/commonpatterns/name
-/points/features/properties/name/label	http://www.w3.org/2000/01/rdf-schema#label
-/points/features/properties/name/template	
-/points/features/properties/name/hasPart	http://purl.org/dc/terms/hasPart
-/points/features/properties/name/hasPart/label	http://www.w3.org/2000/01/rdf-schema#label
-/points/features/properties/name/hasPart/type	https://linked.data.gov.au/def/csdm/commonpatterns/namePartType
-/points/features/properties/purpose	https://linked.data.gov.au/def/csdm/surveyfeatures/purpose
-/points/features/properties/has_provenance	
-/points/features/properties/has_provenance/id	@id
-/points/features/properties/has_provenance/featureType	@type
-/points/features/properties/has_provenance/entityType	@type
-/points/features/properties/has_provenance/has_provenance	http://purl.org/dc/terms/provenance
-/points/features/properties/has_provenance/wasGeneratedBy	http://www.w3.org/ns/prov#wasGeneratedBy
-/points/features/properties/has_provenance/wasGeneratedBy/id	@id
-/points/features/properties/has_provenance/wasGeneratedBy/type	
-/points/features/properties/has_provenance/wasGeneratedBy/activityType	@type
-/points/features/properties/has_provenance/wasGeneratedBy/prov:type	
-/points/features/properties/has_provenance/wasGeneratedBy/endedAtTime	http://www.w3.org/ns/prov#endedAtTime
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith	http://www.w3.org/ns/prov#wasAssociatedWith
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/href	http://www.w3.org/ns/oa#hasTarget
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/rel	http://www.iana.org/assignments/relation
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/anchor	
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/type	http://purl.org/dc/terms/type
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/hreflang	http://purl.org/dc/terms/language
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/title	http://www.w3.org/2000/01/rdf-schema#label
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/length	http://purl.org/dc/terms/extent
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/agentType	@type
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/name	http://www.w3.org/2000/01/rdf-schema#label
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/id	@id
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/actedOnBehalfOf	http://www.w3.org/ns/prov#actedOnBehalfOf
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/atLocation	http://www.w3.org/ns/prov#atLocation
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/qualifiedDelegation	http://www.w3.org/ns/prov#qualifiedDelegation
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/qualifiedDelegation/id	@id
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/qualifiedDelegation/type	
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/qualifiedDelegation/agent	http://www.w3.org/ns/prov#agent
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/qualifiedDelegation/hadActivity	http://www.w3.org/ns/prov#hadActivity
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/wasInfluencedBy	http://www.w3.org/ns/prov#wasInfluencedBy
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/qualifiedInfluence	http://www.w3.org/ns/prov#qualifiedInfluence
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/qualifiedInfluence/id	@id
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/qualifiedInfluence/influencer	http://www.w3.org/ns/prov#influencer
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/qualifiedInfluence/entity	http://www.w3.org/ns/prov#entity
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/qualifiedInfluence/activity	http://www.w3.org/ns/prov#activity
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/qualifiedInfluence/agent	http://www.w3.org/ns/prov#agent
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/provType	@type
-/points/features/properties/has_provenance/wasGeneratedBy/wasAssociatedWith/prov:type	
-/points/features/properties/has_provenance/wasGeneratedBy/wasInformedBy	http://www.w3.org/ns/prov#wasInformedBy
-/points/features/properties/has_provenance/wasGeneratedBy/used	http://www.w3.org/ns/prov#used
-/points/features/properties/has_provenance/wasGeneratedBy/wasStartedBy	http://www.w3.org/ns/prov#wasStartedBy
-/points/features/properties/has_provenance/wasGeneratedBy/wasEndedBy	http://www.w3.org/ns/prov#wasEndedBy
-/points/features/properties/has_provenance/wasGeneratedBy/invalidated	http://www.w3.org/ns/prov#invalidated
-/points/features/properties/has_provenance/wasGeneratedBy/generated	http://www.w3.org/ns/prov#generated
-/points/features/properties/has_provenance/wasGeneratedBy/atLocation	http://www.w3.org/ns/prov#atLocation
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedUsage	http://www.w3.org/ns/prov#qualifiedUsage
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedUsage/id	@id
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedUsage/type	
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedUsage/atTime	http://www.w3.org/ns/prov#atTime
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedUsage/entity	http://www.w3.org/ns/prov#entity
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedCommunication	http://www.w3.org/ns/prov#qualifiedCommunication
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedCommunication/id	@id
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedCommunication/atTime	http://www.w3.org/ns/prov#atTime
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedCommunication/hadRole	http://www.w3.org/ns/prov#hadRole
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedCommunication/influencer	http://www.w3.org/ns/prov#influencer
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedCommunication/hadActivity	http://www.w3.org/ns/prov#hadActivity
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedCommunication/activity	http://www.w3.org/ns/prov#activity
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedCommunication/type	
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedStart	http://www.w3.org/ns/prov#qualifiedStart
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedStart/id	@id
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedStart/type	
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedStart/atTime	http://www.w3.org/ns/prov#atTime
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedStart/entity	http://www.w3.org/ns/prov#entity
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedStart/hadActivity	http://www.w3.org/ns/prov#hadActivity
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedEnd	http://www.w3.org/ns/prov#qualifiedEnd
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedEnd/type	
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedAssociation	http://www.w3.org/ns/prov#qualifiedAssociation
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedAssociation/id	@id
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedAssociation/type	
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedAssociation/agent	http://www.w3.org/ns/prov#agent
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedAssociation/hadRole	http://www.w3.org/ns/prov#hadRole
-/points/features/properties/has_provenance/wasGeneratedBy/qualifiedAssociation/hadPlan	http://www.w3.org/ns/prov#hadPlan
-/points/features/properties/has_provenance/wasAttributedTo	http://www.w3.org/ns/prov#wasAttributedTo
-/points/features/properties/has_provenance/wasDerivedFrom	http://www.w3.org/ns/prov#wasDerivedFrom
-/points/features/properties/has_provenance/alternateOf	http://www.w3.org/ns/prov#alternateOf
-/points/features/properties/has_provenance/hadPrimarySource	http://www.w3.org/ns/prov#hadPrimarySource
-/points/features/properties/has_provenance/specializationOf	http://www.w3.org/ns/prov#specializationOf
-/points/features/properties/has_provenance/wasInvalidatedBy	http://www.w3.org/ns/prov#wasInvalidatedBy
-/points/features/properties/has_provenance/wasQuotedFrom	http://www.w3.org/ns/prov#wasQuotedFrom
-/points/features/properties/has_provenance/wasRevisionOf	http://www.w3.org/ns/prov#wasRevisionOf
-/points/features/properties/has_provenance/atLocation	http://www.w3.org/ns/prov#atLocation
-/points/features/properties/has_provenance/links	http://www.w3.org/2000/01/rdf-schema#seeAlso
-/points/features/properties/has_provenance/qualifiedGeneration	http://www.w3.org/ns/prov#qualifiedGeneration
-/points/features/properties/has_provenance/qualifiedInvalidation	http://www.w3.org/ns/prov#qualifiedInvalidation
-/points/features/properties/has_provenance/qualifiedInvalidation/type	
-/points/features/properties/has_provenance/qualifiedDerivation	http://www.w3.org/ns/prov#qualifiedDerivation
-/points/features/properties/has_provenance/qualifiedDerivation/id	@id
-/points/features/properties/has_provenance/qualifiedDerivation/type	
-/points/features/properties/has_provenance/qualifiedDerivation/hadGeneration	http://www.w3.org/ns/prov#hadGeneration
-/points/features/properties/has_provenance/qualifiedDerivation/hadActivity	http://www.w3.org/ns/prov#hadActivity
-/points/features/properties/has_provenance/qualifiedDerivation/hadUsage	http://www.w3.org/ns/prov#hadUsage
-/points/features/properties/has_provenance/qualifiedDerivation/entity	http://www.w3.org/ns/prov#entity
-/points/features/properties/has_provenance/qualifiedAttribution	http://www.w3.org/ns/prov#qualifiedAttribution
-/points/features/properties/has_provenance/qualifiedAttribution/id	@id
-/points/features/properties/has_provenance/qualifiedAttribution/type	
-/points/features/properties/has_provenance/qualifiedAttribution/agent	http://www.w3.org/ns/prov#agent
-/points/features/properties/has_provenance/provType	@type
-/points/features/properties/has_provenance/prov:type	
-/points/features/properties/has_provenance/type	
-/points/features/properties/has_provenance/hadMember	http://www.w3.org/ns/prov#hadMember
-/points/features/properties/ptQuality	https://linked.data.gov.au/def/csdm/commonpatterns/qualityClass
-/points/features/properties/ptQualityMeasure	https://linked.data.gov.au/def/csdm/commonpatterns/qualityMeasure
-/points/features/properties/comment	http://www.w3.org/2000/01/rdf-schema#comment
-/points/features/properties/monumentedBy	https://linked.data.gov.au/def/csdm/surveyfeatures/monumentedBy
-/points/features/properties/monumentedBy/condition	https://linked.data.gov.au/def/csdm/surveyfeatures/condition
-/points/features/properties/monumentedBy/form	https://linked.data.gov.au/def/csdm/surveyfeatures/form
-/points/features/properties/monumentedBy/replaces	https://linked.data.gov.au/def/csdm/surveyfeatures/replaces
-/points/features/properties/monumentedBy/state	https://linked.data.gov.au/def/csdm/surveyfeatures/state
-/points/features/properties/age	https://linked.data.gov.au/def/csdm/surveyfeatures/age
-/points/features/properties/note	http://www.w3.org/2000/01/rdf-schema#comment
-/points/features/properties/geodeticid	https://linked.data.gov.au/def/csdm/surveyfeatures/geodeticid
-/points/features/properties/geodeticid/label	http://www.w3.org/2000/01/rdf-schema#label
-/points/features/properties/geodeticid/template	
-/points/features/properties/geodeticid/hasPart	http://purl.org/dc/terms/hasPart
-/points/features/properties/geodeticid/hasPart/label	http://www.w3.org/2000/01/rdf-schema#label
-/points/features/properties/geodeticid/hasPart/type	https://linked.data.gov.au/def/csdm/commonpatterns/namePartType
-/points/features/properties/distance	
-/points/features/properties/vectorPurpose	https://linked.data.gov.au/def/csdm/surveyfeatures/vectorPurpose
-/observedVectors	https://linked.data.gov.au/def/csdm/container/observedVectors
-/observedVectors/features	https://purl.org/geojson/vocab#features
-/observedVectors/features/id	@id
-/observedVectors/features/topology	https://purl.org/geojson/vocab#topology
-/observedVectors/features/topology/type	@type
-/observedVectors/features/topology/references	https://purl.org/geojson/vocab#relatedFeatures
-/observedVectors/conformsTo	
-/observedVectors/type	@type
-/observedVectors/featureType	@type
-/observedVectors/geometryDimension	
-/observedVectors/featureSchema	
-/observedVectors/coordRefSys	
-/observedVectors/features/conformsTo	
-/observedVectors/features/type	@type
-/observedVectors/features/featureType	@type
-/observedVectors/features/featureSchema	
-/observedVectors/features/time	http://purl.org/dc/terms/time
-/observedVectors/features/time/date	http://www.w3.org/2006/time#hasTime
-/observedVectors/features/time/timestamp	http://www.w3.org/2006/time#hasTime
-/observedVectors/features/time/interval	http://www.w3.org/2006/time#hasTime
-/observedVectors/features/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS
-/observedVectors/features/place	http://purl.org/dc/terms/spatial
-/observedVectors/features/place/type	
-/observedVectors/features/place/coordRefSys	
-/observedVectors/features/place/coordinates	
-/observedVectors/features/place/bbox	
-/observedVectors/features/place/base	
-/observedVectors/features/place/lower	
-/observedVectors/features/place/upper	
-/observedVectors/features/place/prisms	
-/observedVectors/features/geometry	https://purl.org/geojson/vocab#geometry
-/observedVectors/features/geometry/type	@type
-/observedVectors/features/geometry/coordRefSys	
-/observedVectors/features/geometry/coordinates	https://purl.org/geojson/vocab#coordinates
-/observedVectors/features/geometry/bbox	https://purl.org/geojson/vocab#bbox
-/observedVectors/features/geometry/geometries	
-/observedVectors/features/properties	@nest
-/observedVectors/links	http://www.w3.org/2000/01/rdf-schema#seeAlso
-/observedVectors/links/href	http://www.w3.org/ns/oa#hasTarget
-/observedVectors/links/rel	http://www.iana.org/assignments/relation
-/observedVectors/links/anchor	
-/observedVectors/links/type	http://purl.org/dc/terms/type
-/observedVectors/links/hreflang	http://purl.org/dc/terms/language
-/observedVectors/links/title	http://www.w3.org/2000/01/rdf-schema#label
-/observedVectors/links/length	http://purl.org/dc/terms/extent
-/observedVectors/features/geometry/geometries/type	@type
-/observedVectors/features/geometry/geometries/coordinates	https://purl.org/geojson/vocab#coordinates
-/observedVectors/features/geometry/geometries/bbox	https://purl.org/geojson/vocab#bbox
-/observedVectors/features/bbox	https://purl.org/geojson/vocab#bbox
-/observedVectors/features/links	http://www.w3.org/2000/01/rdf-schema#seeAlso
-/observedVectors/features/links/href	http://www.w3.org/ns/oa#hasTarget
-/observedVectors/features/links/rel	http://www.iana.org/assignments/relation
-/observedVectors/features/links/anchor	
-/observedVectors/features/links/type	http://purl.org/dc/terms/type
-/observedVectors/features/links/hreflang	http://purl.org/dc/terms/language
-/observedVectors/features/links/title	http://www.w3.org/2000/01/rdf-schema#label
-/observedVectors/features/links/length	http://purl.org/dc/terms/extent
-/observedVectors/bbox	
-/observedVectors/timeStamp	
-/observedVectors/numberMatched	
-/observedVectors/numberReturned	
-/observedVectors/features/topology/orientation	
-/observedVectors/features/topology/radius	
-/observedVectors/features/topology/startTangentVector	
-/observedVectors/features/topology/startTangentVector/references	
-/observedVectors/features/topology/endTangentVector	
-/observedVectors/features/topology/endTangentVector/references	
-/observedVectors/features/radius	
-/observedVectors/features/arcLength	
-/adoptedVectors	https://linked.data.gov.au/def/csdm/container/adoptedVectors
-/adoptedVectors/featureType	@type
-/adoptedVectors/features	
-/adoptedVectors/features/featureType	
-/parcels	https://linked.data.gov.au/def/csdm/container/parcels
-/parcels/featureType	@type
-/parcels/features	
-/parcels/features/properties	@nest
-/parcels/features/properties/appellation	https://linked.data.gov.au/def/csdm/parcels/appellation
-/parcels/features/properties/appellation/label	http://www.w3.org/2000/01/rdf-schema#label
-/parcels/features/properties/appellation/template	
-/parcels/features/properties/appellation/hasPart	http://purl.org/dc/terms/hasPart
-/parcels/features/properties/appellation/hasPart/label	http://www.w3.org/2000/01/rdf-schema#label
-/parcels/features/properties/appellation/hasPart/type	https://linked.data.gov.au/def/csdm/commonpatterns/namePartType
-/parcels/features/properties/parcelType	https://linked.data.gov.au/def/csdm/parcels/type
-/parcels/features/properties/parcelState	https://linked.data.gov.au/def/csdm/parcels/state
-/parcels/features/properties/address	https://schema.org/address
-/parcels/features/properties/parcelPurpose	https://linked.data.gov.au/def/csdm/parcels/purpose
-/parcels/features/properties/area	https://linked.data.gov.au/def/csdm/parcels/surfaceArea
-/parcels/features/properties/floor	https://linked.data.gov.au/def/csdm/parcels/floor
-/parcels/features/properties/zmin	https://linked.data.gov.au/def/csdm/parcels/zmin
-/parcels/features/properties/zmax	https://linked.data.gov.au/def/csdm/parcels/zmax
-/parcels/features/properties/interests	https://linked.data.gov.au/def/csdm/parcels/interest
-/parcels/features/properties/interests/interestLink	https://linked.data.gov.au/def/csdm/parcels/interestLink
-/parcels/features/properties/interests/interestName	https://linked.data.gov.au/def/csdm/parcels/interestName
-/parcels/features/properties/interests/interestType	https://linked.data.gov.au/def/csdm/parcels/interestType
-/parcels/features/properties/interests/dateInForce	https://linked.data.gov.au/def/csdm/parcels/interestDateInForce
-/parcels/features/properties/interests/dateExpires	https://linked.data.gov.au/def/csdm/parcels/interestDateExpires
-/parcels/features/properties/interests/statuteLink	https://linked.data.gov.au/def/csdm/parcels/statuteLink
-/parcels/features/properties/interests/statuteName	https://linked.data.gov.au/def/csdm/parcels/statuteName
-/parcels/features/properties/interests/benefitedPartyName	https://linked.data.gov.au/def/csdm/parcels/benefitedPartyName
-/parcels/features/properties/interests/benefitedPartyLink	https://linked.data.gov.au/def/csdm/parcels/benefitedPartyLink
-/parcels/features/properties/interests/originalSurveyLink	https://linked.data.gov.au/def/csdm/parcels/originalSurveyLink
-/parcels/features/properties/interests/referencedParcel	https://linked.data.gov.au/def/csdm/parcels/referencedParcel
-/parcels/features/properties/interests/burdenedParcels	https://linked.data.gov.au/def/csdm/parcels/burdened
-/parcels/features/properties/interests/benefitedParcels	https://linked.data.gov.au/def/csdm/parcels/benefited
-/parcels/features/properties/interests/description	https://linked.data.gov.au/def/csdm/parcels/interestDescription
-/parcels/features/properties/interests/entitlementPortion	https://linked.data.gov.au/def/csdm/parcels/entitlementPortion
-/parcels/features/properties/interests/liabilityPortion	https://linked.data.gov.au/def/csdm/parcels/liabilityPortion
-/vectorObservations	https://linked.data.gov.au/def/csdm/container/vectorObservations
-/vectorObservations/resultTime	http://www.w3.org/ns/sosa/resultTime
-/vectorObservations/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
-/vectorObservations/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest
-/vectorObservations/observedProperty	http://www.w3.org/ns/sosa/observedProperty
-/vectorObservations/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
-/vectorObservations/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
-/vectorObservations/hasMember	http://www.w3.org/ns/sosa/hasMember
-/vectorObservations/hasMember/resultTime	http://www.w3.org/ns/sosa/resultTime
-/vectorObservations/hasMember/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
-/vectorObservations/hasMember/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest
-/vectorObservations/hasMember/observedProperty	http://www.w3.org/ns/sosa/observedProperty
-/vectorObservations/hasMember/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
-/vectorObservations/hasMember/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
-/vectorObservations/hasMember/hasResult	
-/vectorObservations/hasMember/result	
-/vectorObservations/hasMember/result@links	
-/vectorObservations/hasMember/hasSimpleResult	
-/vectorObservations/features	sosa:hasMember
-/vectorObservations/features/type	@type
-/vectorObservations/features/id	@id
-/vectorObservations/features/properties	@nest
-/vectorObservations/features/geometry	https://purl.org/geojson/vocab#geometry
-/vectorObservations/features/geometry/type	@type
-/vectorObservations/features/geometry/coordinates	https://purl.org/geojson/vocab#coordinates
-/vectorObservations/features/geometry/bbox	https://purl.org/geojson/vocab#bbox
-/vectorObservations/features/geometry/geometries	
-/vectorObservations/features/geometry/geometries/type	@type
-/vectorObservations/features/geometry/geometries/coordinates	https://purl.org/geojson/vocab#coordinates
-/vectorObservations/features/geometry/geometries/bbox	https://purl.org/geojson/vocab#bbox
-/vectorObservations/features/bbox	https://purl.org/geojson/vocab#bbox
-/vectorObservations/features/links	http://www.w3.org/2000/01/rdf-schema#seeAlso
-/vectorObservations/features/links/href	http://www.w3.org/ns/oa#hasTarget
-/vectorObservations/features/links/rel	http://www.iana.org/assignments/relation
-/vectorObservations/features/links/anchor	
-/vectorObservations/features/links/type	http://purl.org/dc/terms/type
-/vectorObservations/features/links/hreflang	http://purl.org/dc/terms/language
-/vectorObservations/features/links/title	http://www.w3.org/2000/01/rdf-schema#label
-/vectorObservations/features/links/length	http://purl.org/dc/terms/extent
-/vectorObservations/features/featureType	@type
-/vectorObservations/features/time	http://purl.org/dc/terms/time
-/vectorObservations/features/time/date	http://www.w3.org/2006/time#hasTime
-/vectorObservations/features/time/timestamp	http://www.w3.org/2006/time#hasTime
-/vectorObservations/features/time/interval	http://www.w3.org/2006/time#hasTime
-/vectorObservations/features/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS
-/vectorObservations/features/place	http://purl.org/dc/terms/spatial
-/vectorObservations/features/place/type	
-/vectorObservations/features/place/coordRefSys	
-/vectorObservations/features/place/coordinates	
-/vectorObservations/features/place/bbox	
-/vectorObservations/features/place/base	
-/vectorObservations/features/place/lower	
-/vectorObservations/features/place/upper	
-/vectorObservations/features/place/prisms	
-/vectorObservations/features/geometry/coordRefSys	
-/vectorObservations/features/properties/resultTime	http://www.w3.org/ns/sosa/resultTime
-/vectorObservations/features/properties/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
-/vectorObservations/features/properties/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest
-/vectorObservations/features/properties/observedProperty	http://www.w3.org/ns/sosa/observedProperty
-/vectorObservations/features/properties/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure
-/vectorObservations/features/properties/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor
-/vectorObservations/features/properties/hasResult	sosa:hasResult
-/vectorObservations/features/properties/result	
-/vectorObservations/features/properties/result@links	
-/vectorObservations/features/properties/hasSimpleResult	
-/vectorObservations/features/properties/hasResultQuality	
-/vectorObservations/features/properties/hasResultQuality/angleAccuracy	https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyMeasure
-/vectorObservations/features/properties/hasResultQuality/distanceAccuracy	https://linked.data.gov.au/def/csdm/surveyobs/distanceAccuracyMeasure
-/vectorObservations/features/properties/hasResultQuality/distanceAccuracyClass	https://linked.data.gov.au/def/csdm/surveyobs/distanceAccuracyClass
-/vectorObservations/features/properties/hasResultQuality/angleAccuracyClass	https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyClass
-/vectorObservations/features/properties/hasResult/pose	https://linked.data.gov.au/def/csdm/surveyfeatures/pose
-/vectorObservations/features/properties/hasResult/pose/angles	
-/vectorObservations/features/properties/hasResult/pose/angles/yaw	
-/vectorObservations/features/properties/hasResult/pose/angles/pitch	
-/vectorObservations/features/properties/hasResult/pose/angles/roll	
-/vectorObservations/features/properties/hasResult/angle	
-/vectorObservations/features/properties/hasResult/distance	https://linked.data.gov.au/def/csdm/surveyfeatures/distance
-/vectorObservations/properties	
-/vectorObservations/properties/angleType	https://linked.data.gov.au/def/csdm/surveyobs/angleType
-/vectorObservations/properties/distanceType	https://linked.data.gov.au/def/csdm/surveyobs/distanceType
-/vectorObservations/properties/madeBySensor	sosa:madeBySensor
-/vectorObservations/properties/madeBySensor/sensorType	
-/vectorObservations/properties/madeBySensor/baseSensor	
-/vectorObservations/properties/madeBySensor/roverSensor	
-/vectorObservations/properties/observedProperty	sosa:observedProperty
-/adoptedObservations	
-/adoptedObservations/features	sosa:hasMember
-/adoptedObservations/properties	
-/adoptedObservations/properties/angleType	https://linked.data.gov.au/def/csdm/surveyobs/angleType
-/adoptedObservations/properties/distanceType	https://linked.data.gov.au/def/csdm/surveyobs/distanceType
-/adoptedObservations/properties/madeBySensor	sosa:madeBySensor
-/adoptedObservations/properties/observedProperty	sosa:observedProperty
-/occupationObservations	https://linked.data.gov.au/def/csdm/container/occupationObservations
-/occupationFeatures	https://linked.data.gov.au/def/csdm/container/occupationFeatures
-/time	
-/time/date	
-/time/timestamp	
-/time/interval	
-/has_provenance	
-/wasGeneratedBy	
-/wasGeneratedBy/id	@id
-/wasGeneratedBy/type	
-/wasGeneratedBy/activityType	@type
-/wasGeneratedBy/prov:type	
-/wasGeneratedBy/endedAtTime	http://www.w3.org/ns/prov#endedAtTime
-/wasGeneratedBy/wasAssociatedWith	http://www.w3.org/ns/prov#wasAssociatedWith
-/wasGeneratedBy/wasInformedBy	http://www.w3.org/ns/prov#wasInformedBy
-/wasGeneratedBy/used	http://www.w3.org/ns/prov#used
-/wasGeneratedBy/wasStartedBy	http://www.w3.org/ns/prov#wasStartedBy
-/wasGeneratedBy/wasEndedBy	http://www.w3.org/ns/prov#wasEndedBy
-/wasGeneratedBy/invalidated	http://www.w3.org/ns/prov#invalidated
-/wasGeneratedBy/generated	http://www.w3.org/ns/prov#generated
-/wasGeneratedBy/atLocation	http://www.w3.org/ns/prov#atLocation
-/wasGeneratedBy/qualifiedUsage	http://www.w3.org/ns/prov#qualifiedUsage
-/wasGeneratedBy/qualifiedCommunication	http://www.w3.org/ns/prov#qualifiedCommunication
-/wasGeneratedBy/qualifiedStart	http://www.w3.org/ns/prov#qualifiedStart
-/wasGeneratedBy/qualifiedEnd	http://www.w3.org/ns/prov#qualifiedEnd
-/wasGeneratedBy/qualifiedAssociation	http://www.w3.org/ns/prov#qualifiedAssociation
+path	@id	schema
+/_anyOf/0/type		https://beta.schemas.opengis.net/json-fg/featurecollection.json
+/_anyOf/0/featureType		https://beta.schemas.opengis.net/json-fg/featurecollection.json
+/_anyOf/0/geometryDimension		https://beta.schemas.opengis.net/json-fg/featurecollection.json
+/_anyOf/0/featureSchema		https://beta.schemas.opengis.net/json-fg/featurecollection.json
+/_anyOf/0/coordRefSys		https://beta.schemas.opengis.net/json-fg/featurecollection.json
+/_anyOf/0/coordRefSys/_oneOf/0/_oneOf/1/type		https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+/_anyOf/0/coordRefSys/_oneOf/0/_oneOf/1/href		https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+/_anyOf/0/coordRefSys/_oneOf/0/_oneOf/1/epoch		https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+/_anyOf/0/coordRefSys/_oneOf/0/_oneOf/2/type		https://beta.schemas.opengis.net/json-fg/coordrefsys.json
+/_anyOf/0/measures		https://beta.schemas.opengis.net/json-fg/featurecollection.json
+/_anyOf/0/measures/enabled		https://beta.schemas.opengis.net/json-fg/measures.json
+/_anyOf/0/measures/unit		https://beta.schemas.opengis.net/json-fg/measures.json
+/_anyOf/0/measures/description		https://beta.schemas.opengis.net/json-fg/measures.json
+/_anyOf/0/features		https://beta.schemas.opengis.net/json-fg/featurecollection.json
+/_anyOf/0/features/type		https://beta.schemas.opengis.net/json-fg/feature.json
+/_anyOf/0/features/id		https://beta.schemas.opengis.net/json-fg/feature.json
+/_anyOf/0/features/featureType		https://beta.schemas.opengis.net/json-fg/feature.json
+/_anyOf/0/features/featureSchema		https://beta.schemas.opengis.net/json-fg/feature.json
+/_anyOf/0/features/time		https://beta.schemas.opengis.net/json-fg/feature.json
+/_anyOf/0/features/time/_oneOf/1/date		https://beta.schemas.opengis.net/json-fg/time.json
+/_anyOf/0/features/time/_oneOf/1/timestamp		https://beta.schemas.opengis.net/json-fg/time.json
+/_anyOf/0/features/time/_oneOf/1/interval		https://beta.schemas.opengis.net/json-fg/time.json
+/_anyOf/0/features/coordRefSys		https://beta.schemas.opengis.net/json-fg/feature.json
+/_anyOf/0/features/measures		https://beta.schemas.opengis.net/json-fg/feature.json
+/_anyOf/0/features/place		https://beta.schemas.opengis.net/json-fg/feature.json
+/_anyOf/0/features/place/_oneOf/1/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/1/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/1/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/1/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/1/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/2/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/2/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/2/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/2/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/2/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/3/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/3/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/3/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/3/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/3/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/4/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/4/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/4/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/4/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/4/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/5/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/5/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/5/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/5/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/5/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/6/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/6/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/6/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/6/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/6/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/7/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/7/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/7/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/7/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/7/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/8/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/8/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/8/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/8/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/8/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/9/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/9/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/9/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/9/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/9/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/10/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/10/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/10/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/10/base		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/10/lower		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/10/upper		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/10/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/11/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/11/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/11/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/11/prisms		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/11/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/12/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/12/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/12/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/12/coordinates		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/12/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/13/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/13/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/13/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/13/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/13/geometries/_oneOf/2/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/13/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/14/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/14/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/14/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/14/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/14/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/15/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/15/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/15/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/15/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/15/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/16/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/16/coordRefSys		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/16/measures		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/16/geometries		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/16/geometries/_oneOf/2/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/16/bbox		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/place/_oneOf/17/type		https://beta.schemas.opengis.net/json-fg/geometry-object.json
+/_anyOf/0/features/geometry		https://beta.schemas.opengis.net/json-fg/feature.json
+/_anyOf/0/features/properties		https://beta.schemas.opengis.net/json-fg/feature.json
+/_anyOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json
+/_anyOf/1/id	@id	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json
+/_anyOf/1/properties	@nest	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json
+/_anyOf/1/geometry	https://purl.org/geojson/vocab#geometry	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json
+/_anyOf/1/geometry/_oneOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/1/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/1/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/2/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/2/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/2/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/3/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/3/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/3/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/4/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/4/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/4/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/5/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/5/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/5/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/6/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/6/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/6/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/0/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/0/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/0/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/1/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/1/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/2/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/2/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/2/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/3/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/3/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/3/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/4/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/4/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/4/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/5/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/5/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/geometries/_oneOf/5/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/geometry/_oneOf/7/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json
+/_anyOf/1/links	http://www.w3.org/2000/01/rdf-schema#seeAlso	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json
+/_anyOf/1/links/href	http://www.w3.org/ns/oa#hasTarget	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json
+/_anyOf/1/links/rel	http://www.iana.org/assignments/relation	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json
+/_anyOf/1/links/anchor		https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json
+/_anyOf/1/links/type	http://purl.org/dc/terms/type	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json
+/_anyOf/1/links/hreflang	http://purl.org/dc/terms/language	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json
+/_anyOf/1/links/title	http://www.w3.org/2000/01/rdf-schema#label	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json
+/_anyOf/1/links/length	http://purl.org/dc/terms/extent	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json
+/_anyOf/1/featureType	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json
+/_anyOf/1/time	http://purl.org/dc/terms/time	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json
+/_anyOf/1/time/_oneOf/1/date	http://www.w3.org/2006/time#hasTime	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.json
+/_anyOf/1/time/_oneOf/1/timestamp	http://www.w3.org/2006/time#hasTime	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.json
+/_anyOf/1/time/_oneOf/1/interval	http://www.w3.org/2006/time#hasTime	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/time/schema.json
+/_anyOf/1/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json
+/_anyOf/1/place	http://purl.org/dc/terms/spatial	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature-lenient/schema.json
+/_anyOf/2/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/id		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/properties		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/1/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/1/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/1/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/2/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/2/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/2/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/3/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/3/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/3/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/4/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/4/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/4/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/5/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/5/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/5/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/6/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/6/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/6/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/0/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/0/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/0/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/1/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/1/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/1/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/2/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/2/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/2/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/3/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/3/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/3/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/4/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/4/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/4/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/5/type		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/5/coordinates		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/geometries/_oneOf/5/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/geometry/_oneOf/7/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/features/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/2/bbox		https://geojson.org/schema/FeatureCollection.json
+/_anyOf/3/_anyOf/0/links	rdfs:seeAlso	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json
+/_anyOf/3/_anyOf/0/timeStamp		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json
+/_anyOf/3/_anyOf/0/numberMatched		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json
+/_anyOf/3/_anyOf/0/numberReturned		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/schema.json
+/_anyOf/3/_anyOf/0/features	https://purl.org/geojson/vocab#features	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json
+/_anyOf/3/_anyOf/0/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json
+/_anyOf/3/_anyOf/0/featureType	https://purl.org/geojson/vocab#collectionFeatureType	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json
+/_anyOf/3/_anyOf/0/geometryDimension		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json
+/_anyOf/3/_anyOf/0/coordRefSys		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection/schema.json
+/_anyOf/3/_anyOf/0/features/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json
+/_anyOf/3/_anyOf/0/features/id	@id	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json
+/_anyOf/3/_anyOf/0/features/featureType	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json
+/_anyOf/3/_anyOf/0/features/links	http://www.w3.org/2000/01/rdf-schema#seeAlso	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json
+/_anyOf/3/_anyOf/0/features/time	http://purl.org/dc/terms/time	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json
+/_anyOf/3/_anyOf/0/features/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json
+/_anyOf/3/_anyOf/0/features/place	http://purl.org/dc/terms/spatial	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json
+/_anyOf/3/_anyOf/0/features/geometry	https://purl.org/geojson/vocab#geometry	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json
+/_anyOf/3/_anyOf/0/features/properties	@nest	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.json
+/_anyOf/3/_anyOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json
+/_anyOf/3/_anyOf/1/featureType	https://purl.org/geojson/vocab#collectionFeatureType	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json
+/_anyOf/3/_anyOf/1/geometryDimension		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json
+/_anyOf/3/_anyOf/1/coordRefSys		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json
+/_anyOf/3/_anyOf/1/links	rdfs:seeAlso	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json
+/_anyOf/3/_anyOf/1/features	https://purl.org/geojson/vocab#features	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json
+/_anyOf/3/features		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.json
+/_anyOf/3/features/_anyOf/0/id		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json
+/_anyOf/3/features/_anyOf/0/topology	https://purl.org/geojson/vocab#topology	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/0/type	@type	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/0/references	https://purl.org/geojson/vocab#relatedFeatures	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/1/type	@type	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/1/references	https://purl.org/geojson/vocab#relatedFeatures	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/type	@type	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/references	https://purl.org/geojson/vocab#relatedFeatures	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
+/_anyOf/3/features/_anyOf/1/geometry		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.json
+/_anyOf/3/features/_anyOf/1/geometry/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.json
+/time		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/name	rdfs:label	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/bearingRotation	https://linked.data.gov.au/def/csdm/container/bearingRotation	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/annotations	https://linked.data.gov.au/def/csdm/container/annotations	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/annotations/_anyOf/0/role	http://www.w3.org/ns/dx/prof/hasRole	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json
+/annotations/_anyOf/0/conformsTo	http://purl.org/dc/terms/conformsTo	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json
+/annotations/_anyOf/1/description		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/annotations/_anyOf/1/role		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/_anyOf/0/has_provenance		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy	http://www.w3.org/ns/prov#wasInfluencedBy	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/provType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/prov:type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/activityType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/endedAtTime	http://www.w3.org/ns/prov#endedAtTime	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith	http://www.w3.org/ns/prov#wasAssociatedWith	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/agentType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/provType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/prov:type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/name	http://www.w3.org/2000/01/rdf-schema#label	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/actedOnBehalfOf	http://www.w3.org/ns/prov#actedOnBehalfOf	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/atLocation	http://www.w3.org/ns/prov#atLocation	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/qualifiedDelegation	http://www.w3.org/ns/prov#qualifiedDelegation	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/qualifiedDelegation/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/qualifiedDelegation/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/qualifiedDelegation/_oneOf/1/agent	http://www.w3.org/ns/prov#agent	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/qualifiedDelegation/_oneOf/1/hadActivity	http://www.w3.org/ns/prov#hadActivity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasInformedBy	http://www.w3.org/ns/prov#wasInformedBy	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/used	http://www.w3.org/ns/prov#used	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasStartedBy	http://www.w3.org/ns/prov#wasStartedBy	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasEndedBy	http://www.w3.org/ns/prov#wasEndedBy	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/invalidated	http://www.w3.org/ns/prov#invalidated	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/generated	http://www.w3.org/ns/prov#generated	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/atLocation	http://www.w3.org/ns/prov#atLocation	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedUsage	http://www.w3.org/ns/prov#qualifiedUsage	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedUsage/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedUsage/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedUsage/_oneOf/1/atTime	http://www.w3.org/ns/prov#atTime	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedUsage/_oneOf/1/entity	http://www.w3.org/ns/prov#entity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedCommunication	http://www.w3.org/ns/prov#qualifiedCommunication	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedCommunication/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedCommunication/_oneOf/1/atTime	http://www.w3.org/ns/prov#atTime	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedCommunication/_oneOf/1/hadRole	http://www.w3.org/ns/prov#hadRole	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedCommunication/_oneOf/1/influencer	http://www.w3.org/ns/prov#influencer	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedCommunication/_oneOf/1/hadActivity	http://www.w3.org/ns/prov#hadActivity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedCommunication/_oneOf/1/activity	http://www.w3.org/ns/prov#activity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedCommunication/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedCommunication/_oneOf/2/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedStart	http://www.w3.org/ns/prov#qualifiedStart	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedStart/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedStart/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedStart/_oneOf/1/atTime	http://www.w3.org/ns/prov#atTime	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedStart/_oneOf/1/entity	http://www.w3.org/ns/prov#entity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedStart/_oneOf/1/hadActivity	http://www.w3.org/ns/prov#hadActivity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedEnd	http://www.w3.org/ns/prov#qualifiedEnd	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedEnd/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedAssociation	http://www.w3.org/ns/prov#qualifiedAssociation	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedAssociation/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedAssociation/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedAssociation/_oneOf/1/agent	http://www.w3.org/ns/prov#agent	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedAssociation/_oneOf/1/hadRole	http://www.w3.org/ns/prov#hadRole	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedAssociation/_oneOf/1/hadPlan	http://www.w3.org/ns/prov#hadPlan	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedInfluence	http://www.w3.org/ns/prov#qualifiedInfluence	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedInfluence/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedInfluence/_oneOf/1/influencer	http://www.w3.org/ns/prov#influencer	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedInfluence/_oneOf/1/entity	http://www.w3.org/ns/prov#entity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedInfluence/_oneOf/1/activity	http://www.w3.org/ns/prov#activity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedInfluence/_oneOf/1/agent	http://www.w3.org/ns/prov#agent	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/_anyOf/0/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/_anyOf/0/hadMember	http://www.w3.org/ns/prov#hadMember	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/_anyOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/_anyOf/1/hadMember	http://www.w3.org/ns/prov#hadMember	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/provType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/prov:type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/featureType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/entityType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/has_provenance	http://purl.org/dc/terms/provenance	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasGeneratedBy	http://www.w3.org/ns/prov#wasGeneratedBy	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasAttributedTo	http://www.w3.org/ns/prov#wasAttributedTo	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasDerivedFrom	http://www.w3.org/ns/prov#wasDerivedFrom	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/alternateOf	http://www.w3.org/ns/prov#alternateOf	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/hadPrimarySource	http://www.w3.org/ns/prov#hadPrimarySource	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/specializationOf	http://www.w3.org/ns/prov#specializationOf	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInvalidatedBy	http://www.w3.org/ns/prov#wasInvalidatedBy	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasQuotedFrom	http://www.w3.org/ns/prov#wasQuotedFrom	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasRevisionOf	http://www.w3.org/ns/prov#wasRevisionOf	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/atLocation	http://www.w3.org/ns/prov#atLocation	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/links	http://www.w3.org/2000/01/rdf-schema#seeAlso	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedGeneration	http://www.w3.org/ns/prov#qualifiedGeneration	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedGeneration/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedInvalidation	http://www.w3.org/ns/prov#qualifiedInvalidation	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedInvalidation/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation	http://www.w3.org/ns/prov#qualifiedDerivation	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation/_oneOf/1/hadGeneration	http://www.w3.org/ns/prov#hadGeneration	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation/_oneOf/1/hadActivity	http://www.w3.org/ns/prov#hadActivity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation/_oneOf/1/hadUsage	http://www.w3.org/ns/prov#hadUsage	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation/_oneOf/1/entity	http://www.w3.org/ns/prov#entity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedAttribution	http://www.w3.org/ns/prov#qualifiedAttribution	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedAttribution/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedAttribution/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedAttribution/_oneOf/1/agent	http://www.w3.org/ns/prov#agent	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/1/wasGeneratedBy		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/horizontalCRS	https://linked.data.gov.au/def/csdm/container/horizontalCRS	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/compoundCRS	https://linked.data.gov.au/def/csdm/container/compoundCRS	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/verticalDatum	https://linked.data.gov.au/def/csdm/container/verticalDatum	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/surveyDescription	https://linked.data.gov.au/def/csdm/container/surveyDescription	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/surveyDescriptors	https://linked.data.gov.au/def/csdm/container/surveyDescriptors	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/surveyDescriptors/label	http://www.w3.org/2000/01/rdf-schema#label	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema.json
+/surveyDescriptors/template		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema.json
+/surveyDescriptors/hasPart	http://purl.org/dc/terms/hasPart	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema.json
+/surveyDescriptors/hasPart/label	http://www.w3.org/2000/01/rdf-schema#label	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema.json
+/surveyDescriptors/hasPart/type	https://linked.data.gov.au/def/csdm/commonpatterns/namePartType	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema.json
+/purpose	https://linked.data.gov.au/def/csdm/container/purpose	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/surveyType	https://linked.data.gov.au/def/csdm/container/surveyType	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/referencedCSDs	https://linked.data.gov.au/def/csdm/container/referencedCSD	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/referencedCSDs/id		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/adminUnit	https://linked.data.gov.au/def/csdm/container/adminUnit	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/supportingDocuments	https://linked.data.gov.au/def/csdm/container/supportingDocuments	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/points	https://linked.data.gov.au/def/csdm/container/points	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/points/features		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/points/features/_anyOf/0/featureType		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/0/properties		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/0/properties/name	https://linked.data.gov.au/def/csdm/commonpatterns/name	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/0/properties/purpose	https://linked.data.gov.au/def/csdm/surveyfeatures/purpose	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/0/properties/has_provenance		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/0/properties/ptQuality	https://linked.data.gov.au/def/csdm/commonpatterns/qualityClass	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/0/properties/ptQualityMeasure	https://linked.data.gov.au/def/csdm/commonpatterns/qualityMeasure	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/0/properties/comment	http://www.w3.org/2000/01/rdf-schema#comment	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/0/properties/monumentedBy	https://linked.data.gov.au/def/csdm/surveyfeatures/monumentedBy	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/0/properties/monumentedBy/condition	https://linked.data.gov.au/def/csdm/surveyfeatures/condition	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/0/properties/monumentedBy/form	https://linked.data.gov.au/def/csdm/surveyfeatures/form	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/0/properties/monumentedBy/replaces	https://linked.data.gov.au/def/csdm/surveyfeatures/replaces	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/0/properties/monumentedBy/state	https://linked.data.gov.au/def/csdm/surveyfeatures/state	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/1/featureType		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/1/properties		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/1/properties/age	https://linked.data.gov.au/def/csdm/surveyfeatures/age	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/1/properties/note	http://www.w3.org/2000/01/rdf-schema#comment	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/2/featureType		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/2/properties		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/3/featureType		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/3/properties		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/3/properties/geodeticid	https://linked.data.gov.au/def/csdm/surveyfeatures/geodeticid	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/5/topology		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.json
+/points/features/_anyOf/5/topology/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.json
+/points/features/_anyOf/5/properties		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/5/properties/distance		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/5/properties/vectorPurpose	https://linked.data.gov.au/def/csdm/surveyfeatures/vectorPurpose	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/_anyOf/5/properties/comment	http://www.w3.org/2000/01/rdf-schema#comment	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyFeatures/schema.json
+/points/features/featureType	@type	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/observedVectors	https://linked.data.gov.au/def/csdm/container/observedVectors	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/observedVectors/features		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/observedVectors/features/_anyOf/1/topology		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/0/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/0/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/1/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/1/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/1/orientation		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/2/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/2/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/2/radius		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/2/orientation		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/3/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/3/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/3/radius		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/4/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/4/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/5/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/5/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/5/startTangentVector		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/5/startTangentVector/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/5/endTangentVector		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/topology/_oneOf/5/endTangentVector/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/radius		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/1/arcLength		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.json
+/observedVectors/features/_anyOf/2/topology		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/observedVectors/features/_anyOf/2/topology/type		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/observedVectors/features/_anyOf/2/topology/references		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/observedVectors/_anyOf/0/featureType	@type	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/observedVectors/_anyOf/1/features		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/observedVectors/_anyOf/1/features/featureType		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/adoptedVectors	https://linked.data.gov.au/def/csdm/container/adoptedVectors	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/adoptedVectors/_anyOf/0/featureType	@type	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/adoptedVectors/_anyOf/1/features		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/adoptedVectors/_anyOf/1/features/featureType		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels	https://linked.data.gov.au/def/csdm/container/parcels	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/featureType	@type	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties	@nest	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/appellation	https://linked.data.gov.au/def/csdm/parcels/appellation	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/parcelType	https://linked.data.gov.au/def/csdm/parcels/type	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/parcelState	https://linked.data.gov.au/def/csdm/parcels/state	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/address	https://schema.org/address	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/parcelPurpose	https://linked.data.gov.au/def/csdm/parcels/purpose	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/area	https://linked.data.gov.au/def/csdm/parcels/surfaceArea	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/floor	https://linked.data.gov.au/def/csdm/parcels/floor	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/zmin	https://linked.data.gov.au/def/csdm/parcels/zmin	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/zmax	https://linked.data.gov.au/def/csdm/parcels/zmax	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests	https://linked.data.gov.au/def/csdm/parcels/interest	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/interestLink	https://linked.data.gov.au/def/csdm/parcels/interestLink	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/interestName	https://linked.data.gov.au/def/csdm/parcels/interestName	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/interestType	https://linked.data.gov.au/def/csdm/parcels/interestType	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/dateInForce	https://linked.data.gov.au/def/csdm/parcels/interestDateInForce	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/dateExpires	https://linked.data.gov.au/def/csdm/parcels/interestDateExpires	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/statuteLink	https://linked.data.gov.au/def/csdm/parcels/statuteLink	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/statuteName	https://linked.data.gov.au/def/csdm/parcels/statuteName	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/benefitedPartyName	https://linked.data.gov.au/def/csdm/parcels/benefitedPartyName	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/benefitedPartyLink	https://linked.data.gov.au/def/csdm/parcels/benefitedPartyLink	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/originalSurveyLink	https://linked.data.gov.au/def/csdm/parcels/originalSurveyLink	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/referencedParcel	https://linked.data.gov.au/def/csdm/parcels/referencedParcel	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/burdenedParcels	https://linked.data.gov.au/def/csdm/parcels/burdened	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/benefitedParcels	https://linked.data.gov.au/def/csdm/parcels/benefited	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/description	https://linked.data.gov.au/def/csdm/parcels/interestDescription	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/entitlementPortion	https://linked.data.gov.au/def/csdm/parcels/entitlementPortion	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/features/properties/interests/liabilityPortion	https://linked.data.gov.au/def/csdm/parcels/liabilityPortion	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/_oneOf/0/featureType	@type	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/_oneOf/1/featureType	@type	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/_oneOf/1/features		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/parcels/_oneOf/1/features/properties	@nest	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/vectorObservations	https://linked.data.gov.au/def/csdm/container/vectorObservations	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/vectorObservations/resultTime	http://www.w3.org/ns/sosa/resultTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
+/vectorObservations/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
+/vectorObservations/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
+/vectorObservations/observedProperty	http://www.w3.org/ns/sosa/observedProperty	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
+/vectorObservations/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
+/vectorObservations/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
+/vectorObservations/hasMember	http://www.w3.org/ns/sosa/hasMember	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
+/vectorObservations/hasMember/_anyOf/1/resultTime	http://www.w3.org/ns/sosa/resultTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
+/vectorObservations/hasMember/_anyOf/1/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
+/vectorObservations/hasMember/_anyOf/1/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
+/vectorObservations/hasMember/_anyOf/1/observedProperty	http://www.w3.org/ns/sosa/observedProperty	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
+/vectorObservations/hasMember/_anyOf/1/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
+/vectorObservations/hasMember/_anyOf/1/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
+/vectorObservations/hasMember/_anyOf/1/hasResult		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
+/vectorObservations/hasMember/_anyOf/1/result		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
+/vectorObservations/hasMember/_anyOf/1/result@links		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
+/vectorObservations/hasMember/_anyOf/1/hasSimpleResult		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
+/vectorObservations/features	sosa:hasMember	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/features/properties	@nest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.json
+/vectorObservations/features/properties/hasResultQuality		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/features/properties/hasResultQuality/angleAccuracy	https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyMeasure	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/schema.json
+/vectorObservations/features/properties/hasResultQuality/distanceAccuracy	https://linked.data.gov.au/def/csdm/surveyobs/distanceAccuracyMeasure	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/schema.json
+/vectorObservations/features/properties/hasResultQuality/distanceAccuracyClass	https://linked.data.gov.au/def/csdm/surveyobs/distanceAccuracyClass	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/schema.json
+/vectorObservations/features/properties/hasResultQuality/angleAccuracyClass	https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyClass	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/quality/schema.json
+/vectorObservations/features/properties/hasResult	sosa:hasResult	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/features/properties/hasResult/pose	https://linked.data.gov.au/def/csdm/surveyfeatures/pose	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/features/properties/hasResult/pose/angles	https://linked.data.gov.au/def/csdm/utils/geopose/angles	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/features/properties/hasResult/pose/angles/yaw		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/features/properties/hasResult/pose/angles/pitch		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/features/properties/hasResult/pose/angles/roll		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/features/properties/hasResult/angle		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/features/properties/hasResult/distance	https://linked.data.gov.au/def/csdm/surveyfeatures/distance	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/properties		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/properties/angleType	https://linked.data.gov.au/def/csdm/surveyobs/angleType	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/properties/distanceType	https://linked.data.gov.au/def/csdm/surveyobs/distanceType	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/properties/madeBySensor	sosa:madeBySensor	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/properties/madeBySensor/sensorType	@type	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/properties/madeBySensor/_oneOf/0/sensorType	@type	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/properties/madeBySensor/_oneOf/0/baseSensor	https://linked.data.gov.au/def/csdm/sensors/baseSensor	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/properties/madeBySensor/_oneOf/0/roverSensor	https://linked.data.gov.au/def/csdm/sensors/roverSensor	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/properties/madeBySensor/_oneOf/1/sensorType	@type	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/vectorObservations/properties/observedProperty	sosa:observedProperty	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
+/adoptedObservations		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/occupationObservations	https://linked.data.gov.au/def/csdm/container/occupationObservations	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+/occupationFeatures	https://linked.data.gov.au/def/csdm/container/occupationFeatures	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json

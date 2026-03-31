@@ -1,7 +1,7 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Common ICSM profile of Cadastral Survey Data Model
 allOf:
-- $ref: https://icsm-au.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
+- $ref: https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 - properties:
     parcels:
       type: array
@@ -13,7 +13,7 @@ allOf:
               properties:
                 properties:
                   address:
-                    $ref: https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.yaml#/$defs/streetAddress
+                    $ref: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.yaml#/$defs/streetAddress
               required:
               - properties
         required:

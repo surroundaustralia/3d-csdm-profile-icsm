@@ -28,7 +28,7 @@ A simple address with street number
 #### jsonld
 ```jsonld
 {
-  "@context": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/context.jsonld",
+  "@context": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/context.jsonld",
   "propertyNumber": "4",
   "streetName": "Clarendon",
   "streetType": "St",
@@ -73,7 +73,7 @@ A simple address with PO box
 #### jsonld
 ```jsonld
 {
-  "@context": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/context.jsonld",
+  "@context": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/context.jsonld",
   "postOfficeBoxNumber": "4334",
   "locality": "Maidstone",
   "state": "VIC",
@@ -157,8 +157,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.json)
-* JSON version: [schema.json](https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.yaml)
+* YAML version: [schema.yaml](https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.json)
+* JSON version: [schema.json](https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.yaml)
 
 
 # JSON-LD Context
@@ -183,7 +183,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/context.jsonld)
+[context.jsonld](https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/context.jsonld)
 
 ## Sources
 
@@ -193,6 +193,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/icsm-au/3d-csdm-profile-icsm](https://github.com/icsm-au/3d-csdm-profile-icsm)
+* URL: [https://github.com/surroundaustralia/3d-csdm-profile-icsm](https://github.com/surroundaustralia/3d-csdm-profile-icsm)
 * Path: `_sources/datatypes/address`
 

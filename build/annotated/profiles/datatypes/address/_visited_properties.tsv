@@ -1,10 +1,10 @@
-path	@id
-/propertyNumber	ad:propertyNumber
-/unitNumber	
-/streetName	ad:streetName
-/streetType	ad:streetType
-/locality	https://schema.org/addressLocality
-/state	https://schema.org/addressRegion
-/postOfficeBoxNumber	https://schema.org/postOfficeBoxNumber
-/postCode	https://schema.org/postalCode
-/country	https://schema.org/addressCountry
+path	@id	schema
+/propertyNumber	ad:propertyNumber	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
+/unitNumber		/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
+/streetName	ad:streetName	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
+/streetType	ad:streetType	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
+/locality	https://schema.org/addressLocality	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
+/state	https://schema.org/addressRegion	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
+/postOfficeBoxNumber	https://schema.org/postOfficeBoxNumber	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
+/postCode	https://schema.org/postalCode	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
+/country	https://schema.org/addressCountry	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
