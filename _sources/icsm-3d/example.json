@@ -59,7 +59,7 @@
         }
     ],
     "observedVectors": [],
-    "vectorObservations": [
+    "edges": [
         {
             "id": "vectorObservations",
             "type": "FeatureCollection",
