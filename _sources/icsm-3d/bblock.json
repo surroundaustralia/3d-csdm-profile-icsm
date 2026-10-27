@@ -2,6 +2,7 @@
   "name": "Cadastral Survey 3D profile",
   "abstract": "2d and 3D objects allowed, observations  and coords must be 3d.  Note that validation rules for 3D have not been elucidated pending future phases of development and testing.",
   "status": "under-development",
+  "group": "2. Profiles",
   "dateTimeAddition": "2023-07-31T00:00:00Z",
   "itemClass": "schema",
   "register": "icsm-csdm",
