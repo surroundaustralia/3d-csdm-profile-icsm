@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    // Upgrade http:// subresources only when served over https; plain-http
+    // viewers (e.g. local testing against http://localhost registers) are left alone.
+    if (location.protocol === 'https:') {
+      var csp = document.createElement('meta');
+      csp.httpEquiv = 'Content-Security-Policy';
+      csp.content = 'upgrade-insecure-requests';
+      document.head.appendChild(csp);
+    }
+  </script>
+  <link rel="icon" href="https://ogcincubator.github.io/bblocks-viewer/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Cadastre Survey Data Exchange Specification</title>
+  <meta name="description" content="This resource is a view of the specification for the 3D Cadastral Survey Data (CSD) Exchange Schema. 
+
+The specification is a machine-readable, modular data exchange model using the JSON language, using JSON Schema for structure and a semantic model (JSON-LD and SHACL rules) for more complex constraints. 
+
+  **[Implementation profiles](https://icsm-au.github.io/3d-csdm-profiles/)**  with extensive examples are available for Australian and New Zealand jurisdictions.**
+
+The core (top level container) schema can be viewed using the in-built documentation system **[here](bblock/icsm.csdm.features.CSD)** 
+
+The schema re-uses, flexible, standards based components using the [OGC Building Blocks methodology](https://github.com/opengeospatial/bblock-template/blob/master/USAGE.md).  
+
+The [set of modules comprising the specification](bblock) is implemented as a &quot;register&quot; of &quot;Building Blocks&quot; managed within a [Git repository](https://icsm-au.github.io/3d-csdm-schema/). 
+
+The [documentation for the underlying 3D CSDM](https://icsm-au.github.io/3d-csdm/docs/) data model collates the elements from all the inherited components into a single comprehensive document (directly from the machine-readable sources) 
+
+_Implementation Profiles (e.g. for each Jurisdiction) use the same documentation form extended with specific constraints and vocabulary usages_" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="3D Cadastre Survey Data Exchange Specification" />
+  <meta property="og:description" content="This resource is a view of the specification for the 3D Cadastral Survey Data (CSD) Exchange Schema. 
+
+The specification is a machine-readable, modular data exchange model using the JSON language, using JSON Schema for structure and a semantic model (JSON-LD and SHACL rules) for more complex constraints. 
+
+  **[Implementation profiles](https://icsm-au.github.io/3d-csdm-profiles/)**  with extensive examples are available for Australian and New Zealand jurisdictions.**
+
+The core (top level container) schema can be viewed using the in-built documentation system **[here](bblock/icsm.csdm.features.CSD)** 
+
+The schema re-uses, flexible, standards based components using the [OGC Building Blocks methodology](https://github.com/opengeospatial/bblock-template/blob/master/USAGE.md).  
+
+The [set of modules comprising the specification](bblock) is implemented as a &quot;register&quot; of &quot;Building Blocks&quot; managed within a [Git repository](https://icsm-au.github.io/3d-csdm-schema/). 
+
+The [documentation for the underlying 3D CSDM](https://icsm-au.github.io/3d-csdm/docs/) data model collates the elements from all the inherited components into a single comprehensive document (directly from the machine-readable sources) 
+
+_Implementation Profiles (e.g. for each Jurisdiction) use the same documentation form extended with specific constraints and vocabulary usages_" />
+  <meta property="og:url" content="https://surroundaustralia.github.io/3d-csdm-common/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3D Cadastre Survey Data Exchange Specification" />
+  <meta name="twitter:description" content="This resource is a view of the specification for the 3D Cadastral Survey Data (CSD) Exchange Schema. 
+
+The specification is a machine-readable, modular data exchange model using the JSON language, using JSON Schema for structure and a semantic model (JSON-LD and SHACL rules) for more complex constraints. 
+
+  **[Implementation profiles](https://icsm-au.github.io/3d-csdm-profiles/)**  with extensive examples are available for Australian and New Zealand jurisdictions.**
+
+The core (top level container) schema can be viewed using the in-built documentation system **[here](bblock/icsm.csdm.features.CSD)** 
+
+The schema re-uses, flexible, standards based components using the [OGC Building Blocks methodology](https://github.com/opengeospatial/bblock-template/blob/master/USAGE.md).  
+
+The [set of modules comprising the specification](bblock) is implemented as a &quot;register&quot; of &quot;Building Blocks&quot; managed within a [Git repository](https://icsm-au.github.io/3d-csdm-schema/). 
+
+The [documentation for the underlying 3D CSDM](https://icsm-au.github.io/3d-csdm/docs/) data model collates the elements from all the inherited components into a single comprehensive document (directly from the machine-readable sources) 
+
+_Implementation Profiles (e.g. for each Jurisdiction) use the same documentation form extended with specific constraints and vocabulary usages_" />
+  <script src="https://surroundaustralia.github.io/3d-csdm-common/config.js"></script>
+  <script type="module" crossorigin src="https://ogcincubator.github.io/bblocks-viewer/assets/index.js"></script>
+  <link rel="stylesheet" href="https://ogcincubator.github.io/bblocks-viewer/assets/index.css">
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>

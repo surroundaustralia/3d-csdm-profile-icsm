@@ -2,3 +2,8 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: 2D restricted profile Cadastral Survey Data Model
 allOf:
 - $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+x-bblocks-metadata:
+  itemIdentifier: icsm.profiles.icsm-2d
+  register: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-27'

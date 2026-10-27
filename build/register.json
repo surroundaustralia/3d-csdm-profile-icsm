@@ -1,19 +1,23 @@
 {
+  "metaRegistry": "https://w3id.org/ogc/bblocks/meta-register.json",
   "name": "Implementation Profiles for 3D CSDM",
   "abstract": "This repository contains the \n ICSM - [ANZLIC](https://www.anzlic.gov.au/) [Intergovernmental Committee on Survey and Mapping](https://www.icsm.gov.au/) - [Common  profile](bblock/icsm.profiles.common) of the [Cadastral Survey Data Model Exchange Specification](https://icsm-au.github.io/3d-csdm-common/). \n \n _The ICSM profile is a partial set of constraints, the full model is implemented by a further set of jurisdiction specific profiles using local vocabulary (codelists) and any additional content and rules necessary._\n \nProfiles are defined in a consistent, machine-readable and validatable way using the [OGC Building Blocks methodology](https://ogcincubator.github.io/bblocks-docs/).\n",
   "description": "Each jurisdiction profile extends a [common ICSM profile] of a general [model of 3D cadastre](https://icsm-au.github.io/3d-csdm-model/), and an [encoding specification in form of a JSON schema](https://icsm-au.github.io/3d-csdm-common/).\n\nThe encoding specification and all profiles are compatible with the [OGC API Features](https://opengeospatial.github.io/e-learning/ogcapi-features/text/basic-main.html) data exchange specification, and can thus be implemented by any standards compliant software capable of handling nested object sub-schemas and control of codelist in content.\n\nThe relationships of this profile to specific jurisdictional profiles and and the underlying  common model are shown below:\n\n![](https://lucid.app/publicSegments/view/f7e6c029-db67-4186-9592-cab6ec3437d0/image.png)\n",
-  "modified": "2026-03-31T04:23:55.782248",
+  "modified": "2026-10-27T21:40:27.704871",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"526c3a47ca93635fb1572ac841a65271d1667aaa",
-      "shortCommitId": "\"526c3a",
-      "date": "2026-03-27T14:14:05+00:00\""
+      "commitId": "\"862052921203373f8136e6f464e0dfdd693e79f5",
+      "shortCommitId": "\"862052",
+      "date": "2026-10-26T21:53:11+00:00\""
     }
   },
   "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-icsm",
   "gitHubRepository": "https://github.com/surroundaustralia/3d-csdm-profile-icsm/blob/main/",
   "baseURL": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/",
   "viewerURL": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/",
+  "license": {
+    "url": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/LICENSE"
+  },
   "validationReport": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/tests/report.html",
   "validationReportJson": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/tests/report.json",
   "imports": [
@@ -26,11 +30,12 @@
       "name": "ICSM Address (Placeholder)",
       "abstract": "A simple implementation of ICSM address model. Can be mapped to or replaced by a standard ICSM schema when available.",
       "status": "under-development",
+      "group": "4. Datatypes",
       "dateTimeAddition": "2024-01-15T00:00:00Z",
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-03-31",
+      "dateOfLastChange": "2026-10-27",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -46,6 +51,9 @@
         "ICSM"
       ],
       "shaclShapes": {},
+      "license": {
+        "url": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/LICENSE"
+      },
       "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/context.jsonld",
       "schema": {
         "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.yaml",
@@ -55,7 +63,6 @@
       "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/datatypes/address/context.jsonld",
       "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/resolvedProperties.json",
       "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/datatypes/address/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-icsm/blob/main/build/tests/profiles/datatypes/address/",
       "documentation": {
@@ -78,11 +85,12 @@
       "name": "Cadastral Survey 2D (+elevation) basic Profile",
       "abstract": "Profile to constrain a 2D implementation of the 3D Cadastre Survey Data Model",
       "status": "under-development",
+      "group": "2. Profiles",
       "dateTimeAddition": "2023-07-31T00:00:00Z",
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-03-31",
+      "dateOfLastChange": "2026-10-27",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -103,6 +111,9 @@
       "superBBlock": false,
       "shaclRules": [],
       "shaclShapes": {},
+      "license": {
+        "url": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/LICENSE"
+      },
       "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/context.jsonld",
       "schema": {
         "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/schema.yaml",
@@ -112,7 +123,6 @@
       "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-2d/context.jsonld",
       "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/resolvedProperties.json",
       "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-2d/",
-      "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
@@ -134,11 +144,12 @@
       "name": "Cadastral Survey 3D profile",
       "abstract": "2d and 3D objects allowed, observations  and coords must be 3d.  Note that validation rules for 3D have not been elucidated pending future phases of development and testing.",
       "status": "under-development",
+      "group": "2. Profiles",
       "dateTimeAddition": "2023-07-31T00:00:00Z",
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-03-31",
+      "dateOfLastChange": "2026-10-27",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -159,6 +170,9 @@
       "superBBlock": false,
       "shaclRules": [],
       "shaclShapes": {},
+      "license": {
+        "url": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/LICENSE"
+      },
       "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/context.jsonld",
       "schema": {
         "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/schema.yaml",
@@ -168,7 +182,6 @@
       "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-3d/context.jsonld",
       "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/resolvedProperties.json",
       "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-3d/",
-      "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
@@ -188,13 +201,15 @@
     {
       "itemIdentifier": "icsm.profiles.common",
       "name": "Cadastral Survey Common ICSM Profile",
+      "highlighted": true,
       "abstract": "Common profile of the Cadastral Survey Data Model. All ICSM jurisdiction profiles will inherit schemas, rules and vocabulary bindings from this profile, ensuring consistency and minimising effort and complexity of jurisdictional profile specification.",
       "status": "under-development",
+      "group": "2. Profiles",
       "dateTimeAddition": "2023-07-31T00:00:00Z",
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-03-31",
+      "dateOfLastChange": "2026-10-27",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -246,43 +261,58 @@
       ],
       "shaclShapes": {
         "icsm.profiles.common": [
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl",
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl"
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl"
         ],
         "icsm.csdm.features.CSD": [
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl"
         ],
-        "ogc.geo.topo.features.topo-feature-collection": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+        "ogc.bbr.utils.compoundName.ontology": [
+          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl"
+        ],
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
         ],
         "ogc.geo.topo.features.topo-feature": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ],
-        "icsm.csdm.datatypes.compoundName": [
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+        "ogc.geo.topo.features.topo-feature-collection": [
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ],
-        "ogc.geo.topo.features.topo-arc": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+        "ogc.geo.features.featureCollection": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
+        ],
+        "ogc.model.cross-domain.prov": [
+          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
         ],
         "icsm.csdm.features.SurveyObservations": [
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl"
         ],
+        "ogc.sosa.properties.execution": [
+          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/execution/shapes.shacl"
+        ],
         "ogc.sosa.properties.observation": [
           "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+        ],
+        "ogc.geo.topo.features.topo-arc": [
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ]
       },
       "dependsOn": [
-        "icsm.profiles.datatypes.address",
-        "icsm.csdm.features.CSD"
+        "bblocks://icsm.csdm.features.CSD",
+        "bblocks://icsm.profiles.datatypes.address"
       ],
+      "license": {
+        "url": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/LICENSE"
+      },
       "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/context.jsonld",
       "schema": {
         "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/schema.yaml",
@@ -292,7 +322,6 @@
       "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/common/context.jsonld",
       "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/resolvedProperties.json",
       "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/common/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-icsm/blob/main/build/tests/profiles/common/",
       "documentation": {

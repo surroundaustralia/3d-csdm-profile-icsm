@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.common - Cadastral Survey Common ICSM Profile
-Generated 2026-03-31T04:24:18.038466+00:00
+Generated 2026-10-27T21:41:06.903626+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -26,36 +26,94 @@ On instance:
 === End JSON Schema ===
 
 === SHACL ===
-Using building block SHACL closures:
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/icsm-admin-unit-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/icsm-parcel-state.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-angle-type.ttl
+Error processing closure source ../../examples/referenced-objects-closure.ttl: <urlopen error [Errno 2] No such file or directory: 'examples/referenced-objects-closure.ttl'> - SHACL validation will run against an incomplete closure graph
+Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-distance-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-equipment-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-procedure-used.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/nz-procedure-used.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/nz-condition.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/monument/nz-monument-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-crs.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-compound-crs.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-land-district.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-territorial-authority.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-documentation-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-annotation.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-annotation.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-vhd.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-secondary-parcel-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-angle-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/icsm-admin-unit-type.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-state.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/nz-vector-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-procedure-used.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-vhd.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-secondary-parcel-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/icsm-parcel-state.ttl
+ - https://www.w3.org/ns/prov-o
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-territorial-authority.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-compound-crs.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-documentation-type.ttl
+ - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/accuracy/nz-point-class.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/nz-vector-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-land-district.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/nz-procedure-used.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-purpose.ttl
+ - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/ontology/ontology.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/monument/nz-monument-type.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/nz-condition.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/nz-purpose.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/nz-state.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-type.ttl
+ - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-crs.ttl
+ - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcelSpatialRepresentationDefinition/ontology.ttl
+ - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/nz-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-annotation.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-equipment-type.ttl
+Validation result for profiles/icsm-observation-properties.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for profiles/icsm-observation-properties.shacl:
+ - Shape :bindSurveyObservation-angle-and-distance-types: *none*
+ - Shape :annotate-madeBySensor: *none*
+ - Shape :testInCollectionOrMember-procedure: *none*
+ - Shape :testInCollectionOrMember-madeBySensor: *none*
+ - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
+
+
+** Validation error **
+Validation result for profiles/icsm-point-codetypes-shacl.ttl:
+  Validation Report
+  Conforms: False
+  Results (4):
+  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:class surv:MonumentForm ; sh:name Literal("form") ; sh:path surv:form ]
+  	Focus Node: [ surv:condition <monument-condition:mkfd> ; surv:form <file:///github/workspace/> ; surv:state <monument-state:original> ]
+  	Value Node: <file:///github/workspace/>
+  	Result Path: surv:form
+  	Message: Value does not have class surv:MonumentForm
+  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:class surv:SurveyPointPurpose ; sh:path surv:purpose ]
+  	Focus Node: <file:///github/workspace/1725787>
+  	Value Node: <surveypoint-purpose:boundary>
+  	Result Path: surv:purpose
+  	Message: Value does not have class surv:SurveyPointPurpose
+  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:class surv:SurveyPointState ; sh:name Literal("state") ; sh:path surv:state ]
+  	Focus Node: [ surv:condition <monument-condition:mkfd> ; surv:form <file:///github/workspace/> ; surv:state <monument-state:original> ]
+  	Value Node: <monument-state:original>
+  	Result Path: surv:state
+  	Message: Value does not have class surv:SurveyPointState
+  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:class surv:ConditionCode ; sh:name Literal("condition") ; sh:path surv:condition ]
+  	Focus Node: [ surv:condition <monument-condition:mkfd> ; surv:form <file:///github/workspace/> ; surv:state <monument-state:original> ]
+  	Value Node: <monument-condition:mkfd>
+  	Result Path: surv:condition
+  	Message: Value does not have class surv:ConditionCode
+  
+Focus nodes for profiles/icsm-point-codetypes-shacl.ttl:
+ - Shape jcl:testBoundVocab-vector-purpose: *none*
+ - Shape jcl:testBoundVocab-form: <file:///github/workspace/1725787>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-surveypoint-purpose: <file:///github/workspace/1725787>
+ - Shape jcl:testBoundVocab-state: <file:///github/workspace/1725787>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-condition: <file:///github/workspace/1725787>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-pt-quality-class: <file:///github/workspace/1725787>
+
 
 ** Validation error **
 Validation result for profiles/icsm-survey-metadata-shacl.ttl:
@@ -90,12 +148,19 @@ Validation result for profiles/icsm-survey-metadata-shacl.ttl:
   	Message: AdminUnit Value must match profile
   
 Focus nodes for profiles/icsm-survey-metadata-shacl.ttl:
- - Shape :testCompoundCRS: *none*
- - Shape :testDistanceType: *none*
- - Shape :testCRS: <file:///github/workspace/DP_572532>
- - Shape :testSurveyMetadata: <file:///github/workspace/DP_572532>
  - Shape :testVHD: *none*
+ - Shape :testCompoundCRS: *none*
+ - Shape :testCRS: <file:///github/workspace/DP_572532>
  - Shape :testAngleType: *none*
+ - Shape :testDistanceType: *none*
+ - Shape :testSurveyMetadata: <file:///github/workspace/DP_572532>
+
+Validation result for profiles/icsm-references-shacl.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for profiles/icsm-references-shacl.ttl:
+ - Shape :referencedCSDs-present: <file:///github/workspace/1725787>
 
 Validation result for profiles/icsm-parcel-codetypes-shacl.ttl:
   Validation Report
@@ -105,93 +170,23 @@ Focus nodes for profiles/icsm-parcel-codetypes-shacl.ttl:
  - Shape jcl:testBoundVocab-parcelType: *none*
  - Shape jcl:testBoundVocab-parcelInterest: *none*
 
-Validation result for profiles/icsm-observation-properties.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for profiles/icsm-observation-properties.shacl:
- - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
- - Shape :testInCollectionOrMember-procedure: *none*
- - Shape :testInCollectionOrMember-madeBySensor: *none*
- - Shape :bindSurveyObservation-angle-and-distance-types: *none*
- - Shape :annotate-madeBySensor: *none*
-
-Validation result for profiles/icsm-references-shacl.ttl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for profiles/icsm-references-shacl.ttl:
- - Shape :referencedCSDs-present: <file:///github/workspace/1725787>
-
-
-** Validation error **
-Validation result for profiles/icsm-point-codetypes-shacl.ttl:
-  Validation Report
-  Conforms: False
-  Results (4):
-  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:class surv:ConditionCode ; sh:name Literal("condition") ; sh:path surv:condition ]
-  	Focus Node: [ surv:condition <monument-condition:mkfd> ; surv:form <file:///github/workspace/> ; surv:state <monument-state:original> ]
-  	Value Node: <monument-condition:mkfd>
-  	Result Path: surv:condition
-  	Message: Value does not have class surv:ConditionCode
-  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:class surv:SurveyPointPurpose ; sh:path surv:purpose ]
-  	Focus Node: <file:///github/workspace/1725787>
-  	Value Node: <surveypoint-purpose:boundary>
-  	Result Path: surv:purpose
-  	Message: Value does not have class surv:SurveyPointPurpose
-  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:class surv:SurveyPointState ; sh:name Literal("state") ; sh:path surv:state ]
-  	Focus Node: [ surv:condition <monument-condition:mkfd> ; surv:form <file:///github/workspace/> ; surv:state <monument-state:original> ]
-  	Value Node: <monument-state:original>
-  	Result Path: surv:state
-  	Message: Value does not have class surv:SurveyPointState
-  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:class surv:MonumentForm ; sh:name Literal("form") ; sh:path surv:form ]
-  	Focus Node: [ surv:condition <monument-condition:mkfd> ; surv:form <file:///github/workspace/> ; surv:state <monument-state:original> ]
-  	Value Node: <file:///github/workspace/>
-  	Result Path: surv:form
-  	Message: Value does not have class surv:MonumentForm
-  
-Focus nodes for profiles/icsm-point-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-condition: <file:///github/workspace/1725787>/surv:monumentedBy
- - Shape jcl:testBoundVocab-surveypoint-purpose: <file:///github/workspace/1725787>
- - Shape jcl:testBoundVocab-pt-quality-class: <file:///github/workspace/1725787>
- - Shape jcl:testBoundVocab-state: <file:///github/workspace/1725787>/surv:monumentedBy
- - Shape jcl:testBoundVocab-vector-purpose: *none*
- - Shape jcl:testBoundVocab-form: <file:///github/workspace/1725787>/surv:monumentedBy
-
-Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
- - Shape <https://linked.data.gov.au/def/csdm/surveyprov/SurveyType>: *none*
- - Shape container:CSD-seeAlso: *none*
- - Shape container:CSD: *none*
-
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
- - Shape :PrimaryParcel: *none*
- - Shape :PropertyUnit: *none*
- - Shape :Apellation: *none*
- - Shape :ParcelQualityClass: *none*
- - Shape :EstateParcel: *none*
- - Shape :ParcelType: *none*
- - Shape :ParcelAggregate: *none*
- - Shape :LandInterest: *none*
- - Shape :ParcelState: *none*
- - Shape :SecondaryParcel: *none*
  - Shape :Parcel: *none*
+ - Shape :LandInterest: *none*
+ - Shape :ParcelAggregate: *none*
+ - Shape :PropertyUnit: *none*
+ - Shape :ParcelQualityClass: *none*
+ - Shape :ParcelType: *none*
  - Shape :PurposeOfSpatialUnit: *none*
+ - Shape :SecondaryParcel: *none*
+ - Shape :Apellation: *none*
+ - Shape :PrimaryParcel: *none*
+ - Shape :ParcelState: *none*
+ - Shape :EstateParcel: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
   Validation Report
@@ -200,28 +195,125 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-common/_source
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
  - Shape :testFOIexists: *none*
 
-Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
   Validation Report
   Conforms: True
   
-Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:nf48e7897603c4b77bed28f4429d09f5eb3: <file:///github/workspace/1725787>/geojson:geometry
- - Shape _:nf48e7897603c4b77bed28f4429d09f5eb1: <file:///github/workspace/1725787>/geojson:geometry
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+ - Shape container:CSD: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyprov/SurveyType>: *none*
+ - Shape container:CSD-seeAlso: *none*
+
+Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
+ - Shape :NamePartShape: *none*
+ - Shape :MeasureShape: *none*
+ - Shape :CompoundNameShape: <file:///github/workspace/1725787>/commonpatterns:name
+
+Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:FeatureShape: <file:///github/workspace/1725787>
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 
 Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoLinesReferencePoints: *none*
- - Shape topo:testTopoReferencesExist: *none*
+ - Shape toporules:testTopoDirectedReferencesExist: *none*
+ - Shape toporules:testTopoReferencesExist: *none*
+ - Shape toporules:testTopoLinesReferencePoints: *none*
+ - Shape toporules:testTopoEdgesReferencePoints: *none*
 
-Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:nc3456ef1477f465ca86331a086c7ef34b1: <file:///github/workspace/1725787>/commonpatterns:name
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+ - Shape _:n448cc656d6fb4d009555cdb2ac9f612bb1: <file:///github/workspace/1725787>/geojson:geometry
+ - Shape _:n448cc656d6fb4d009555cdb2ac9f612bb3: <file:///github/workspace/1725787>/geojson:geometry
+
+Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureCollectionShape: <file:///github/workspace/points>
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:LinkShape: *none*
+
+Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInformedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-entity>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-activity>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-atLocation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasStartedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasAttributedTo>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Plan-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#End-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#EmptyCollection-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-specializationOf>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Invalidation-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadPrimarySource>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Start-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Bundle-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Entity-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadMember>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadActivity>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-used>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-agent>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedEnd>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadGeneration>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Generation-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Usage-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-generated>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-influencer>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasRevisionOf>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadPlan>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Collection-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-invalidated>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedRevision>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedUsage>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Activity-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedStart>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasEndedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadRole>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-alternateOf>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadUsage>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
   Validation Report
@@ -230,20 +322,26 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-common/_source
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
  - Shape :testRequiredProperties: *none*
 
+Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/execution/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/execution/shapes.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
+
 Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
  - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
 
 === End SHACL ===
 

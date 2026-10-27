@@ -52,3 +52,8 @@ x-jsonld-extra-terms:
 x-jsonld-prefixes:
   sdo: https://schema.org/
   ads: https:/icsm.org.au/placeholder/address/
+x-bblocks-metadata:
+  itemIdentifier: icsm.profiles.datatypes.address
+  register: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-27'

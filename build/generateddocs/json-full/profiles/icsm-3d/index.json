@@ -5,11 +5,12 @@
   "name": "Cadastral Survey 3D profile",
   "abstract": "2d and 3D objects allowed, observations  and coords must be 3d.  Note that validation rules for 3D have not been elucidated pending future phases of development and testing.",
   "status": "under-development",
+  "group": "2. Profiles",
   "dateTimeAddition": "2023-07-31T00:00:00Z",
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-03-31",
+  "dateOfLastChange": "2026-10-27",
   "sources": [
     {
       "title": "3D Cadastre Survey Data Model",
@@ -30,6 +31,9 @@
   "superBBlock": false,
   "shaclRules": [],
   "shaclShapes": {},
+  "license": {
+    "url": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/LICENSE"
+  },
   "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/context.jsonld",
   "schema": {
     "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/schema.yaml",
@@ -39,7 +43,6 @@
   "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-3d/context.jsonld",
   "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-3d/resolvedProperties.json",
   "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-3d/",
-  "rdfData": [],
   "validationPassed": true,
   "description": "## Cadastral Survey Data Model - ICSM common\n\nRules and default namespace bindings for ICSM Jurisdiction Profiles of the Cadastral Survey Data Model (CSDM)\n\n",
   "examples": [
@@ -48,7 +51,7 @@
       "content": "CSD with 3D parcels and observations."
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: 3D profile of Cadastral Survey Data Model - may include solid geometry\n  parcels and must include pitch (azimuth angle) component of each observation\n$defs:\n  3dParcelCollection: {}\n  3dParcelTypes:\n    anyOf:\n    - {}\nallOf:\n- $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json\n- properties:\n    parcels:\n      type: array\n      items:\n        allOf:\n        - $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json#/$defs/FeatureCollectionOptions\n        - allOf:\n          - properties:\n              featureType:\n                enum:\n                - PrimaryParcel\n                - surv:PrimaryParcel\n                - SecondaryParcel\n                - surv:SecondaryParcel\n              appellation:\n                $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema.json\n            required:\n            - featureType\n          - properties:\n              features:\n                items:\n                  properties:\n                    featureType:\n                      enum:\n                      - PrimaryParcel\n                      - surv:PrimaryParcel\n                      - SecondaryParcel\n                      - surv:SecondaryParcel\n                    topology:\n                      properties:\n                        type:\n                          enum:\n                          - Polygon\n                          - Solid\n                          - SweptSolid\n                  required:\n                  - featureType\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: 3D profile of Cadastral Survey Data Model - may include solid geometry\n  parcels and must include pitch (azimuth angle) component of each observation\n$defs:\n  3dParcelCollection: {}\n  3dParcelTypes:\n    anyOf:\n    - {}\nallOf:\n- $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json\n- properties:\n    parcels:\n      type: array\n      items:\n        allOf:\n        - $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json#/$defs/FeatureCollectionOptions\n        - allOf:\n          - properties:\n              featureType:\n                enum:\n                - PrimaryParcel\n                - surv:PrimaryParcel\n                - SecondaryParcel\n                - surv:SecondaryParcel\n              appellation:\n                $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/datatypes/compoundName/schema.json\n            required:\n            - featureType\n          - properties:\n              features:\n                items:\n                  properties:\n                    featureType:\n                      enum:\n                      - PrimaryParcel\n                      - surv:PrimaryParcel\n                      - SecondaryParcel\n                      - surv:SecondaryParcel\n                    topology:\n                      properties:\n                        type:\n                          enum:\n                          - Polygon\n                          - Solid\n                          - SweptSolid\n                  required:\n                  - featureType\nx-bblocks-metadata:\n  itemIdentifier: icsm.profiles.icsm-3d\n  register: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-10-27'\n",
   "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-icsm",
   "gitPath": "_sources/icsm-3d"
 }
