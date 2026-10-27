@@ -78,7 +78,7 @@
             "featureType": "sosa:ObservationCollection",
             "time": null,
             "properties": {
-                "resultTime": "2023-03-31",
+                "resultTime": "2023-03-31T00:00:00",
                 "observedProperty": "surveyable:VectorDetermination",
                 "usedProcedure": "wa-procedure-used:measured",
                 "angleType": "icsm-angle-type:angle",

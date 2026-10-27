@@ -2,6 +2,7 @@
   "name": "Cadastral Survey 2D (+elevation) basic Profile",
   "abstract": "Profile to constrain a 2D implementation of the 3D Cadastre Survey Data Model",
   "status": "under-development",
+  "group": "2. Profiles",
   "dateTimeAddition": "2023-07-31T00:00:00Z",
   "itemClass": "schema",
   "register": "icsm-csdm",
