@@ -26,14 +26,14 @@
     {
       "Class": "",
       "Property": "surv:distanceType",
-      "Range": "surv:Distance",
+      "Range": "surv:DistanceType",
       "Scheme": "vocabs:icsm-distance-type",
       "Label": "Distance Type"
     },
     {
       "Class": "",
       "Property": "surv:angleType",
-      "Range": "surv:Angle",
+      "Range": "surv:AngleType",
       "Scheme": "vocabs:icsm-angle-type",
       "Label": "Angle Type"
     },

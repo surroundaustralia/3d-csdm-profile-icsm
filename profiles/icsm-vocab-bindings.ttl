@@ -33,7 +33,7 @@ parcel:state a qb:CodedProperty ;
 
 surv:angleType a qb:CodedProperty ;
     qb:codeList vocabs:icsm-angle-type ;
-    rdfs:range surv:Angle .
+    rdfs:range surv:AngleType .
 
 surv:condition a qb:CodedProperty ;
     qb:codeList vocabs:icsm-monument-condition ;
@@ -41,7 +41,7 @@ surv:condition a qb:CodedProperty ;
 
 surv:distanceType a qb:CodedProperty ;
     qb:codeList vocabs:icsm-distance-type ;
-    rdfs:range surv:Distance .
+    rdfs:range surv:DistanceType .
 
 surv:purpose a qb:CodedProperty ;
     qb:codeList vocabs:icsm-surveypoint-purpose ;
