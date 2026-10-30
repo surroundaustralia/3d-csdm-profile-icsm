@@ -41,7 +41,7 @@
     {
       "Classes": [],
       "Property": "surv:distanceType",
-      "Range": "surv:Distance",
+      "Range": "surv:DistanceType",
       "Schemes": [
         "vocabs:icsm-distance-type"
       ],
@@ -50,7 +50,7 @@
     {
       "Classes": [],
       "Property": "surv:angleType",
-      "Range": "surv:Angle",
+      "Range": "surv:AngleType",
       "Schemes": [
         "vocabs:icsm-angle-type"
       ],
