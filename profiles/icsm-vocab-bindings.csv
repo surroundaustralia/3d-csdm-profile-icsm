@@ -1,7 +1,7 @@
 Classes,Property,Range,Schemes
 ,sosa:usedProcedure,sosa:Procedure,vocabs:icsm-procedure-used
-,surv:distanceType,surv:Distance,vocabs:icsm-distance-type
-,surv:angleType,surv:Angle,vocabs:icsm-angle-type
+,surv:distanceType,surv:DistanceType,vocabs:icsm-distance-type
+,surv:angleType,surv:AngleType,vocabs:icsm-angle-type
 container:CSD,container:surveyType,termtype:SurveyType,vocabs:icsm-survey-type
 ,container:adminUnit,termtype:AdminUnit,vocabs:icsm-admin-unit-type
 parcel:Parcel,parcel:state,termtype:ParcelState,vocabs:icsm-parcel-state

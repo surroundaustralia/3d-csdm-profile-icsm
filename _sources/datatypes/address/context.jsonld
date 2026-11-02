@@ -1,7 +1,7 @@
 {
   "@context": {
     "sdo": "https://schema.org/",
-    "ads": "https:/icsm.org.au/placeholder/address/",
+    "ad": "https://icsm.org.au/placeholder/address/",
     "address": "sdo:address",
     "propertyNumber": {
       "@id": "ad:propertyNumber"
