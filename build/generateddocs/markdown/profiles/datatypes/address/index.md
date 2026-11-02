@@ -41,12 +41,12 @@ A simple address with street number
 
 #### ttl
 ```ttl
-@prefix ns1: <ad:> .
+@prefix ad: <https://icsm.org.au/placeholder/address/> .
 @prefix sdo: <https://schema.org/> .
 
-[] ns1:propertyNumber "4" ;
-    ns1:streetName "Clarendon" ;
-    ns1:streetType "St" ;
+[] ad:propertyNumber "4" ;
+    ad:streetName "Clarendon" ;
+    ad:streetType "St" ;
     sdo:addressCountry "Australia" ;
     sdo:addressLocality "Maidstone" ;
     sdo:addressRegion "VIC" ;
@@ -106,15 +106,15 @@ $defs:
       properties:
         propertyNumber:
           type: string
-          x-jsonld-id: ad:propertyNumber
+          x-jsonld-id: https://icsm.org.au/placeholder/address/propertyNumber
         unitNumber:
           type: string
         streetName:
           type: string
-          x-jsonld-id: ad:streetName
+          x-jsonld-id: https://icsm.org.au/placeholder/address/streetName
         streetType:
           type: string
-          x-jsonld-id: ad:streetType
+          x-jsonld-id: https://icsm.org.au/placeholder/address/streetType
         locality:
           type: string
           x-jsonld-id: https://schema.org/addressLocality
@@ -151,12 +151,12 @@ x-jsonld-extra-terms:
   address: https://schema.org/address
 x-jsonld-prefixes:
   sdo: https://schema.org/
-  ads: https:/icsm.org.au/placeholder/address/
+  ad: https://icsm.org.au/placeholder/address/
 x-bblocks-metadata:
   itemIdentifier: icsm.profiles.datatypes.address
   register: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-27'
+  dateOfLastChange: '2026-11-02'
 
 ```
 
@@ -181,7 +181,7 @@ Links to the schema:
     "country": "sdo:addressCountry",
     "address": "sdo:address",
     "sdo": "https://schema.org/",
-    "ads": "https:/icsm.org.au/placeholder/address/",
+    "ad": "https://icsm.org.au/placeholder/address/",
     "@version": 1.1
   }
 }

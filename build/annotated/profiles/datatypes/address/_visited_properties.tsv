@@ -1,8 +1,8 @@
 path	@id	schema
-/propertyNumber	ad:propertyNumber	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
+/propertyNumber	https://icsm.org.au/placeholder/address/propertyNumber	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
 /unitNumber		/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
-/streetName	ad:streetName	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
-/streetType	ad:streetType	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
+/streetName	https://icsm.org.au/placeholder/address/streetName	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
+/streetType	https://icsm.org.au/placeholder/address/streetType	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
 /locality	https://schema.org/addressLocality	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
 /state	https://schema.org/addressRegion	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml
 /postOfficeBoxNumber	https://schema.org/postOfficeBoxNumber	/github/workspace/build/annotated/profiles/datatypes/address/schema.yaml

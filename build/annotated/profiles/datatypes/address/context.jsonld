@@ -10,7 +10,7 @@
     "country": "sdo:addressCountry",
     "address": "sdo:address",
     "sdo": "https://schema.org/",
-    "ads": "https:/icsm.org.au/placeholder/address/",
+    "ad": "https://icsm.org.au/placeholder/address/",
     "@version": 1.1
   }
 }

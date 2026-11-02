@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-10-27",
+  "dateOfLastChange": "2026-11-02",
   "sources": [
     {
       "title": "3D Cadastre Survey Data Model",
@@ -64,18 +64,31 @@
   "shaclShapes": {
     "icsm.profiles.common": [
       "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
-      "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
       "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl",
       "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
+      "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
       "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl"
     ],
     "icsm.csdm.features.CSD": [
-      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
-      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
-      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl"
+      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/rules.shacl"
+    ],
+    "icsm.csdm.model.commonpatterns": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/commonpatterns/owl-consistency.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/commonpatterns/shapes.shacl"
     ],
     "ogc.bbr.utils.compoundName.ontology": [
       "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl"
+    ],
+    "icsm.csdm.model.surveyfeatures": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyfeatures/owl-consistency.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyfeatures/survey_features.shapes.ttl"
+    ],
+    "icsm.csdm.model.geometry": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/owl-consistency.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/geometryprimitives.shapes.ttl"
+    ],
+    "ogc.geo.topo.ontology": [
+      "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl"
     ],
     "ogc.geo.features.feature": [
       "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
@@ -97,11 +110,31 @@
     "icsm.csdm.features.SurveyObservations": [
       "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl"
     ],
+    "icsm.csdm.model.surveyobs": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/owl-consistency.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/vector_observations.shapes.ttl"
+    ],
+    "icsm.csdm.model.geopose": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geopose/owl-consistency.shapes.ttl"
+    ],
+    "ogc.model.cross-domain.sosa": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+    ],
     "ogc.sosa.properties.execution": [
       "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/execution/shapes.shacl"
     ],
     "ogc.sosa.properties.observation": [
       "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+    ],
+    "icsm.csdm.model.container": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/container/container.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/container/owl-consistency.shapes.ttl"
+    ],
+    "ogc.skos.concept": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
     ],
     "ogc.geo.topo.features.topo-arc": [
       "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
@@ -133,7 +166,7 @@
       "content": "Examples are provided in specific jurisdictional profiles. \n\nSee also the [ICSM address component](https://icsm-au.github.io/3d-csdm-profile-icsm/bblock/icsm.profiles.datatypes.address/examples)"
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Common ICSM profile of Cadastral Survey Data Model\nallOf:\n- $ref: https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml\n- properties:\n    parcels:\n      type: array\n      items:\n        properties:\n          features:\n            type: array\n            items:\n              properties:\n                properties:\n                  address:\n                    $ref: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.yaml#/$defs/streetAddress\n              required:\n              - properties\n        required:\n        - features\nx-jsonld-extra-terms:\n  sensorType:\n    x-jsonld-type: '@id'\n    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/sensorType\n  sensorRole:\n    x-jsonld-type: '@id'\n    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/sensorRole\n  lastCalibrated: https://linked.data.gov.au/def/csdm/surveyfeatures/lastCalibrated\nx-jsonld-prefixes:\n  icsm: https://linked.data.gov.au/def/csdm/\n  surv: https://linked.data.gov.au/def/csdm/surveyfeatures/\n  epsg: http://www.opengis.net/def/crs/EPSG/0/\n  surveytype: https://linked.data.gov.au/def/csdm/surveytypes/\n  icsm-jurisdictions: https://linked.data.gov.au/def/csdm/jurisdictions/\n  surveyable: https://linked.data.gov.au/def/csdm/observedProperties/\n  surveyproc: https://linked.data.gov.au/def/csdm/icsm-procedure-used/\n  icsm-survey-type: https://linked.data.gov.au/def/csdm/icsm-survey-type/\n  survptpurp: https://linked.data.gov.au/def/csdm/survptpurp/\n  icsm-admin-unit-type: https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/\n  icsm-procedure-used: https://linked.data.gov.au/def/csdm/icsm-procedure-used/\n  icsm-surveypoint-purpose: https://linked.data.gov.au/def/csdm/icsm-surveypoint-purpose/\n  icsm-parcel-state: https://linked.data.gov.au/def/csdm/icsm-parcel-state/\n  icsm-angle-type: https://linked.data.gov.au/def/csdm/icsm-angle-type/\n  icsm-equipment-type: https://linked.data.gov.au/def/csdm/icsm-equipment-type/\n  icsm-distance-type: https://linked.data.gov.au/def/csdm/icsm-distance-type/\n  icsm-arc-orientation: https://linked.data.gov.au/def/csdm/arc-orientation/\nx-bblocks-metadata:\n  itemIdentifier: icsm.profiles.common\n  register: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-10-27'\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Common ICSM profile of Cadastral Survey Data Model\nallOf:\n- $ref: https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml\n- properties:\n    parcels:\n      type: array\n      items:\n        properties:\n          features:\n            type: array\n            items:\n              properties:\n                properties:\n                  address:\n                    $ref: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/datatypes/address/schema.yaml#/$defs/streetAddress\n              required:\n              - properties\n        required:\n        - features\nx-jsonld-extra-terms:\n  sensorType:\n    x-jsonld-type: '@id'\n    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/sensorType\n  sensorRole:\n    x-jsonld-type: '@id'\n    x-jsonld-id: https://linked.data.gov.au/def/csdm/surveyfeatures/sensorRole\n  lastCalibrated: https://linked.data.gov.au/def/csdm/surveyfeatures/lastCalibrated\nx-jsonld-prefixes:\n  icsm: https://linked.data.gov.au/def/csdm/\n  surv: https://linked.data.gov.au/def/csdm/surveyfeatures/\n  epsg: http://www.opengis.net/def/crs/EPSG/0/\n  surveytype: https://linked.data.gov.au/def/csdm/surveytypes/\n  icsm-jurisdictions: https://linked.data.gov.au/def/csdm/jurisdictions/\n  surveyable: https://linked.data.gov.au/def/csdm/observedProperties/\n  surveyproc: https://linked.data.gov.au/def/csdm/icsm-procedure-used/\n  icsm-survey-type: https://linked.data.gov.au/def/csdm/icsm-survey-type/\n  survptpurp: https://linked.data.gov.au/def/csdm/survptpurp/\n  icsm-admin-unit-type: https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/\n  icsm-procedure-used: https://linked.data.gov.au/def/csdm/icsm-procedure-used/\n  icsm-surveypoint-purpose: https://linked.data.gov.au/def/csdm/icsm-surveypoint-purpose/\n  icsm-parcel-state: https://linked.data.gov.au/def/csdm/icsm-parcel-state/\n  icsm-angle-type: https://linked.data.gov.au/def/csdm/icsm-angle-type/\n  icsm-equipment-type: https://linked.data.gov.au/def/csdm/icsm-equipment-type/\n  icsm-distance-type: https://linked.data.gov.au/def/csdm/icsm-distance-type/\n  icsm-arc-orientation: https://linked.data.gov.au/def/csdm/arc-orientation/\nx-bblocks-metadata:\n  itemIdentifier: icsm.profiles.common\n  register: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-02'\n",
   "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-icsm",
   "gitPath": "_sources/common"
 }

@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-10-27",
+  "dateOfLastChange": "2026-11-02",
   "link": "https://github.com/icsm-au/3d-csdm-schema",
   "sources": [
     {
@@ -60,8 +60,8 @@
         {
           "language": "ttl",
           "url": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/tests/profiles/datatypes/address/example_1_1.ttl",
-          "sizeBytes": 280,
-          "code": "@prefix ns1: <ad:> .\n@prefix sdo: <https://schema.org/> .\n\n[] ns1:propertyNumber \"4\" ;\n    ns1:streetName \"Clarendon\" ;\n    ns1:streetType \"St\" ;\n    sdo:addressCountry \"Australia\" ;\n    sdo:addressLocality \"Maidstone\" ;\n    sdo:addressRegion \"VIC\" ;\n    sdo:postalCode \"3012\" .\n\n"
+          "sizeBytes": 313,
+          "code": "@prefix ad: <https://icsm.org.au/placeholder/address/> .\n@prefix sdo: <https://schema.org/> .\n\n[] ad:propertyNumber \"4\" ;\n    ad:streetName \"Clarendon\" ;\n    ad:streetType \"St\" ;\n    sdo:addressCountry \"Australia\" ;\n    sdo:addressLocality \"Maidstone\" ;\n    sdo:addressRegion \"VIC\" ;\n    sdo:postalCode \"3012\" .\n\n"
         }
       ]
     },
@@ -90,7 +90,7 @@
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$defs:\n  icsm-address:\n    allOf:\n    - additionalProperties: false\n      properties:\n        propertyNumber:\n          type: string\n          x-jsonld-id: ad:propertyNumber\n        unitNumber:\n          type: string\n        streetName:\n          type: string\n          x-jsonld-id: ad:streetName\n        streetType:\n          type: string\n          x-jsonld-id: ad:streetType\n        locality:\n          type: string\n          x-jsonld-id: https://schema.org/addressLocality\n        state:\n          type: string\n          x-jsonld-id: https://schema.org/addressRegion\n        postOfficeBoxNumber:\n          type: string\n          x-jsonld-id: https://schema.org/postOfficeBoxNumber\n        postCode:\n          type: string\n          x-jsonld-id: https://schema.org/postalCode\n        country:\n          type: string\n          x-jsonld-id: https://schema.org/addressCountry\n      required:\n      - postCode\n      - state\n    - anyOf:\n      - required:\n        - streetName\n        - locality\n      - required:\n        - postOfficeBoxNumber\n        - state\n  streetAddress:\n    allOf:\n    - $ref: '#/$defs/icsm-address'\n    - required:\n      - streetName\nallOf:\n- $ref: '#/$defs/icsm-address'\nx-jsonld-extra-terms:\n  address: https://schema.org/address\nx-jsonld-prefixes:\n  sdo: https://schema.org/\n  ads: https:/icsm.org.au/placeholder/address/\nx-bblocks-metadata:\n  itemIdentifier: icsm.profiles.datatypes.address\n  register: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-10-27'\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$defs:\n  icsm-address:\n    allOf:\n    - additionalProperties: false\n      properties:\n        propertyNumber:\n          type: string\n          x-jsonld-id: https://icsm.org.au/placeholder/address/propertyNumber\n        unitNumber:\n          type: string\n        streetName:\n          type: string\n          x-jsonld-id: https://icsm.org.au/placeholder/address/streetName\n        streetType:\n          type: string\n          x-jsonld-id: https://icsm.org.au/placeholder/address/streetType\n        locality:\n          type: string\n          x-jsonld-id: https://schema.org/addressLocality\n        state:\n          type: string\n          x-jsonld-id: https://schema.org/addressRegion\n        postOfficeBoxNumber:\n          type: string\n          x-jsonld-id: https://schema.org/postOfficeBoxNumber\n        postCode:\n          type: string\n          x-jsonld-id: https://schema.org/postalCode\n        country:\n          type: string\n          x-jsonld-id: https://schema.org/addressCountry\n      required:\n      - postCode\n      - state\n    - anyOf:\n      - required:\n        - streetName\n        - locality\n      - required:\n        - postOfficeBoxNumber\n        - state\n  streetAddress:\n    allOf:\n    - $ref: '#/$defs/icsm-address'\n    - required:\n      - streetName\nallOf:\n- $ref: '#/$defs/icsm-address'\nx-jsonld-extra-terms:\n  address: https://schema.org/address\nx-jsonld-prefixes:\n  sdo: https://schema.org/\n  ad: https://icsm.org.au/placeholder/address/\nx-bblocks-metadata:\n  itemIdentifier: icsm.profiles.datatypes.address\n  register: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-02'\n",
   "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-icsm",
   "gitPath": "_sources/datatypes/address"
 }

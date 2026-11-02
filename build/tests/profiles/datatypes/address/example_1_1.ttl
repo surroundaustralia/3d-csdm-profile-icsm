@@ -1,9 +1,9 @@
-@prefix ns1: <ad:> .
+@prefix ad: <https://icsm.org.au/placeholder/address/> .
 @prefix sdo: <https://schema.org/> .
 
-[] ns1:propertyNumber "4" ;
-    ns1:streetName "Clarendon" ;
-    ns1:streetType "St" ;
+[] ad:propertyNumber "4" ;
+    ad:streetName "Clarendon" ;
+    ad:streetType "St" ;
     sdo:addressCountry "Australia" ;
     sdo:addressLocality "Maidstone" ;
     sdo:addressRegion "VIC" ;
