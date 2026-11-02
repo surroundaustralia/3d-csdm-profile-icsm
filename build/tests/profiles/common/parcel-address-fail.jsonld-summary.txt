@@ -9,7 +9,7 @@ Monuments:	6
 	None	PEG 19 DP 572532	BoundaryMark	794307.498,398802.357	nz-monument-state:new	nz-monument-condition:relb	None
 	None	PEG 38 DP 572532	BoundaryMark	794289.484,398824.159	nz-monument-state:new	nz-monument-condition:relb	None
 Parcels:	1
-	140517134000912	None	nz-parcel-type:l	484.0	None	allotment	
+	140169982422864	None	nz-parcel-type:l	484.0	None	allotment	
 Observations:	6
 		observedVectors
 	38471662	undated	nz-surveypoint-purpose:bndy	PEG 38 DP 572532	PEG 18 DP 572532	313.01666666666665	25.17

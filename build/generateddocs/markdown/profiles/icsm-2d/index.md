@@ -21,6 +21,11 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: 2D restricted profile Cadastral Survey Data Model
 allOf:
 - $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
+x-bblocks-metadata:
+  itemIdentifier: icsm.profiles.icsm-2d
+  register: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-27'
 
 ```
 
@@ -78,7 +83,47 @@ Links to the schema:
         "topology": {
           "@context": {
             "references": {
-              "@id": "geojson:relatedFeatures",
+              "@id": "topo:relatedFeatures",
+              "@type": "@id",
+              "@container": "@list"
+            },
+            "directed_references": {
+              "@context": {
+                "ref": {
+                  "@type": "@id",
+                  "@id": "topo:ref"
+                }
+              },
+              "@id": "topo:directedReferences",
+              "@container": "@list"
+            },
+            "relationships": {
+              "@context": {
+                "href": {
+                  "@type": "@id",
+                  "@id": "oa:hasTarget"
+                },
+                "rel": {
+                  "@context": {
+                    "@base": "http://www.iana.org/assignments/relation/"
+                  },
+                  "@id": "http://www.iana.org/assignments/relation",
+                  "@type": "@id"
+                },
+                "type": "dct:type",
+                "hreflang": "dct:language",
+                "title": "rdfs:label",
+                "length": "dct:extent",
+                "role": {
+                  "@id": "prof:hasRole",
+                  "@type": "@id"
+                },
+                "conformsTo": {
+                  "@id": "dct:conformsTo",
+                  "@type": "@id"
+                }
+              },
+              "@id": "topo:relatedFeatures",
               "@type": "@id",
               "@container": "@list"
             }
@@ -228,10 +273,10 @@ Links to the schema:
     "surveyDescription": "container:surveyDescription",
     "surveyDescriptors": {
       "@context": {
-        "name": "csdm:commonpatterns/name",
+        "name": "commonpatterns:name",
         "hasPart": {
           "@context": {
-            "type": "csdm:commonpatterns/namePartType"
+            "type": "commonpatterns:namePartType"
           },
           "@id": "dct:hasPart"
         }
@@ -348,7 +393,47 @@ Links to the schema:
             "topology": {
               "@context": {
                 "references": {
-                  "@id": "geojson:relatedFeatures",
+                  "@id": "topo:relatedFeatures",
+                  "@type": "@id",
+                  "@container": "@list"
+                },
+                "directed_references": {
+                  "@context": {
+                    "ref": {
+                      "@type": "@id",
+                      "@id": "topo:ref"
+                    }
+                  },
+                  "@id": "topo:directedReferences",
+                  "@container": "@list"
+                },
+                "relationships": {
+                  "@context": {
+                    "href": {
+                      "@type": "@id",
+                      "@id": "oa:hasTarget"
+                    },
+                    "rel": {
+                      "@context": {
+                        "@base": "http://www.iana.org/assignments/relation/"
+                      },
+                      "@id": "http://www.iana.org/assignments/relation",
+                      "@type": "@id"
+                    },
+                    "type": "dct:type",
+                    "hreflang": "dct:language",
+                    "title": "rdfs:label",
+                    "length": "dct:extent",
+                    "role": {
+                      "@id": "prof:hasRole",
+                      "@type": "@id"
+                    },
+                    "conformsTo": {
+                      "@id": "dct:conformsTo",
+                      "@type": "@id"
+                    }
+                  },
+                  "@id": "topo:relatedFeatures",
                   "@type": "@id",
                   "@container": "@list"
                 }
@@ -382,19 +467,19 @@ Links to the schema:
               "@context": {
                 "hasPart": {
                   "@context": {
-                    "type": "csdm:commonpatterns/namePartType"
+                    "type": "commonpatterns:namePartType"
                   },
                   "@id": "dct:hasPart"
                 }
               }
             },
             "name": {
-              "@id": "csdm:commonpatterns/name",
+              "@id": "commonpatterns:name",
               "@type": "@id",
               "@context": {
                 "hasPart": {
                   "@context": {
-                    "type": "csdm:commonpatterns/namePartType"
+                    "type": "commonpatterns:namePartType"
                   },
                   "@id": "dct:hasPart"
                 }
@@ -461,7 +546,47 @@ Links to the schema:
             "topology": {
               "@context": {
                 "references": {
-                  "@id": "geojson:relatedFeatures",
+                  "@id": "topo:relatedFeatures",
+                  "@type": "@id",
+                  "@container": "@list"
+                },
+                "directed_references": {
+                  "@context": {
+                    "ref": {
+                      "@type": "@id",
+                      "@id": "topo:ref"
+                    }
+                  },
+                  "@id": "topo:directedReferences",
+                  "@container": "@list"
+                },
+                "relationships": {
+                  "@context": {
+                    "href": {
+                      "@type": "@id",
+                      "@id": "oa:hasTarget"
+                    },
+                    "rel": {
+                      "@context": {
+                        "@base": "http://www.iana.org/assignments/relation/"
+                      },
+                      "@id": "http://www.iana.org/assignments/relation",
+                      "@type": "@id"
+                    },
+                    "type": "dct:type",
+                    "hreflang": "dct:language",
+                    "title": "rdfs:label",
+                    "length": "dct:extent",
+                    "role": {
+                      "@id": "prof:hasRole",
+                      "@type": "@id"
+                    },
+                    "conformsTo": {
+                      "@id": "dct:conformsTo",
+                      "@type": "@id"
+                    }
+                  },
+                  "@id": "topo:relatedFeatures",
                   "@type": "@id",
                   "@container": "@list"
                 }
@@ -471,10 +596,10 @@ Links to the schema:
             },
             "appellation": {
               "@context": {
-                "name": "csdm:commonpatterns/name",
+                "name": "commonpatterns:name",
                 "hasPart": {
                   "@context": {
-                    "type": "csdm:commonpatterns/namePartType"
+                    "type": "commonpatterns:namePartType"
                   },
                   "@id": "dct:hasPart"
                 }
@@ -553,33 +678,6 @@ Links to the schema:
     },
     "vectorObservations": {
       "@context": {
-        "observedProperty": {
-          "@context": {
-            "@base": "https://linked.data.gov.au/def/csdm/property/"
-          },
-          "@id": "sosa:observedProperty",
-          "@type": "@id"
-        },
-        "madeBySensor": {
-          "@context": {
-            "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor",
-            "sensorType": "@type",
-            "baseSensor": "csdm:sensors/baseSensor",
-            "roverSensor": "csdm:sensors/roverSensor"
-          },
-          "@id": "sosa:madeBySensor",
-          "@type": "@id"
-        },
-        "hasMember": {
-          "@context": {
-            "features": {
-              "@id": "sosa:hasMember",
-              "@type": "@id"
-            }
-          },
-          "@id": "sosa:hasMember",
-          "@type": "@id"
-        },
         "featureType": "@type",
         "features": {
           "@id": "sosa:hasMember",
@@ -590,19 +688,6 @@ Links to the schema:
               "@container": "@set",
               "@id": "sosa:hasMember",
               "@type": "@id"
-            },
-            "hasResult": {
-              "@id": "sosa:hasResult",
-              "@type": "@id",
-              "@context": {
-                "pose": {
-                  "@context": {
-                    "angles": "csdm:utils/geopose/angles"
-                  },
-                  "@id": "surv:pose"
-                },
-                "distance": "surv:distance"
-              }
             },
             "hasResultQuality": {
               "@id": "sosa:hasResultQuality",
@@ -619,8 +704,122 @@ Links to the schema:
                   "@id": "csdm:surveyobs/angleAccuracyClass"
                 }
               }
+            },
+            "phenomenonTime": {
+              "@context": {
+                "hasBeginning": "owlTime:hasBeginning",
+                "hasEnd": "owlTime:hasEnd",
+                "inXSDDateTime": {
+                  "@id": "owlTime:inXSDDateTime",
+                  "@type": "xsd:dateTime"
+                },
+                "inXSDDateTimeStamp": {
+                  "@id": "owlTime:inXSDDateTimeStamp",
+                  "@type": "xsd:dateTimeStamp"
+                },
+                "inXSDDate": {
+                  "@id": "owlTime:inXSDDate",
+                  "@type": "xsd:date"
+                },
+                "Instant": "owlTime:Instant",
+                "Interval": "owlTime:Interval",
+                "ProperInterval": "owlTime:ProperInterval",
+                "hasDuration": "owlTime:hasDuration",
+                "hasXSDDuration": {
+                  "@id": "owlTime:hasXSDDuration",
+                  "@type": "xsd:duration"
+                },
+                "inTimePosition": "owlTime:inTimePosition",
+                "inXSDgYear": {
+                  "@id": "owlTime:inXSDgYear",
+                  "@type": "xsd:gYear"
+                },
+                "inXSDgYearMonth": {
+                  "@id": "owlTime:inXSDgYearMonth",
+                  "@type": "xsd:gYearMonth"
+                }
+              },
+              "@id": "sosa:phenomenonTime",
+              "@type": "xsd:dateTime"
+            },
+            "hasResult": {
+              "@context": {
+                "pose": {
+                  "@context": {
+                    "angles": "csdm:utils/geopose/angles"
+                  },
+                  "@id": "surv:pose"
+                },
+                "distance": "surv:distance"
+              },
+              "@id": "sosa:hasResult",
+              "@type": "@id"
             }
           }
+        },
+        "hasMember": {
+          "@id": "sosa:hasMember",
+          "@type": "@id",
+          "@context": {
+            "features": {
+              "@id": "sosa:hasMember",
+              "@type": "@id"
+            }
+          }
+        },
+        "madeBySensor": {
+          "@id": "sosa:madeBySensor",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor",
+            "sensorType": "@type",
+            "baseSensor": "csdm:sensors/baseSensor",
+            "roverSensor": "csdm:sensors/roverSensor"
+          }
+        },
+        "observedProperty": {
+          "@id": "sosa:observedProperty",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/property/"
+          }
+        },
+        "phenomenonTime": {
+          "@context": {
+            "hasBeginning": "owlTime:hasBeginning",
+            "hasEnd": "owlTime:hasEnd",
+            "inXSDDateTime": {
+              "@id": "owlTime:inXSDDateTime",
+              "@type": "xsd:dateTime"
+            },
+            "inXSDDateTimeStamp": {
+              "@id": "owlTime:inXSDDateTimeStamp",
+              "@type": "xsd:dateTimeStamp"
+            },
+            "inXSDDate": {
+              "@id": "owlTime:inXSDDate",
+              "@type": "xsd:date"
+            },
+            "Instant": "owlTime:Instant",
+            "Interval": "owlTime:Interval",
+            "ProperInterval": "owlTime:ProperInterval",
+            "hasDuration": "owlTime:hasDuration",
+            "hasXSDDuration": {
+              "@id": "owlTime:hasXSDDuration",
+              "@type": "xsd:duration"
+            },
+            "inTimePosition": "owlTime:inTimePosition",
+            "inXSDgYear": {
+              "@id": "owlTime:inXSDgYear",
+              "@type": "xsd:gYear"
+            },
+            "inXSDgYearMonth": {
+              "@id": "owlTime:inXSDgYearMonth",
+              "@type": "xsd:gYearMonth"
+            }
+          },
+          "@id": "sosa:phenomenonTime",
+          "@type": "xsd:dateTime"
         },
         "angleType": {
           "@context": {
@@ -641,16 +840,6 @@ Links to the schema:
     },
     "occupationObservations": {
       "@context": {
-        "hasMember": {
-          "@context": {
-            "features": {
-              "@id": "sosa:hasMember",
-              "@type": "@id"
-            }
-          },
-          "@id": "sosa:hasMember",
-          "@type": "@id"
-        },
         "featureType": "@type",
         "features": {
           "@id": "sosa:hasMember",
@@ -661,19 +850,6 @@ Links to the schema:
               "@container": "@set",
               "@id": "sosa:hasMember",
               "@type": "@id"
-            },
-            "hasResult": {
-              "@id": "sosa:hasResult",
-              "@type": "@id",
-              "@context": {
-                "pose": {
-                  "@context": {
-                    "angles": "csdm:utils/geopose/angles"
-                  },
-                  "@id": "surv:pose"
-                },
-                "distance": "surv:distance"
-              }
             },
             "hasResultQuality": {
               "@id": "sosa:hasResultQuality",
@@ -690,8 +866,136 @@ Links to the schema:
                   "@id": "csdm:surveyobs/angleAccuracyClass"
                 }
               }
+            },
+            "phenomenonTime": {
+              "@context": {
+                "hasBeginning": "owlTime:hasBeginning",
+                "hasEnd": "owlTime:hasEnd",
+                "inXSDDateTime": {
+                  "@id": "owlTime:inXSDDateTime",
+                  "@type": "xsd:dateTime"
+                },
+                "inXSDDateTimeStamp": {
+                  "@id": "owlTime:inXSDDateTimeStamp",
+                  "@type": "xsd:dateTimeStamp"
+                },
+                "inXSDDate": {
+                  "@id": "owlTime:inXSDDate",
+                  "@type": "xsd:date"
+                },
+                "Instant": "owlTime:Instant",
+                "Interval": "owlTime:Interval",
+                "ProperInterval": "owlTime:ProperInterval",
+                "hasDuration": "owlTime:hasDuration",
+                "hasXSDDuration": {
+                  "@id": "owlTime:hasXSDDuration",
+                  "@type": "xsd:duration"
+                },
+                "inTimePosition": "owlTime:inTimePosition",
+                "inXSDgYear": {
+                  "@id": "owlTime:inXSDgYear",
+                  "@type": "xsd:gYear"
+                },
+                "inXSDgYearMonth": {
+                  "@id": "owlTime:inXSDgYearMonth",
+                  "@type": "xsd:gYearMonth"
+                }
+              },
+              "@id": "sosa:phenomenonTime",
+              "@type": "xsd:dateTime"
+            },
+            "hasResult": {
+              "@context": {
+                "pose": {
+                  "@context": {
+                    "angles": "csdm:utils/geopose/angles"
+                  },
+                  "@id": "surv:pose"
+                },
+                "distance": "surv:distance"
+              },
+              "@id": "sosa:hasResult",
+              "@type": "@id"
             }
           }
+        },
+        "hasMember": {
+          "@id": "sosa:hasMember",
+          "@type": "@id",
+          "@context": {
+            "features": {
+              "@id": "sosa:hasMember",
+              "@type": "@id"
+            }
+          }
+        },
+        "madeBySensor": {
+          "@id": "sosa:madeBySensor",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor",
+            "sensorType": "@type",
+            "baseSensor": "csdm:sensors/baseSensor",
+            "roverSensor": "csdm:sensors/roverSensor"
+          }
+        },
+        "observedProperty": {
+          "@id": "sosa:observedProperty",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/property/"
+          }
+        },
+        "phenomenonTime": {
+          "@context": {
+            "hasBeginning": "owlTime:hasBeginning",
+            "hasEnd": "owlTime:hasEnd",
+            "inXSDDateTime": {
+              "@id": "owlTime:inXSDDateTime",
+              "@type": "xsd:dateTime"
+            },
+            "inXSDDateTimeStamp": {
+              "@id": "owlTime:inXSDDateTimeStamp",
+              "@type": "xsd:dateTimeStamp"
+            },
+            "inXSDDate": {
+              "@id": "owlTime:inXSDDate",
+              "@type": "xsd:date"
+            },
+            "Instant": "owlTime:Instant",
+            "Interval": "owlTime:Interval",
+            "ProperInterval": "owlTime:ProperInterval",
+            "hasDuration": "owlTime:hasDuration",
+            "hasXSDDuration": {
+              "@id": "owlTime:hasXSDDuration",
+              "@type": "xsd:duration"
+            },
+            "inTimePosition": "owlTime:inTimePosition",
+            "inXSDgYear": {
+              "@id": "owlTime:inXSDgYear",
+              "@type": "xsd:gYear"
+            },
+            "inXSDgYearMonth": {
+              "@id": "owlTime:inXSDgYearMonth",
+              "@type": "xsd:gYearMonth"
+            }
+          },
+          "@id": "sosa:phenomenonTime",
+          "@type": "xsd:dateTime"
+        },
+        "angleType": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/defs/angletypes/"
+          },
+          "@type": "@id",
+          "@id": "csdm:surveyobs/angleType"
+        },
+        "distanceType": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/defs/distancetypes/"
+          },
+          "@type": "@id",
+          "@id": "csdm:surveyobs/distanceType"
         }
       },
       "@id": "container:occupationObservations"
@@ -706,6 +1010,26 @@ Links to the schema:
     "arcLength": "geojson:arcLength",
     "startTangentVector": "geojson:startTangentVector",
     "endTangentVector": "geojson:endTangentVector",
+    "ref": "topo:ref",
+    "orientation": "topo:orientation",
+    "Edge": "topo:Edge",
+    "Face": "topo:Face",
+    "Ring": "topo:Ring",
+    "Shell": "topo:Shell",
+    "Solid": "topo:Solid",
+    "AggregateSolid": "topo:AggregateSolid",
+    "rings": {
+      "@id": "topo:rings",
+      "@container": "@list"
+    },
+    "shells": {
+      "@id": "topo:shells",
+      "@container": "@list"
+    },
+    "faces": {
+      "@id": "topo:faces",
+      "@container": "@list"
+    },
     "activityType": "@type",
     "agentType": "@type",
     "entityType": "@type",
@@ -1018,7 +1342,7 @@ Links to the schema:
       "@id": "prov:mentionOf",
       "@type": "@id"
     },
-    "CompoundName": "csdm:commonpatterns/CompoundName",
+    "CompoundName": "commonpatterns:CompoundName",
     "vectorPurpose": {
       "@type": "@id",
       "@id": "surv:vectorPurpose"
@@ -1044,11 +1368,11 @@ Links to the schema:
       "@type": "@id"
     },
     "ptQuality": {
-      "@id": "csdm:commonpatterns/qualityClass",
+      "@id": "commonpatterns:qualityClass",
       "@type": "@id"
     },
     "ptQualityMeasure": {
-      "@id": "csdm:commonpatterns/qualityMeasure",
+      "@id": "commonpatterns:qualityMeasure",
       "@type": "@id"
     },
     "GeodeticReferenceMark": {
@@ -1144,8 +1468,16 @@ Links to the schema:
       "@id": "sosa:System",
       "@type": "@id"
     },
+    "actsOn": {
+      "@id": "sosa:actsOn",
+      "@type": "@id"
+    },
     "actsOnProperty": {
       "@id": "sosa:actsOnProperty",
+      "@type": "@id"
+    },
+    "deployedAsset": {
+      "@id": "sosa:deployedAsset",
       "@type": "@id"
     },
     "deployedOnPlatform": {
@@ -1172,6 +1504,10 @@ Links to the schema:
       "@id": "sosa:hasInput",
       "@type": "@id"
     },
+    "hasMember": {
+      "@id": "sosa:hasMember",
+      "@type": "@id"
+    },
     "hasOriginalSample": {
       "@id": "sosa:hasOriginalSample",
       "@type": "@id"
@@ -1182,10 +1518,6 @@ Links to the schema:
     },
     "hasProperty": {
       "@id": "sosa:hasProperty",
-      "@type": "@id"
-    },
-    "hasResult": {
-      "@id": "sosa:hasResult",
       "@type": "@id"
     },
     "hasResultQuality": {
@@ -1200,18 +1532,10 @@ Links to the schema:
       "@id": "sosa:hasSampledFeature",
       "@type": "@id"
     },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
-      "@type": "@id"
-    },
     "hasSubSystem": {
       "@id": "sosa:hasSubSystem",
       "@type": "@id",
       "@container": "@set"
-    },
-    "hasUltimateFeatureOfInterest": {
-      "@id": "sosa:hasUltimateFeatureOfInterest",
-      "@type": "@id"
     },
     "hosts": {
       "@id": "sosa:hosts",
@@ -1246,6 +1570,10 @@ Links to the schema:
       "@id": "sosa:isObservedBy",
       "@type": "@id"
     },
+    "isOriginalSampleOf": {
+      "@id": "sosa:isOriginalSampleOf",
+      "@type": "@id"
+    },
     "isPropertyOf": {
       "@id": "sosa:isPropertyOf",
       "@type": "@id"
@@ -1270,6 +1598,14 @@ Links to the schema:
       "@id": "sosa:isSampleOf",
       "@type": "@id"
     },
+    "isSampleOfUltimateFOI": {
+      "@id": "sosa:isSampleOfUltimateFOI",
+      "@type": "@id"
+    },
+    "isSubSystemOf": {
+      "@id": "sosa:isSubSystemOf",
+      "@type": "@id"
+    },
     "madeActuation": {
       "@id": "sosa:madeActuation",
       "@type": "@id"
@@ -1282,12 +1618,28 @@ Links to the schema:
       "@id": "sosa:madeBySampler",
       "@type": "@id"
     },
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
+    "madeBySystem": {
+      "@id": "sosa:madeBySystem",
+      "@type": "@id"
+    },
+    "madeExecution": {
+      "@id": "sosa:madeExecution",
+      "@type": "@id"
+    },
     "madeObservation": {
       "@id": "sosa:madeObservation",
       "@type": "@id"
     },
     "madeSampling": {
       "@id": "sosa:madeSampling",
+      "@type": "@id"
+    },
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
       "@type": "@id"
     },
     "observes": {
@@ -1418,27 +1770,73 @@ Links to the schema:
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
-    "hasMember": {
-      "@id": "sosa:hasMember",
-      "@type": "@id"
+    "endTime": {
+      "@id": "sosa:endTime",
+      "@type": "xsd:dateTime"
     },
     "hasFeatureOfInterest": {
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
+    "hasInputValue": {
+      "@id": "sosa:hasInputValue",
       "@type": "@id"
     },
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id"
+    },
+    "hasSimpleResult": "sosa:hasSimpleResult",
+    "hasUltimateFeatureOfInterest": {
+      "@id": "sosa:hasUltimateFeatureOfInterest",
       "@type": "@id"
     },
     "phenomenonTime": {
       "@id": "sosa:phenomenonTime",
-      "@type": "@id"
+      "@type": "xsd:dateTime",
+      "@context": {
+        "time": "http://www.w3.org/2006/time#",
+        "Instant": "owlTime:Instant",
+        "Interval": "owlTime:Interval",
+        "ProperInterval": "owlTime:ProperInterval",
+        "hasBeginning": "owlTime:hasBeginning",
+        "hasEnd": "owlTime:hasEnd",
+        "hasDuration": "owlTime:hasDuration",
+        "hasXSDDuration": {
+          "@id": "owlTime:hasXSDDuration",
+          "@type": "xsd:duration"
+        },
+        "inTimePosition": "owlTime:inTimePosition",
+        "inXSDDate": {
+          "@id": "owlTime:inXSDDate",
+          "@type": "xsd:date"
+        },
+        "inXSDDateTime": {
+          "@id": "owlTime:inXSDDateTime",
+          "@type": "xsd:dateTime"
+        },
+        "inXSDDateTimeStamp": {
+          "@id": "owlTime:inXSDDateTimeStamp",
+          "@type": "xsd:dateTimeStamp"
+        },
+        "inXSDgYear": {
+          "@id": "owlTime:inXSDgYear",
+          "@type": "xsd:gYear"
+        },
+        "inXSDgYearMonth": {
+          "@id": "owlTime:inXSDgYearMonth",
+          "@type": "xsd:gYearMonth"
+        }
+      }
     },
-    "resultTime": "sosa:resultTime",
+    "resultTime": {
+      "@id": "sosa:resultTime",
+      "@type": "xsd:dateTime"
+    },
+    "startTime": {
+      "@id": "sosa:startTime",
+      "@type": "xsd:dateTime"
+    },
     "usedProcedure": {
       "@id": "sosa:usedProcedure",
       "@type": "@id"
@@ -1454,11 +1852,12 @@ Links to the schema:
     "dct": "http://purl.org/dc/terms/",
     "owlTime": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "csdm": "https://linked.data.gov.au/def/csdm/",
+    "topo": "https://purl.org/geojson/topo#",
     "prof": "http://www.w3.org/ns/dx/prof/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "commonpatterns": "csdm:commonpatterns/",
+    "csdm": "https://linked.data.gov.au/def/csdm/",
     "geosparql": "http://www.opengis.net/ont/geosparql#",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",

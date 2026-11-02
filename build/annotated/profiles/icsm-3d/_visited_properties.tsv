@@ -243,34 +243,42 @@ path	@id	schema
 /_anyOf/3/_anyOf/1/features	https://purl.org/geojson/vocab#features	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.json
 /_anyOf/3/features		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.json
 /_anyOf/3/features/_anyOf/0/id		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json
+/_anyOf/3/features/_anyOf/0/geometry		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json
+/_anyOf/3/features/_anyOf/0/geometry/_oneOf/1/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json
 /_anyOf/3/features/_anyOf/0/topology	https://purl.org/geojson/vocab#topology	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.json
 /_anyOf/3/features/_anyOf/0/topology/_oneOf/0/type	@type	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
-/_anyOf/3/features/_anyOf/0/topology/_oneOf/0/references	https://purl.org/geojson/vocab#relatedFeatures	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/0/references	https://purl.org/geojson/topo#relatedFeatures	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
 /_anyOf/3/features/_anyOf/0/topology/_oneOf/1/type	@type	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
-/_anyOf/3/features/_anyOf/0/topology/_oneOf/1/references	https://purl.org/geojson/vocab#relatedFeatures	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/1/references	https://purl.org/geojson/topo#relatedFeatures	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
 /_anyOf/3/features/_anyOf/0/topology/_oneOf/2/type	@type	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
-/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/references	https://purl.org/geojson/vocab#relatedFeatures	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/directed_references	https://purl.org/geojson/topo#directedReferences	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/directed_references/ref	https://purl.org/geojson/topo#ref	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/oriented-ref/schema.json
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/directed_references/orientation	https://purl.org/geojson/topo#orientation	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/oriented-ref/schema.json
+/_anyOf/3/features/_anyOf/0/topology/type	@type	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
+/_anyOf/3/features/_anyOf/0/topology/relationships	https://purl.org/geojson/topo#relatedFeatures	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
+/_anyOf/3/features/_anyOf/0/topology/relationships/role	http://www.w3.org/ns/dx/prof/hasRole	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json
+/_anyOf/3/features/_anyOf/0/topology/relationships/conformsTo	http://purl.org/dc/terms/conformsTo	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json
+/_anyOf/3/features/_anyOf/0/topology/relationships/rel		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.json
 /_anyOf/3/features/_anyOf/1/geometry		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.json
 /_anyOf/3/features/_anyOf/1/geometry/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.json
 /time		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
 /name	rdfs:label	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
 /bearingRotation	https://linked.data.gov.au/def/csdm/container/bearingRotation	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
 /annotations	https://linked.data.gov.au/def/csdm/container/annotations	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
-/annotations/_anyOf/0/role	http://www.w3.org/ns/dx/prof/hasRole	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json
-/annotations/_anyOf/0/conformsTo	http://purl.org/dc/terms/conformsTo	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.json
 /annotations/_anyOf/1/description		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
 /annotations/_anyOf/1/role		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
 /_anyOf/0/has_provenance		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy	http://www.w3.org/ns/prov#wasInfluencedBy	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/provType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
-/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/prov:type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/prov:type	http://www.w3.org/ns/prov#type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/activityType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/startedAtTime	http://www.w3.org/ns/prov#startedAtTime	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/endedAtTime	http://www.w3.org/ns/prov#endedAtTime	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith	http://www.w3.org/ns/prov#wasAssociatedWith	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/agentType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/provType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
-/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/prov:type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/prov:type	http://www.w3.org/ns/prov#type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/name	http://www.w3.org/2000/01/rdf-schema#label	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/wasAssociatedWith/_oneOf/1/actedOnBehalfOf	http://www.w3.org/ns/prov#actedOnBehalfOf	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.json
@@ -300,7 +308,6 @@ path	@id	schema
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedCommunication/_oneOf/1/hadActivity	http://www.w3.org/ns/prov#hadActivity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedCommunication/_oneOf/1/activity	http://www.w3.org/ns/prov#activity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedCommunication/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
-/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedCommunication/_oneOf/2/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedStart	http://www.w3.org/ns/prov#qualifiedStart	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedStart/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInfluencedBy/_anyOf/0/_oneOf/1/qualifiedStart/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
@@ -327,7 +334,7 @@ path	@id	schema
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/_anyOf/1/hadMember	http://www.w3.org/ns/prov#hadMember	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/provType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
-/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/prov:type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/prov:type	http://www.w3.org/ns/prov#type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/featureType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/entityType	@type	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/has_provenance	http://purl.org/dc/terms/provenance	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
@@ -340,6 +347,22 @@ path	@id	schema
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasInvalidatedBy	http://www.w3.org/ns/prov#wasInvalidatedBy	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasQuotedFrom	http://www.w3.org/ns/prov#wasQuotedFrom	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/wasRevisionOf	http://www.w3.org/ns/prov#wasRevisionOf	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/generatedAtTime	http://www.w3.org/ns/prov#generatedAtTime	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/invalidatedAtTime	http://www.w3.org/ns/prov#invalidatedAtTime	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/value	http://www.w3.org/ns/prov#value	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedPrimarySource	http://www.w3.org/ns/prov#qualifiedPrimarySource	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedPrimarySource/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedPrimarySource/_oneOf/1/atTime	http://www.w3.org/ns/prov#atTime	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedPrimarySource/_oneOf/1/hadGeneration	http://www.w3.org/ns/prov#hadGeneration	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedPrimarySource/_oneOf/1/hadGeneration/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedPrimarySource/_oneOf/1/hadActivity	http://www.w3.org/ns/prov#hadActivity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedPrimarySource/_oneOf/1/hadUsage	http://www.w3.org/ns/prov#hadUsage	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedPrimarySource/_oneOf/1/entity	http://www.w3.org/ns/prov#entity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedPrimarySource/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedQuotation	http://www.w3.org/ns/prov#qualifiedQuotation	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedQuotation/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedRevision	http://www.w3.org/ns/prov#qualifiedRevision	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
+/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedRevision/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/atLocation	http://www.w3.org/ns/prov#atLocation	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/links	http://www.w3.org/2000/01/rdf-schema#seeAlso	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedGeneration	http://www.w3.org/ns/prov#qualifiedGeneration	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
@@ -347,12 +370,7 @@ path	@id	schema
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedInvalidation	http://www.w3.org/ns/prov#qualifiedInvalidation	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedInvalidation/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation	http://www.w3.org/ns/prov#qualifiedDerivation	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
-/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
-/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation/_oneOf/1/hadGeneration	http://www.w3.org/ns/prov#hadGeneration	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
-/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation/_oneOf/1/hadActivity	http://www.w3.org/ns/prov#hadActivity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
-/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation/_oneOf/1/hadUsage	http://www.w3.org/ns/prov#hadUsage	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
-/_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedDerivation/_oneOf/1/entity	http://www.w3.org/ns/prov#entity	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedAttribution	http://www.w3.org/ns/prov#qualifiedAttribution	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedAttribution/_oneOf/1/id	@id	https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
 /_anyOf/0/has_provenance/_anyOf/0/_oneOf/0/qualifiedAttribution/_oneOf/1/type		https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json
@@ -475,23 +493,44 @@ path	@id	schema
 /parcels/_oneOf/1/features		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
 /parcels/_oneOf/1/features/properties	@nest	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
 /vectorObservations	https://linked.data.gov.au/def/csdm/container/vectorObservations	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json
-/vectorObservations/resultTime	http://www.w3.org/ns/sosa/resultTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
-/vectorObservations/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
-/vectorObservations/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
+/vectorObservations/resultTime	http://www.w3.org/ns/sosa/resultTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.json
+/vectorObservations/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.json
+/vectorObservations/phenomenonTime/_oneOf/0/_oneOf/1/hasBeginning	http://www.w3.org/2006/time#hasBeginning	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/phenomenonTime/_oneOf/0/_oneOf/1/hasBeginning/inXSDDateTime		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/phenomenonTime/_oneOf/0/_oneOf/1/hasBeginning/inXSDDateTimeStamp		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/phenomenonTime/_oneOf/0/_oneOf/1/hasBeginning/inXSDDate		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/phenomenonTime/_oneOf/0/_oneOf/1/hasEnd	http://www.w3.org/2006/time#hasEnd	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/phenomenonTime/_oneOf/0/_oneOf/1/inXSDDateTime	http://www.w3.org/2006/time#inXSDDateTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/phenomenonTime/_oneOf/0/_oneOf/1/inXSDDateTimeStamp	http://www.w3.org/2006/time#inXSDDateTimeStamp	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/phenomenonTime/_oneOf/0/_oneOf/1/inXSDDate	http://www.w3.org/2006/time#inXSDDate	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.json
+/vectorObservations/hasUltimateFeatureOfInterest	http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.json
+/vectorObservations/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.json
+/vectorObservations/startTime	http://www.w3.org/ns/sosa/startTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.json
+/vectorObservations/endTime	http://www.w3.org/ns/sosa/endTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.json
+/vectorObservations/hasResult	http://www.w3.org/ns/sosa/hasResult	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.json
+/vectorObservations/result		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.json
+/vectorObservations/result@links		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.json
+/vectorObservations/hasSimpleResult	http://www.w3.org/ns/sosa/hasSimpleResult	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.json
+/vectorObservations/hasInputValue	http://www.w3.org/ns/sosa/hasInputValue	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.json
 /vectorObservations/observedProperty	http://www.w3.org/ns/sosa/observedProperty	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
-/vectorObservations/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
 /vectorObservations/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
 /vectorObservations/hasMember	http://www.w3.org/ns/sosa/hasMember	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observationCollection/schema.json
-/vectorObservations/hasMember/_anyOf/1/resultTime	http://www.w3.org/ns/sosa/resultTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
-/vectorObservations/hasMember/_anyOf/1/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
-/vectorObservations/hasMember/_anyOf/1/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
+/vectorObservations/hasMember/_anyOf/1/resultTime	http://www.w3.org/ns/sosa/resultTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/hasMember/_anyOf/1/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/hasMember/_anyOf/1/hasFeatureOfInterest	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/hasMember/_anyOf/1/hasUltimateFeatureOfInterest	http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/hasMember/_anyOf/1/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/hasMember/_anyOf/1/startTime	http://www.w3.org/ns/sosa/startTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/hasMember/_anyOf/1/endTime	http://www.w3.org/ns/sosa/endTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/hasMember/_anyOf/1/hasResult	http://www.w3.org/ns/sosa/hasResult	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/hasMember/_anyOf/1/result		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/hasMember/_anyOf/1/result@links		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/hasMember/_anyOf/1/hasSimpleResult	http://www.w3.org/ns/sosa/hasSimpleResult	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
+/vectorObservations/hasMember/_anyOf/1/hasInputValue	http://www.w3.org/ns/sosa/hasInputValue	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/execution/schema.json
 /vectorObservations/hasMember/_anyOf/1/observedProperty	http://www.w3.org/ns/sosa/observedProperty	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
-/vectorObservations/hasMember/_anyOf/1/usedProcedure	http://www.w3.org/ns/sosa/usedProcedure	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
 /vectorObservations/hasMember/_anyOf/1/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
-/vectorObservations/hasMember/_anyOf/1/hasResult		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
-/vectorObservations/hasMember/_anyOf/1/result		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
-/vectorObservations/hasMember/_anyOf/1/result@links		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
-/vectorObservations/hasMember/_anyOf/1/hasSimpleResult		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.json
+/vectorObservations/hasMember/_anyOf/1/featureType	@type	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.json
 /vectorObservations/features	sosa:hasMember	https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json
 /vectorObservations/features/properties	@nest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.json
 /vectorObservations/features/properties/hasResultQuality		https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/SurveyObservations/schema.json

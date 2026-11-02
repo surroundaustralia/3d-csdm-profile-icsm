@@ -5,11 +5,12 @@
   "name": "Cadastral Survey 2D (+elevation) basic Profile",
   "abstract": "Profile to constrain a 2D implementation of the 3D Cadastre Survey Data Model",
   "status": "under-development",
+  "group": "2. Profiles",
   "dateTimeAddition": "2023-07-31T00:00:00Z",
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-03-31",
+  "dateOfLastChange": "2026-10-27",
   "sources": [
     {
       "title": "3D Cadastre Survey Data Model",
@@ -30,6 +31,9 @@
   "superBBlock": false,
   "shaclRules": [],
   "shaclShapes": {},
+  "license": {
+    "url": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/LICENSE"
+  },
   "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/context.jsonld",
   "schema": {
     "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/schema.yaml",
@@ -39,10 +43,9 @@
   "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-2d/context.jsonld",
   "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/icsm-2d/resolvedProperties.json",
   "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/_sources/icsm-2d/",
-  "rdfData": [],
   "validationPassed": true,
   "description": "## Cadastral Survey Data Model - ICSM common\n\nRules and default namespace bindings for ICSM Jurisdiction Profiles of the Cadastral Survey Data Model (CSDM)\n\n",
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: 2D restricted profile Cadastral Survey Data Model\nallOf:\n- $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: 2D restricted profile Cadastral Survey Data Model\nallOf:\n- $ref: https://icsm-au.github.io/3d-csdm-schema/build/annotated/csdm/features/CSD/schema.json\nx-bblocks-metadata:\n  itemIdentifier: icsm.profiles.icsm-2d\n  register: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-10-27'\n",
   "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-icsm",
   "gitPath": "_sources/icsm-2d"
 }

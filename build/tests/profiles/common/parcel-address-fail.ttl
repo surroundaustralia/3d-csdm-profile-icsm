@@ -1,4 +1,4 @@
-@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .
 @prefix container: <https://linked.data.gov.au/def/csdm/container/> .
 @prefix csd: <https://linked.data.gov.au/def/csdm/csd/> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -13,14 +13,16 @@
 @prefix ns2: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owlTime: <http://www.w3.org/2006/time#> .
-@prefix parcel: <https://linked.data.gov.au/def/csdm/parcels/> .
+@prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix sr: <https://linked.data.gov.au/def/csdm/spatial-representation/> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
 @prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
+@prefix topo: <https://purl.org/geojson/topo#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <file:///github/workspace/DP_572532> a geojson:FeatureCollection ;
@@ -47,15 +49,19 @@
     geojson:collectionFeatureType "CSD" .
 
 <file:///github/workspace/8446454> a geojson:Feature ;
+    geojson:topology [ a geojson:Polygon ;
+            topo:relatedFeatures ( ( <file:///github/workspace/38471667> <file:///github/workspace/38471666> <file:///github/workspace/38471665> <file:///github/workspace/38471664> <file:///github/workspace/38471663> <file:///github/workspace/38471662> ) ) ] ;
+    sdo:address [ csd:locality "Maidstone" ;
+            sr:boundaryState <file:///github/workspace/VIC> ] ;
     parcel:appellation [ rdfs:label "Lot 1 DP 572532" ;
-            dct:hasPart [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType "ParcelType" ],
+            dct:hasPart [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <file:///github/workspace/planIdentifier> ],
                 [ rdfs:label "1" ;
-                    commonpatterns:namePartType "ParcelIdentifier" ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "planIdentifier" ],
+                    commonpatterns:namePartType <file:///github/workspace/ParcelIdentifier> ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/PlanType> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <file:///github/workspace/ParcelType> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/1040074> ;
             parcel:interestType <nz-interest-type:c-t> ],
         [ parcel:interestDateInForce "2023-03-10T11:32:21Z" ;
@@ -65,10 +71,7 @@
     parcel:purpose <nz-parcel-purpose:fst> ;
     parcel:state <nz-parcel-state:c> ;
     parcel:surfaceArea 4.84e+02 ;
-    parcel:type <nz-parcel-type:l> ;
-    geojson:topology [ a geojson:Polygon ;
-            geojson:relatedFeatures ( ( <file:///github/workspace/38471667> <file:///github/workspace/38471666> <file:///github/workspace/38471665> <file:///github/workspace/38471664> <file:///github/workspace/38471663> <file:///github/workspace/38471662> ) ) ] ;
-    sdo:address [ csd:locality "Maidstone" ] .
+    parcel:type <nz-parcel-type:l> .
 
 <file:///github/workspace/BoundaryMark> a geojson:FeatureCollection ;
     geojson:collectionFeatureType "BoundaryMarks" ;
@@ -107,8 +110,8 @@
             oa:hasTarget <nz-land-district:NA> ] ;
     container:bearingRotation 0e+00 .
 
-<file:///github/workspace/PrimaryParcels> a parcel:PrimaryParcel,
-        geojson:FeatureCollection ;
+<file:///github/workspace/PrimaryParcels> a geojson:FeatureCollection,
+        parcel:PrimaryParcel ;
     geojson:features <file:///github/workspace/8446454> .
 
 <file:///github/workspace/observedVectors> a surv:ObservedVector,
@@ -123,23 +126,13 @@
 <vectorobservation:calculation> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/38471665> ;
-            sosa:hasResult [ surv:distance 3.058e+01 ] ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/38471667> ;
+            sosa:hasResult [ surv:distance 3.5e+00 ] ;
             sosa:hasResultQuality [ ns1:angleAccuracyClass <nz-survey-class:A> ;
-                    ns1:angleAccuracyMeasure 9.239391e-04 ;
+                    ns1:angleAccuracyMeasure 6.142723e-02 ;
                     ns1:distanceAccuracyClass <nz-survey-class:A> ;
-                    ns1:distanceAccuracyMeasure 2.631922e-04 ] ;
-            sosa:resultTime "2023-03-10T00:00:00Z" ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceType icsm-distance-type:ellipsoid ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/38471663> ;
-            sosa:hasResult [ surv:distance 3e+00 ] ;
-            sosa:hasResultQuality [ ns1:angleAccuracyClass <nz-survey-class:A> ;
-                    ns1:angleAccuracyMeasure 8.338854e-02 ;
-                    ns1:distanceAccuracyClass <nz-survey-class:A> ;
-                    ns1:distanceAccuracyMeasure 2.286144e-04 ] ;
-            sosa:resultTime "2023-03-10T00:00:00Z" ;
+                    ns1:distanceAccuracyMeasure 2.292196e-04 ] ;
+            sosa:resultTime "2023-03-10T00:00:00+00:00"^^xsd:dateTime ;
             ns1:angleType icsm-angle-type:bearing ;
             ns1:distanceType icsm-distance-type:ellipsoid ],
         [ a geojson:Feature ;
@@ -149,27 +142,17 @@
                     ns1:angleAccuracyMeasure 2.344855e-03 ;
                     ns1:distanceAccuracyClass <nz-survey-class:A> ;
                     ns1:distanceAccuracyMeasure 2.479113e-04 ] ;
-            sosa:resultTime "2023-03-10T00:00:00Z" ;
+            sosa:resultTime "2023-03-10T00:00:00+00:00"^^xsd:dateTime ;
             ns1:angleType icsm-angle-type:bearing ;
             ns1:distanceType icsm-distance-type:ellipsoid ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/38471667> ;
-            sosa:hasResult [ surv:distance 3.5e+00 ] ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/38471663> ;
+            sosa:hasResult [ surv:distance 3e+00 ] ;
             sosa:hasResultQuality [ ns1:angleAccuracyClass <nz-survey-class:A> ;
-                    ns1:angleAccuracyMeasure 6.142723e-02 ;
+                    ns1:angleAccuracyMeasure 8.338854e-02 ;
                     ns1:distanceAccuracyClass <nz-survey-class:A> ;
-                    ns1:distanceAccuracyMeasure 2.292196e-04 ] ;
-            sosa:resultTime "2023-03-10T00:00:00Z" ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceType icsm-distance-type:ellipsoid ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/38471666> ;
-            sosa:hasResult [ surv:distance 1.684e+01 ] ;
-            sosa:hasResultQuality [ ns1:angleAccuracyClass <nz-survey-class:A> ;
-                    ns1:angleAccuracyMeasure 2.843797e-03 ;
-                    ns1:distanceAccuracyClass <nz-survey-class:A> ;
-                    ns1:distanceAccuracyMeasure 2.456617e-04 ] ;
-            sosa:resultTime "2023-03-10T00:00:00Z" ;
+                    ns1:distanceAccuracyMeasure 2.286144e-04 ] ;
+            sosa:resultTime "2023-03-10T00:00:00+00:00"^^xsd:dateTime ;
             ns1:angleType icsm-angle-type:bearing ;
             ns1:distanceType icsm-distance-type:ellipsoid ],
         [ a geojson:Feature ;
@@ -179,165 +162,185 @@
                     ns1:angleAccuracyMeasure 1.327663e-03 ;
                     ns1:distanceAccuracyClass <nz-survey-class:A> ;
                     ns1:distanceAccuracyMeasure 2.562176e-04 ] ;
-            sosa:resultTime "2023-03-10T00:00:00Z" ;
+            sosa:resultTime "2023-03-10T00:00:00+00:00"^^xsd:dateTime ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ellipsoid ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/38471665> ;
+            sosa:hasResult [ surv:distance 3.058e+01 ] ;
+            sosa:hasResultQuality [ ns1:angleAccuracyClass <nz-survey-class:A> ;
+                    ns1:angleAccuracyMeasure 9.239391e-04 ;
+                    ns1:distanceAccuracyClass <nz-survey-class:A> ;
+                    ns1:distanceAccuracyMeasure 2.631922e-04 ] ;
+            sosa:resultTime "2023-03-10T00:00:00+00:00"^^xsd:dateTime ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ellipsoid ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/38471666> ;
+            sosa:hasResult [ surv:distance 1.684e+01 ] ;
+            sosa:hasResultQuality [ ns1:angleAccuracyClass <nz-survey-class:A> ;
+                    ns1:angleAccuracyMeasure 2.843797e-03 ;
+                    ns1:distanceAccuracyClass <nz-survey-class:A> ;
+                    ns1:distanceAccuracyMeasure 2.456617e-04 ] ;
+            sosa:resultTime "2023-03-10T00:00:00+00:00"^^xsd:dateTime ;
             ns1:angleType icsm-angle-type:bearing ;
             ns1:distanceType icsm-distance-type:ellipsoid ] ;
     sosa:madeBySensor [ a icsm-equipment-type:software ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
-    sosa:resultTime "2023-03-10T00:00:00Z" ;
+    sosa:resultTime "2023-03-10T00:00:00+00:00"^^xsd:dateTime ;
     sosa:usedProcedure icsm-procedure-used:calculation .
 
 <file:///github/workspace/29960715> a surv:BoundaryMark,
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 7.942823e+05 3.988085e+05 ) ] ;
-    commonpatterns:name [ rdfs:label "PEG 6 DP 119553" ;
-            dct:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "119553" ;
-                    commonpatterns:namePartType "planIdentifier" ],
-                [ rdfs:label "PEG" ;
-                    commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "6" ;
-                    commonpatterns:namePartType "MarkIdentifier" ] ] ;
-    commonpatterns:qualityClass <nz-point-class:7> ;
-    commonpatterns:qualityMeasure 1.3e-02 ;
     surv:monumentedBy [ surv:condition <nz-monument-condition:nfnd> ;
             surv:form <nz-monument-form:peg> ;
             surv:state <nz-monument-state:new> ] ;
-    surv:purpose <nz-surveypoint-purpose:bndy> .
+    surv:purpose <nz-surveypoint-purpose:bndy> ;
+    commonpatterns:name [ rdfs:label "PEG 6 DP 119553" ;
+            dct:hasPart [ rdfs:label "6" ;
+                    commonpatterns:namePartType <file:///github/workspace/MarkIdentifier> ],
+                [ rdfs:label "PEG" ;
+                    commonpatterns:namePartType <file:///github/workspace/MarkType> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <file:///github/workspace/PlanType> ],
+                [ rdfs:label "119553" ;
+                    commonpatterns:namePartType <file:///github/workspace/planIdentifier> ] ] ;
+    commonpatterns:qualityClass <nz-point-class:7> ;
+    commonpatterns:qualityMeasure 1.3e-02 .
 
 <file:///github/workspace/38471662> a geojson:Feature ;
     rdfs:comment "No Occupation" ;
     surv:vectorPurpose <nz-vector-purpose:calculated> ;
     geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( <file:///github/workspace/49655187> <file:///github/workspace/49655172> ) ] .
+            topo:relatedFeatures ( <file:///github/workspace/49655187> <file:///github/workspace/49655172> ) ] .
 
 <file:///github/workspace/38471663> a geojson:Feature ;
     rdfs:comment "No Occupation" ;
     surv:vectorPurpose <nz-vector-purpose:calculated> ;
     geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( <file:///github/workspace/49655170> <file:///github/workspace/49655187> ) ] .
+            topo:relatedFeatures ( <file:///github/workspace/49655170> <file:///github/workspace/49655187> ) ] .
 
 <file:///github/workspace/38471664> a geojson:Feature ;
     surv:vectorPurpose <nz-vector-purpose:calculated> ;
     geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( <file:///github/workspace/29960715> <file:///github/workspace/49655170> ) ] .
+            topo:relatedFeatures ( <file:///github/workspace/29960715> <file:///github/workspace/49655170> ) ] .
 
 <file:///github/workspace/38471665> a geojson:Feature ;
     surv:vectorPurpose <nz-vector-purpose:calculated> ;
     geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( <file:///github/workspace/49655171> <file:///github/workspace/29960715> ) ] .
+            topo:relatedFeatures ( <file:///github/workspace/49655171> <file:///github/workspace/29960715> ) ] .
 
 <file:///github/workspace/38471666> a geojson:Feature ;
     rdfs:comment "No Occupation" ;
     surv:vectorPurpose <nz-vector-purpose:calculated> ;
     geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( <file:///github/workspace/49655173> <file:///github/workspace/49655171> ) ] .
+            topo:relatedFeatures ( <file:///github/workspace/49655173> <file:///github/workspace/49655171> ) ] .
 
 <file:///github/workspace/38471667> a geojson:Feature ;
     rdfs:comment "No Occupation" ;
     surv:vectorPurpose <nz-vector-purpose:calculated> ;
     geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( <file:///github/workspace/49655172> <file:///github/workspace/49655173> ) ] .
+            topo:relatedFeatures ( <file:///github/workspace/49655172> <file:///github/workspace/49655173> ) ] .
 
 <file:///github/workspace/49655170> a surv:BoundaryMark,
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 7.942874e+05 3.988264e+05 ) ] ;
-    commonpatterns:name [ rdfs:label "UNMK 14 DP 572532" ;
-            dct:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "14" ;
-                    commonpatterns:namePartType "MarkIdentifier" ],
-                [ rdfs:label "UNMK" ;
-                    commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "planIdentifier" ] ] ;
-    commonpatterns:qualityClass <nz-point-class:7> ;
-    commonpatterns:qualityMeasure 5.7e-02 ;
     surv:monumentedBy [ surv:condition <nz-monument-condition:impm> ;
             surv:form <nz-monument-form:unmk> ;
             surv:state <nz-monument-state:new> ] ;
-    surv:purpose <nz-surveypoint-purpose:bndy> .
+    surv:purpose <nz-surveypoint-purpose:bndy> ;
+    commonpatterns:name [ rdfs:label "UNMK 14 DP 572532" ;
+            dct:hasPart [ rdfs:label "14" ;
+                    commonpatterns:namePartType <file:///github/workspace/MarkIdentifier> ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <file:///github/workspace/planIdentifier> ],
+                [ rdfs:label "UNMK" ;
+                    commonpatterns:namePartType <file:///github/workspace/MarkType> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <file:///github/workspace/PlanType> ] ] ;
+    commonpatterns:qualityClass <nz-point-class:7> ;
+    commonpatterns:qualityMeasure 5.7e-02 .
 
 <file:///github/workspace/49655171> a surv:BoundaryMark,
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 7.943031e+05 3.987861e+05 ) ] ;
-    commonpatterns:name [ rdfs:label "DISK 15 DP 572532" ;
-            dct:hasPart [ rdfs:label "15" ;
-                    commonpatterns:namePartType "MarkIdentifier" ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "planIdentifier" ],
-                [ rdfs:label "DISK" ;
-                    commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ] ] ;
-    commonpatterns:qualityClass <nz-point-class:7> ;
-    commonpatterns:qualityMeasure 3.1e-02 ;
     surv:monumentedBy [ surv:condition <nz-monument-condition:relb> ;
             surv:form <nz-monument-form:disk> ;
             surv:state <nz-monument-state:new> ] ;
-    surv:purpose <nz-surveypoint-purpose:bndy> .
+    surv:purpose <nz-surveypoint-purpose:bndy> ;
+    commonpatterns:name [ rdfs:label "DISK 15 DP 572532" ;
+            dct:hasPart [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <file:///github/workspace/planIdentifier> ],
+                [ rdfs:label "15" ;
+                    commonpatterns:namePartType <file:///github/workspace/MarkIdentifier> ],
+                [ rdfs:label "DISK" ;
+                    commonpatterns:namePartType <file:///github/workspace/MarkType> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <file:///github/workspace/PlanType> ] ] ;
+    commonpatterns:qualityClass <nz-point-class:7> ;
+    commonpatterns:qualityMeasure 3.1e-02 .
 
 <file:///github/workspace/49655172> a surv:BoundaryMark,
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 7.943067e+05 3.988058e+05 ) ] ;
-    commonpatterns:name [ rdfs:label "PEG 18 DP 572532" ;
-            dct:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "planIdentifier" ],
-                [ rdfs:label "18" ;
-                    commonpatterns:namePartType "MarkIdentifier" ],
-                [ rdfs:label "PEG" ;
-                    commonpatterns:namePartType "MarkType" ] ] ;
-    commonpatterns:qualityClass <nz-point-class:7> ;
-    commonpatterns:qualityMeasure 2.4e-02 ;
     surv:monumentedBy [ surv:condition <nz-monument-condition:relb> ;
             surv:form <nz-monument-form:peg> ;
             surv:state <nz-monument-state:new> ] ;
-    surv:purpose <nz-surveypoint-purpose:bndy> .
+    surv:purpose <nz-surveypoint-purpose:bndy> ;
+    commonpatterns:name [ rdfs:label "PEG 18 DP 572532" ;
+            dct:hasPart [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <file:///github/workspace/PlanType> ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <file:///github/workspace/planIdentifier> ],
+                [ rdfs:label "18" ;
+                    commonpatterns:namePartType <file:///github/workspace/MarkIdentifier> ],
+                [ rdfs:label "PEG" ;
+                    commonpatterns:namePartType <file:///github/workspace/MarkType> ] ] ;
+    commonpatterns:qualityClass <nz-point-class:7> ;
+    commonpatterns:qualityMeasure 2.4e-02 .
 
 <file:///github/workspace/49655173> a surv:BoundaryMark,
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 7.943075e+05 3.988024e+05 ) ] ;
-    commonpatterns:name [ rdfs:label "PEG 19 DP 572532" ;
-            dct:hasPart [ rdfs:label "PEG" ;
-                    commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "planIdentifier" ],
-                [ rdfs:label "19" ;
-                    commonpatterns:namePartType "MarkIdentifier" ] ] ;
-    commonpatterns:qualityClass <nz-point-class:7> ;
-    commonpatterns:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition <nz-monument-condition:relb> ;
             surv:form <nz-monument-form:peg> ;
             surv:state <nz-monument-state:new> ] ;
-    surv:purpose <nz-surveypoint-purpose:bndy> .
+    surv:purpose <nz-surveypoint-purpose:bndy> ;
+    commonpatterns:name [ rdfs:label "PEG 19 DP 572532" ;
+            dct:hasPart [ rdfs:label "PEG" ;
+                    commonpatterns:namePartType <file:///github/workspace/MarkType> ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <file:///github/workspace/planIdentifier> ],
+                [ rdfs:label "19" ;
+                    commonpatterns:namePartType <file:///github/workspace/MarkIdentifier> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <file:///github/workspace/PlanType> ] ] ;
+    commonpatterns:qualityClass <nz-point-class:7> ;
+    commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/49655187> a surv:BoundaryMark,
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 7.942895e+05 3.988242e+05 ) ] ;
-    commonpatterns:name [ rdfs:label "PEG 38 DP 572532" ;
-            dct:hasPart [ rdfs:label "38" ;
-                    commonpatterns:namePartType "MarkIdentifier" ],
-                [ rdfs:label "PEG" ;
-                    commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType "planIdentifier" ] ] ;
-    commonpatterns:qualityClass <nz-point-class:7> ;
-    commonpatterns:qualityMeasure 4e-02 ;
     surv:monumentedBy [ surv:condition <nz-monument-condition:relb> ;
             surv:form <nz-monument-form:peg> ;
             surv:state <nz-monument-state:new> ] ;
-    surv:purpose <nz-surveypoint-purpose:bndy> .
+    surv:purpose <nz-surveypoint-purpose:bndy> ;
+    commonpatterns:name [ rdfs:label "PEG 38 DP 572532" ;
+            dct:hasPart [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <file:///github/workspace/planIdentifier> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <file:///github/workspace/PlanType> ],
+                [ rdfs:label "PEG" ;
+                    commonpatterns:namePartType <file:///github/workspace/MarkType> ],
+                [ rdfs:label "38" ;
+                    commonpatterns:namePartType <file:///github/workspace/MarkIdentifier> ] ] ;
+    commonpatterns:qualityClass <nz-point-class:7> ;
+    commonpatterns:qualityMeasure 4e-02 .
 

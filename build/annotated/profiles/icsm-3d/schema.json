@@ -81,5 +81,11 @@
         }
       }
     }
-  ]
+  ],
+  "x-bblocks-metadata": {
+    "itemIdentifier": "icsm.profiles.icsm-3d",
+    "register": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-10-27"
+  }
 }

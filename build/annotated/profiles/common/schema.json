@@ -64,5 +64,11 @@
     "icsm-equipment-type": "https://linked.data.gov.au/def/csdm/icsm-equipment-type/",
     "icsm-distance-type": "https://linked.data.gov.au/def/csdm/icsm-distance-type/",
     "icsm-arc-orientation": "https://linked.data.gov.au/def/csdm/arc-orientation/"
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "icsm.profiles.common",
+    "register": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-10-27"
   }
 }
